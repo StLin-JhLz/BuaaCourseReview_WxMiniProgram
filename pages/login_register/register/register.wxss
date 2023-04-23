@@ -1,0 +1,10 @@
+/* pages/login_register/register/register.wxss */
+
+.loginBox {
+    width: 80%;
+    margin: 30% auto;
+  }
+  
+  .loginButton {
+    margin-top: 100rpx;
+  }
