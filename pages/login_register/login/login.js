@@ -31,7 +31,8 @@ Page({
       if (!password) {
         wx.showToast({
           icon: 'none',
-          title: "密码不能为空",
+          title: "密码不能为空",    
+          
         })
         return
       }
@@ -48,6 +49,9 @@ Page({
         },
         success (res) {
           console.log(res.data)
+        },
+        fail (res) {
+            console.log(res.data)
         }
     // 查询数据库，校验账号密码是否正确
     // wx.cloud.database().collection('user').where({
