@@ -40,8 +40,11 @@
 ### 注册页
 
 - `data`：formData记录账号密码、showPassword、showPasswordConfirm
-
 - `login`：跳转至登录页
 - `register`：跳转至注册页
 - `inputChange`：更新输入文本框对应的数据
+
+
+
+11
 
