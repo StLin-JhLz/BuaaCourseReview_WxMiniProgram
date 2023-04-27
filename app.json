@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/home-page/home-page",
         "pages/login_register/login/login",
         "pages/login_register/register/register",
         "pages/home/home",
@@ -51,7 +52,9 @@
         "pages/image-viewer/image-viewer",
         "pages/result/result",
         "pages/result/result-page",
-        "pages/link/link"
+        "pages/link/link",
+        "pages/mine/mine",
+        "pages/course-list/course-list"
     ],
     "subpackages": [
         {
@@ -134,10 +137,37 @@
     },
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#f6f6f6",
+        "navigationBarBackgroundColor": "#0000ff",
         "backgroundColor": "#f6f6f6",
         "navigationBarTitleText": "北航课程评价",
-        "navigationBarTextStyle": "black"
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "backgroundColor": "#0000ff",
+        "borderStyle": "white",
+        "color": "#ffffff",
+        "position": "bottom",
+        "selectedColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/course-list/course-list",
+                "text": "课程列表",
+                "iconPath": "images/course-list/courseListUnSelected.png",
+                "selectedIconPath": "images/course-list/courseListSelected.png"
+            },
+            {
+                "pagePath": "pages/home-page/home-page",
+                "text": "首页",
+                "iconPath": "images/home-page/homeUnSelected.png",
+                "selectedIconPath": "images/home-page/homeSelected.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "images/mine/mineUnSelected.png",
+                "selectedIconPath": "images/mine/mineSelected.png"
+            }
+        ]
     },
     "sitemapLocation": "sitemap.json"
 }
