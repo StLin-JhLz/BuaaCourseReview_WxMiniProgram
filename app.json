@@ -3,6 +3,8 @@
         "pages/home-page/home-page",
         "pages/login_register/login/login",
         "pages/login_register/register/register",
+        "pages/mine/mine",
+        "pages/course-list/course-list",
         "pages/home/home",
         "pages/button/button",
         "pages/tabs/tabs",
@@ -52,9 +54,7 @@
         "pages/image-viewer/image-viewer",
         "pages/result/result",
         "pages/result/result-page",
-        "pages/link/link",
-        "pages/mine/mine",
-        "pages/course-list/course-list"
+        "pages/link/link"
     ],
     "subpackages": [
         {
