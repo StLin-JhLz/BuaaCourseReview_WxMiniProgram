@@ -1,2 +1,5 @@
 <!--pages/home-page/home-page.wxml-->
-<text>pages/home-page/home-page.wxml</text>
+<!-- <text>pages/home-page/home-page.wxml</text> -->
+<view class="homeBox"></view>
+    <view class="demo-title">welcome</view>
+    <t-input bindblur="CourseFit" placeholder="输入你想查询的课程"></t-input>
