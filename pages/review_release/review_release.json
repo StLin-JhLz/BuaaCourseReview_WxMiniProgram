@@ -1,0 +1,13 @@
+{
+    "component": true,
+    "usingComponents": {
+      "t-rate": "tdesign-miniprogram/rate/rate",
+      "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+      "t-cell": "tdesign-miniprogram/cell/cell",
+      "t-picker": "tdesign-miniprogram/picker/picker",
+      "t-picker-item": "tdesign-miniprogram/picker-item/picker-item",
+      "t-textarea": "tdesign-miniprogram/textarea/textarea",
+      "t-divider": "tdesign-miniprogram/divider/divider",
+      "t-button": "tdesign-miniprogram/button/button"
+    }
+  }

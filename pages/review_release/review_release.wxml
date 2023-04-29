@@ -1,0 +1,70 @@
+<!--pages/review_release/review_release.wxml-->
+
+
+
+<t-cell class="mb-16" title="学期" arrow hover note="{{dateText}}" bind:click="onSeasonPicker" />
+
+
+<t-picker
+  visible="{{cityVisible}}"
+  value="{{cityValue}}"
+  data-key="city"
+  title="选择城市"
+  cancelBtn="取消"
+  confirmBtn="确认"
+  bindchange="onPickerChange"
+  bindpick="onColumnChange"
+  bindcancel="onPickerCancel"
+>
+  <t-picker-item options="{{citys}}" />
+</t-picker>
+
+<t-picker
+  visible="{{dateVisible}}"
+  value="{{dateValue}}"
+  data-key="date"
+  title="选择学期"
+  cancelBtn="取消"
+  confirmBtn="确认"
+  bindchange="onPickerChange"
+  bindpick="onColumnChange"
+  bindcancel="onPickerCancel"
+>
+  <t-picker-item options="{{years}}"></t-picker-item>
+  <t-picker-item options="{{seasons}}"></t-picker-item>
+</t-picker>
+
+<view class="demo-rate">
+  <view class="demo-rate__title">总体评价</view>
+  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+</view>
+<view class="demo-rate">
+    <view class="demo-rate__title">内容质量</view>
+  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+</view>
+<view class="demo-rate">
+    <view class="demo-rate__title">工作量</view>
+  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+</view>
+<view class="demo-rate">
+    <view class="demo-rate__title">考核/给分</view>
+  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+</view>
+
+<t-textarea label="标题" placeholder="请输入标题（最多50字）" disableDefaultPadding="{{true}}" maxlength="50" autosize />
+<t-divider  />
+
+<t-textarea
+  t-class="external-class"
+  label="正文"
+  placeholder="设置最大字符个数"
+  maxlength="1000"
+  disableDefaultPadding="{{true}}"
+  indicator
+  autosize
+/>
+
+<view class="button-example">
+  <t-button theme="light" block size="large">保存草稿</t-button>
+  <t-button theme="primary" block size="large">提交</t-button>
+</view>

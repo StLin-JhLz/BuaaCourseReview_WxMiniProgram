@@ -1,0 +1,54 @@
+/* pages/review_release/review_release.wxss */
+.mb-16 {
+    margin-bottom: 32rpx;
+  }
+
+  .demo-rate {
+    background-color: #fff;
+    
+    height: 96rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32rpx;
+    border-bottom: solid 1rpx #f0f0f0;
+    border-top: solid 1rpx #f0f0f0;
+    margin-top: 32rpx;
+    margin-bottom: 32rpx;
+  }
+  
+  .demo-rate__title {
+    width: 200rpx;
+  }
+  
+  .demo-rate__transparent {
+    background-color: transparent;
+    padding-left: 32rpx;
+    border: 0;
+  }
+
+  .external-class {
+    height: 650rpx;
+  }
+  
+  .divider-demo__title {
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 16rpx 32rpx;
+    line-height: 40rpx;
+  }
+  
+  .divider-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.9);
+    padding-left: 32rpx;
+  }
+
+  .button-example {
+    margin: 0 32rpx;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32rpx;
+  }

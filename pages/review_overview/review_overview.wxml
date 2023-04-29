@@ -1,0 +1,22 @@
+<!--pages/review_overview/review_overview.wxml-->
+<t-back-top theme="round" text="顶部" bind:to-top="onToTop"></t-back-top>
+
+<view class="homeBox"></view>
+    <view class="demo-title">{{courseName}}</view>
+    <view class="block">
+    <t-tag class="margin-16" theme="primary">{{departmentName}}</t-tag>
+    <t-tag class="margin-16" variant="light-outline">{{credit}}学分</t-tag>
+</view>
+
+<t-cell-group title="标题" class = "review" theme="card" bordered="false">
+    
+    <t-cell title="{{reviewTitle}}" 
+    description = "{{reviewTeacher}}老师（{{reviewSemester}}学期)，{{reviewDate}}" hover = false />
+    <t-cell description = "{{reviewContent}}"/>
+</t-cell-group>
+
+<view class="button-example">
+  <t-button theme="primary" size="small">赞</t-button>
+  <t-button theme="primary" size="small">踩</t-button>
+</view>
+
