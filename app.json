@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/review_release/review_release",
         "pages/home-page/home-page",
+        "pages/review_release/review_release",
         "pages/login_register/login/login",
         "pages/login_register/register/register",
         "pages/mine/mine",
