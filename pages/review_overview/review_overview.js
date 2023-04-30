@@ -5,14 +5,56 @@ Page({
      * 页面的初始数据
      */
     data: {
+        reviews:[{
+            id : "1afbc",
+            user_id : "1afbc",
+            time : "2022/09/02",
+            agree_cnt : "5",
+            disagree_cnt : "3",
+            course_id : "1afbcd",
+            teacher_id : "1afbcd",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 4,
+            rating_workload : 3,
+            rating_assesment : 3,
+            title : "好课",
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        },{
+            id : "1afbc",
+            user_id : "1afbc",
+            time : "2022/09/02",
+            agree_cnt : "5",
+            disagree_cnt : "3",
+            course_id : "1afbcd",
+            teacher_id : "1afbcd",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 4,
+            rating_workload : 3,
+            rating_assesment : 3,
+            title : "好课",
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        },
+{
+            id : "1afbc",
+            user_id : "1afbc",
+            time : "2022/09/02",
+            agree_cnt : "5",
+            disagree_cnt : "3",
+            course_id : "1afbcd",
+            teacher_id : "1afbcd",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 4,
+            rating_workload : 3,
+            rating_assesment : 3,
+            title : "好课",
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        }],
         courseName : "计算机网络实验",
         departmentName : "计算机学院",
         credit : "2",
-        reviewTitle: "好课",
-        reviewTeacher: "李莹",
-        reviewSemester: "21-22-3",
-        reviewDate : "2022/09/02",
-        reviewContent : "评价内容：微信小程序默认支持的字体 在小程序的.wxss 中对字体进行样式定义,如 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, ans-serif ; \n显示效果如下图: 但是由于微信支持的字体"
     },
     methods: {
         onToTop(e) {
@@ -24,21 +66,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.makeTestData();
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-
+        
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        
     },
 
     /**
@@ -74,5 +116,26 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    makeTestData() {
+        var a = {
+            id : "1afbc",
+            user_id : "1afbc",
+            time : "2022/09/02",
+            agree_cnt : "5",
+            disagree_cnt : "3",
+            course_id : "1afbcd",
+            teacher_id : "1afbcd",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 4,
+            rating_workload : 3,
+            rating_assesment : 3,
+            title : "好课",
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        };
+        this.reviews.push(a);
     }
+    
 })

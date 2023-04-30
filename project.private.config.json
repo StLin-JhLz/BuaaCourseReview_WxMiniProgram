@@ -1,10 +1,6 @@
 {
     "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-<<<<<<< HEAD
-    "projectname": "BuaaCourseReview_WxMiniProgram-main",
-=======
     "projectname": "miniProgram",
->>>>>>> 93d1a4da7385d92603bda2f9a03fb16462ac4a67
     "setting": {
         "compileHotReLoad": true
     }
