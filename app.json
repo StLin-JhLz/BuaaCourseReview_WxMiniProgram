@@ -1,8 +1,14 @@
 {
     "pages": [
         "pages/home-page/home-page",
+        "pages/review_release/review_release",
         "pages/login_register/login/login",
         "pages/login_register/register/register",
+        "pages/mine/mine",
+        "pages/course-list/course-list",
+        "pages/review_overview/review_overview",
+        
+
         "pages/home/home",
         "pages/button/button",
         "pages/tabs/tabs",
@@ -51,11 +57,16 @@
         "pages/notice-bar/notice-bar",
         "pages/image-viewer/image-viewer",
         "pages/result/result",
+        
         "pages/result/result-page",
+<<<<<<< HEAD
         "pages/link/link",
         "pages/mine/mine",
         "pages/course-list/course-list",
         "pages/release/release"
+=======
+        "pages/link/link"
+>>>>>>> 93d1a4da7385d92603bda2f9a03fb16462ac4a67
     ],
     "subpackages": [
         {

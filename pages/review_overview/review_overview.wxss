@@ -1,0 +1,29 @@
+/* pages/review_overview/review_overview.wxss */
+.homeBox {
+    width: 80%;
+    margin: 5% auto;
+  }
+
+  .block {
+    margin: 0 32rpx;
+  }
+  
+  .block + .block {
+    margin-top: 48rpx;
+  }
+  
+  .block .margin-16:not(:last-child) {
+    margin-right: 32rpx;
+  }
+
+.review{
+    margin: 3% auto;
+}
+
+.button-example {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 32rpx;
+  }
+  

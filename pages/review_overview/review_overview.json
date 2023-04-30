@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+        "t-tag": "tdesign-miniprogram/tag/tag",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-back-top": "tdesign-miniprogram/back-top/back-top",
+        "t-button": "tdesign-miniprogram/button/button"
+    }
+}

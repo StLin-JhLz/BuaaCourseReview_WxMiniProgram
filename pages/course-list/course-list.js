@@ -1,66 +1,87 @@
 // pages/course-list/course-list.js
+const image = 'https://tdesign.gtimg.com/miniprogram/images/example2.png';
+const items = new Array(12).fill({ label: '计算机网络实验', image }, 0, 12);
+var course_list_json = require('../../my_data/course_list')
+
 Page({
+  offsetTopList: [],
+  data: {
+    catValue: 0, // category value
+    sideBarIndex: 1,
+    scrollTop: 0,
+    // categories: course_list_json.courseList
+    categories: [
+      {
+        label: '01 材院',
+        title: '01 材料学院',
+        badgeProps: {},
+        items,
+      },
+      {
+        label: '06 计院',
+        title: '06 计算机学院',
+        badgeProps: {
+          dot: true,
+        },
+        items: items.slice(0, 9),
+      },
+      {
+        label: '23 高工',
+        title: '23 沈元荣誉学院',
+        badgeProps: {},
+        items: items.slice(0, 9),
+      },
+      {
+        label: '73 书院',
+        title: '标题四',
+        badgeProps: {
+          count: 6,
+        },
+        items: items.slice(0, 6),
+      },
+      {
+        label: '智慧树',
+        title: '标题五',
+        badgeProps: {},
+        items: items.slice(0, 3),
+      },
+    ]
+  },
+  onLoad() {
+    const query = wx.createSelectorQuery().in(this);
+    const { sideBarIndex } = this.data;
 
-    /**
-     * 页面的初始数据
-     */
-    data: {
+    query
+      .selectAll('.title')
+      .boundingClientRect((rects) => {
+        this.offsetTopList = rects.map((item) => item.top);
+        this.setData({ scrollTop: rects[sideBarIndex].top });
+      })
+      .exec();
+  },
 
-    },
+  onTabsChange(e) {
+    this.setData({ catValue: e.detail.value })
+  },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
+  onSideBarChange(e) {
+    const { value } = e.detail;
 
-    },
+    this.setData({ sideBarIndex: value, scrollTop: this.offsetTopList[value] });
+  },
+  onScroll(e) {
+    const { scrollTop } = e.detail;
+    const threshold = 50; // 下一个标题与顶部的距离
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    if (scrollTop < threshold) {
+      this.setData({ sideBarIndex: 0 });
+      return;
     }
-})
+
+    const index = this.offsetTopList.findIndex((top) => top > scrollTop && top - scrollTop <= threshold);
+
+    if (index > -1) {
+      this.setData({ sideBarIndex: index });
+    }
+  },
+});
