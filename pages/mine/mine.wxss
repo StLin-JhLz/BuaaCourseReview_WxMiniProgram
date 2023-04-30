@@ -1,1 +1,11 @@
-/* pages/mine/mine.wxss */
+.button-example {
+    margin: 0 50rpx;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50rpx;
+  }
+  
+  .button-example:not(:last-child) {
+    margin-bottom: 50rpx;
+  }
+  
