@@ -54,7 +54,8 @@
         "pages/result/result-page",
         "pages/link/link",
         "pages/mine/mine",
-        "pages/course-list/course-list"
+        "pages/course-list/course-list",
+        "pages/release/release"
     ],
     "subpackages": [
         {

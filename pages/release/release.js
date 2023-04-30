@@ -1,15 +1,13 @@
-// pages/home-page/home-page.js
+// pages/release/release.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        
+
     },
-    courseFit(e){
-        //课程匹配
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */
