@@ -7,8 +7,6 @@
         "pages/mine/mine",
         "pages/course-list/course-list",
         "pages/review_overview/review_overview",
-        
-
         "pages/home/home",
         "pages/button/button",
         "pages/tabs/tabs",
@@ -57,10 +55,12 @@
         "pages/notice-bar/notice-bar",
         "pages/image-viewer/image-viewer",
         "pages/result/result",
-        
         "pages/result/result-page",
         "pages/link/link",
-        "pages/release/release"
+        "pages/release/release",
+        "pages/info-feedback/info-feedback",
+        "pages/concerning/concerning",
+        "pages/statistics/statistics"
     ],
     "subpackages": [
         {

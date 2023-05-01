@@ -1,10 +1,12 @@
+<navigator url="../info-feedback/info-feedback">
+<t-cell class="mb-16" title="信息反馈" arrow hover ></t-cell>
+</navigator>
+<navigator url="../concerning/concerning">
+<t-cell class="mb-16" title="关于" arrow hover ></t-cell>
+</navigator>
+<navigator url="../statistics/statistics">
+<t-cell class="mb-16" title="统计" arrow hover ></t-cell>
+</navigator>
 <view class="button-example">
-  <!-- <t-button theme="primary" size="large">填充按钮</t-button> -->
-  <!-- <t-button theme="light" size="large">填充按钮</t-button> -->
-  <!-- <t-button size="large">填充按钮</t-button> -->
-</view>
-
-<view class="button-example">
-  <t-button theme="primary" size="large" variant="outline">描边按钮</t-button>
-  <!-- <t-button theme="primary" size="large" variant="text">111</t-button> -->
+  <t-button theme="primary" size="large" block>登录/登出</t-button>
 </view>

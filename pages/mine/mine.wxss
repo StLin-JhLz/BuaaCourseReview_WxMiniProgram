@@ -1,11 +1,7 @@
-.button-example {
-    margin: 0 50rpx;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50rpx;
+.mb-16 {
+    margin-bottom: 32rpx;
   }
-  
-  .button-example:not(:last-child) {
-    margin-bottom: 50rpx;
+  .button-example {
+    margin: 0 32rpx;
   }
-  
+    
