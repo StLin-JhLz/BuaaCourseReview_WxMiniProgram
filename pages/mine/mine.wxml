@@ -1,12 +1,14 @@
 <navigator url="../info-feedback/info-feedback">
-<t-cell class="mb-16" title="信息反馈" arrow hover ></t-cell>
+    <t-cell class="mb-16" title="信息反馈" arrow hover ></t-cell>
 </navigator>
 <navigator url="../concerning/concerning">
-<t-cell class="mb-16" title="关于" arrow hover ></t-cell>
+    <t-cell class="mb-16" title="关于" arrow hover ></t-cell>
 </navigator>
 <navigator url="../statistics/statistics">
-<t-cell class="mb-16" title="统计" arrow hover ></t-cell>
+    <t-cell class="mb-16" title="统计" arrow hover ></t-cell>   
 </navigator>
-<view class="button-example">
-  <t-button theme="primary" size="large" block>登录/登出</t-button>
-</view>
+<navigator url="../login_register/login/login">
+    <t-cell class="mb-16" title="登出" arrow hover ></t-cell>   
+</navigator>
+<!--只实现了界面-->
+

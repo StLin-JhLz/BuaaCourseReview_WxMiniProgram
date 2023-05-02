@@ -1,2 +1,7 @@
-<!--pages/info-feedback/info-feedback.wxml-->
-<text>pages/info-feedback/info-feedback.wxml</text>
+<t-input label="标题" placeholder="请输入文字" />
+<t-input label="内容" placeholder="请输入文字" />
+<view class="button-example">
+  <t-button theme="primary" size="large" block>提交</t-button>
+</view>
+
+
