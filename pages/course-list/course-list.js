@@ -15,7 +15,7 @@ Page({
         label: '01 材院',
         title: '01 材料学院',
         badgeProps: {},
-        items,
+        items: items.slice(0,9),
       },
       {
         label: '06 计院',
@@ -23,7 +23,7 @@ Page({
         badgeProps: {
           dot: true,
         },
-        items: items.slice(0, 9),
+        items: items.slice(0,9),
       },
       {
         label: '23 高工',
@@ -48,6 +48,9 @@ Page({
     ]
   },
   onLoad() {
+    init();
+
+
     const query = wx.createSelectorQuery().in(this);
     const { sideBarIndex } = this.data;
 
@@ -58,6 +61,34 @@ Page({
         this.setData({ scrollTop: rects[sideBarIndex].top });
       })
       .exec();
+  },
+
+  init() {
+    // wx.request({
+    //     url: './api/course_list', //仅为示例，并非真实的接口地址
+    //     data: {
+    //     },
+    //     header: {
+    //       'content-type': 'application/json' // 默认值
+    //     },
+    //     success (res) {
+    //         var cat = this.data.categories;
+    //         var dep2course = res.data.dep2course;
+    //         for(let key in dep2course) {
+    //             //初始化数组
+    //             var course_id = [];
+    //             var course_name = [];
+    //             var dep_num = 
+    //             var src_course_id = dep2course[key];
+    //             for (var i = 0 ; i < src_course_id.length; i++) {
+    //                 var dep_num = 
+    //                 course_id.push(src_course_id[i]);
+    //                 course_name.push(get_course_name_by_id(src_course_id[i]));//TODO
+    //             }
+    //         }
+    //       console.log(res.data)
+    //     }
+    //   })
   },
 
   onTabsChange(e) {
