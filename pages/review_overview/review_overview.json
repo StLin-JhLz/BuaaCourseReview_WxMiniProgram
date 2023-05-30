@@ -6,6 +6,7 @@
         "t-cell": "tdesign-miniprogram/cell/cell",
         "t-icon": "tdesign-miniprogram/icon/icon",
         "t-back-top": "tdesign-miniprogram/back-top/back-top",
-        "t-button": "tdesign-miniprogram/button/button"
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-check-tag": "tdesign-miniprogram/check-tag/check-tag"
     }
 }
