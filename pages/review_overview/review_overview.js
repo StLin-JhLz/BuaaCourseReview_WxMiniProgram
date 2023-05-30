@@ -189,8 +189,25 @@ Page({
             title : "好课",
             text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
         };
+        var b = {
+            id : "1afbc",
+            user_id : "1afbc",
+            time : "2022/09/02",
+            agree_cnt : "5",
+            disagree_cnt : "3",
+            course_id : "1afbcd",
+            teacher_name : "孙青",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 5,
+            rating_workload : 5,
+            rating_assesment : 5,
+            title : "好课",
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        };
         //console.log(this.data.length);
         this.data.reviews.push(a);
+        this.data.reviews.push(b);
         this.setData({
            reviews : this.data.reviews,
         })
