@@ -70,6 +70,10 @@ Page({
         this.setData({
             "teachers_name2index" : this.data.course.teachers_name2index
         });
+        // 初始化review_show
+        this.setData({
+            "reviews_show" : this.data.reviews 
+        });
     },
 
     /**
@@ -134,7 +138,6 @@ Page({
         // 2 统计筛选老师数量
         let cnt = 0;
         for (let i=0; i<this.data.course.teachers.length; i++) {
-            console.log("cnt:"+cnt);
             if (this.data.course.teachers_filter[i] == 1)
                 cnt++;
         }
@@ -147,7 +150,6 @@ Page({
             this.setData({
                 "reviews_show" : []
             })
-            console.log("begin"+this.data.reviews_show.length);
             for (let i=0; i<this.data.reviews.length; i++) {
                 if (this.data.course.teachers_filter[this.data.course.teachers_name2index[this.data.reviews[i].teacher_name]] == true)
                     this.data.reviews_show.push(this.data.reviews[i]);
@@ -156,7 +158,6 @@ Page({
                 "reviews_show" : this.data.reviews_show
             })
         }
-        console.log("end"+this.data.reviews_show.length);
     },
     
 
