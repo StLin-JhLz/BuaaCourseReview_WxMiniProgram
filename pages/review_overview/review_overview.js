@@ -29,13 +29,28 @@ Page({
      * 生命周期函数--监听页载
      */
     onLoad() { 
+    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady() {
+        // this.makeTestData();
+    },
+
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow() {
+        const course_id = getApp().globalData.navigate_courseId;
+        console.log(course_id);
         if (apis.main.api_undefined == true)
             this.makeTestData();
         wx.request({
             url: apis.main.url + apis.review.url, // 请求的 URL
             method: apis.review.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
             data: { // 请求的参数，以键值对的形式传递
-              course_id : "123" // todo
+              course_id : course_id // todo
             },
             // header: { // 请求的头部信息，以键值对的形式传递
             //   'Content-Type': 'application/json'
@@ -74,20 +89,6 @@ Page({
         this.setData({
             "reviews_show" : this.data.reviews 
         });
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-        // this.makeTestData();
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-        
     },
 
     /**
