@@ -7,14 +7,37 @@ Page({
       //存储数据
       course_list : [],
       course_list_show : [],
+      imageUrl : '',
     },
   
     onLoad() {
         this.setData({
             course_list : getApp().globalData.course_list,
         });
-        
+        this.fetchImage();
     },
+
+    fetchImage() {
+        wx.request({
+            url: 'https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0884436661/p302255.png', // 替换为您要获取的图片地址
+            responseType: 'arraybuffer', // 设置响应类型为二进制数组
+            success: (res) => {
+              const arrayBuffer = res.data; // 获取到的二进制数组
+              const base64 = wx.getFileSystemManager().readFileSync({
+                filePath: wx.env.USER_DATA_PATH + '/temp_image.jpg',
+                data: arrayBuffer,
+                encoding: 'base64',
+              }); // 将二进制数据转换为 base64 字符串
+              const imageUrl = `data:image/jpeg;base64,${base64}`; // 构建图片的 data URI
+              this.setData({
+                imageUrl: imageUrl, // 将图片路径存储在 data 中
+              });
+            },
+            fail: (error) => {
+              console.error('请求失败', error);
+            }
+          });
+      },
 
     navigate_courseId(event) {
         const id = event.currentTarget.dataset.id;

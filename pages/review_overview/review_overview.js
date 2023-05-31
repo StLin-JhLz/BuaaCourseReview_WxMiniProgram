@@ -16,7 +16,8 @@ Page({
             teachers_filter : [],
         },
         reviews:[],
-        reviews_show:[]
+        reviews_show:[],
+        state_text :"已举报"
     },
     
     methods: {

@@ -1,4 +1,7 @@
 /* pages/home-page/home-page.wxss */
+
+
+  
 .homeBox {
     width: 80%;
     margin: 30% auto; 

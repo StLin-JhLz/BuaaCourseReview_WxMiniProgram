@@ -25,6 +25,7 @@
         </view>
     </scroll-view>
 
+    <image src="{{imageUrl}}" mode="aspectFit"></image>
     <navigator url="../review_release/review_release">
         <!-- <t-fab icon="add" aria-label="增加">添加评测</t-fab> -->
         <view class="my_button">发布评测</view>
