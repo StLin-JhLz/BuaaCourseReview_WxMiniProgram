@@ -1,9 +1,30 @@
 <!--pages/home-page/home-page.wxml-->
 <!-- <text>pages/home-page/home-page.wxml</text> -->
 <view class="homeBox"></view>
-    <view class="demo-title">welcome</view>
+    <view class="demo-title">欢迎</view>
     <t-notice-bar visible="{{true}}" theme="warning" content="内容提示：目前已经更新新学期课表"></t-notice-bar>
-    <t-input bindblur="CourseFit" placeholder="输入你想查询的课程"></t-input>
+    <view class="example-search">
+        <t-search
+        value="{{value}}"
+        center
+        placeholder="输入你想查询的课程名"
+        action="{{actionText}}"
+        bind:blur="blurHandle"
+        bind:focus="focusHandle"
+        bind:action-click="actionHandle"
+        bind:change="changeHandle"
+        />
+    </view>
+    
+    <scroll-view wx:if="{{focus}}"  scroll-y="true">
+        <view wx:for="{{course_list_show}}" wx:key="name">
+            <view class="scrollItem">
+                <view class="font1" space="nbsp" bind:tap="navigate_courseId" data-id = "{{item.id}}">   {{item.name}} ({{item.department}}, {{item.credit}}学分)</view>
+                <!-- <view class="font2" space="nbsp"> {{item.id}}   </view> -->
+            </view>
+        </view>
+    </scroll-view>
+
     <navigator url="../review_release/review_release">
         <!-- <t-fab icon="add" aria-label="增加">添加评测</t-fab> -->
         <view class="my_button">发布评测</view>

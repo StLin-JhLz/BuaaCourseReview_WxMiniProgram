@@ -1,8 +1,9 @@
 {
     "pages": [
+        "pages/home-page/home-page",
         "pages/review_overview/review_overview",
         "pages/course-list/course-list",
-        "pages/home-page/home-page",
+        
         
         
         

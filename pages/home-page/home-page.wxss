@@ -20,3 +20,8 @@
     /* 0 204 255 */
     align-items: center;
 }  
+
+.example-search {
+    background-color: #fff;
+    padding: 16rpx 32rpx;
+  }

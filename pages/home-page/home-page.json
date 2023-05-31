@@ -2,6 +2,7 @@
     "usingComponents": {
         "t-input": "tdesign-miniprogram/input/input",
         "t-notice-bar": "tdesign-miniprogram/notice-bar/notice-bar",
-        "t-fab": "tdesign-miniprogram/fab/fab"
+        "t-fab": "tdesign-miniprogram/fab/fab",
+        "t-search": "tdesign-miniprogram/search/search"
     }
 }

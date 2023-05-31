@@ -5,6 +5,7 @@ App({
 
     globalData: {
         navigate_courseId: null, // 初始化全局变量 courseId
+        college_course_list:[],
         course_list:[],
     },
     onShow() {
@@ -19,11 +20,20 @@ App({
             this.makeTestData();
         }
 
+        //wx.request
+
+        for (let i=0; i<this.globalData.college_course_list.length; i++) {
+            for(let j=0; j<this.globalData.college_course_list[i].items.length; j++) {
+                this.globalData.course_list.push(this.globalData.college_course_list[i].items[j]);
+                //console.log(j+this.globalData.college_course_list[i].items[j].name);
+            }
+        }
+        //console.log(this.globalData.course_list.length);
     },
 
     makeTestData() {
         const items = [
-            { name: '信息系统分析与设计', id: 'id' },
+            { name: '信息系统分析与设计', id: 'id', department:'计算机学院', credit:'2' },
             { name: '学科技术前沿讲座', id: 'id' },
             { name: '计算机网络安全技术', id: 'id' },
             { name: '科研课堂', id: 'id' },
@@ -55,7 +65,7 @@ App({
             { name: '高级算法设计与分析', id: 'id' },
             { name: '新型计算机系统设计与性能优化', id: 'id' }
           ];      
-        this.globalData.course_list = [ 
+        this.globalData.college_course_list = [ 
             {
               label: '06 计院',
               title: '06 计算机学院',
@@ -120,7 +130,7 @@ App({
               label: '23 高工',
               title: '23 沈元荣誉学院',
               badgeProps: {},
-              items: items.slice(0, 9),
+              items: [],
             },
             {
               label: '73 书院',
@@ -128,13 +138,13 @@ App({
               badgeProps: {
                 count: 6,
               },
-              items: items.slice(0, 6),
+              items: [],
             },
             {
               label: '智慧树',
               title: '标题五',
               badgeProps: {},
-              items: items.slice(0, 3),
+              items: [],
             },
           ];
     }
