@@ -8,6 +8,7 @@
       "t-picker-item": "tdesign-miniprogram/picker-item/picker-item",
       "t-textarea": "tdesign-miniprogram/textarea/textarea",
       "t-divider": "tdesign-miniprogram/divider/divider",
-      "t-button": "tdesign-miniprogram/button/button"
+      "t-button": "tdesign-miniprogram/button/button",
+      "t-search": "tdesign-miniprogram/search/search"
     }
   }

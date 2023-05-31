@@ -25,13 +25,13 @@
    <text class="my-title">教师筛选</text>
     <view class="block">
        <view class="flex-container">
-            <block wx:for="{{course.teachers}}" wx:key="index">
-                <!-- <view class="block"> -->
-                    <t-check-tag class="margin-16" size="large" variant="light" content="{{item}}"
-                        data-index="{{index}}"  bind:change="filterTeachers" />
-                <!-- </view> -->
-            </block>
-        </view>
+    <block wx:for="{{course.teachers}}" wx:key="index">
+     
+        <t-check-tag class="margin-16" size="large" variant="light" content="{{item}}"
+                   data-index="{{index}}"  bind:change="filterTeachers" />
+      
+    </block>
+  </view>
     </view>
   
 <!-- </view> -->
@@ -47,6 +47,7 @@
 
     <view class="button-example">
         <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">举报</t-button>
+        <view> {{state_text}}</view>
         <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "supportReview">赞</t-button>
         <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
     </view>

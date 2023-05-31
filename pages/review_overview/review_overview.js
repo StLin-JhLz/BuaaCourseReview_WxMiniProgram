@@ -19,7 +19,8 @@ Page({
             teachers_filter : [],
         },
         reviews:[],
-        reviews_show:[]
+        reviews_show:[],
+        state_text :"已举报"
     },
     
     methods: {
@@ -130,7 +131,6 @@ Page({
     },
 
     filterTeachers(event) {
-    
         const checked = event.detail.checked;
         const index = event.currentTarget.dataset.index;
         // 1 更改筛选bool数组
@@ -164,6 +164,17 @@ Page({
         }
     },
     
+    reportReview(event) {
+
+    } ,
+    
+    supportReview(event) {
+
+    },
+
+    opposeReview(event) {
+
+    },
 
     makeTestData() {
         var course = {

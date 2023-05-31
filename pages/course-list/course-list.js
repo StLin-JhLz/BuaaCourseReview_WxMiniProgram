@@ -13,7 +13,7 @@ Page({
   },
   onLoad() {
     this.setData({
-        categories : getApp().globalData.course_list
+        categories : getApp().globalData.college_course_list
     });
     const query = wx.createSelectorQuery().in(this);
     const { sideBarIndex } = this.data;

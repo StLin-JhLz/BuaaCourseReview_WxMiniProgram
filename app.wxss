@@ -1,6 +1,13 @@
-page {
-  background: #f6f6f6;
+@font-face {
+    font-family: 'SHSN';
+    src: url('/assets/SourceHanSans-Normal.ttf');
+  }
+.page {
+  background: #f6f6f669;
+  font-family: 'SHSN', sans-serif;
+
 }
+
 .demo {
   padding-bottom: 56rpx;
 }
