@@ -67,3 +67,46 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.my_top{
+    z-index: 101;
+    position: absolute;
+}
+
+
+.my-title {
+    font-size: 48rpx;
+    font-weight: 600;
+    line-height: 64rpx;
+    margin: 48rpx 32rpx 0;
+    color: var(--td-font-gray-1, rgb(201, 160, 72));
+  }
+
+  .my_img{
+      height: 20px;
+      width: 20px;
+      align-items: center;
+  }
+
+
+/* 11111 */
+  .base-button .book-button-left {
+    display: flex;
+  }
+  .base-button .book-button-left view image {
+    padding-top: 10rpx; 
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+    margin: 0 auto;
+  }
+  .base-button .book-button-left view view {
+    width: 100%;
+    font-size: 20rpx;
+    color: #515151;
+  }
+   
+  /* 点击后的样式 */
+  .active {
+    color: #8a8a8a !important;
+  }

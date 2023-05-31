@@ -1,18 +1,12 @@
 {
     "pages": [
         "pages/review_overview/review_overview",
-        "pages/course-list/course-list",
         "pages/home-page/home-page",
-        
-        
-        
+        "pages/course-list/course-list",
         "pages/review_release/review_release",
-        
         "pages/login_register/login/login",
         "pages/login_register/register/register",
         "pages/mine/mine",
-        
-
         "pages/home/home",
         "pages/button/button",
         "pages/tabs/tabs",
@@ -66,6 +60,7 @@
         "pages/release/release",
         "pages/info-feedback/info-feedback",
         "pages/concerning/concerning",
+        "pages/report/report",
         "pages/statistics/statistics"
     ],
     "subpackages": [

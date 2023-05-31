@@ -1,5 +1,8 @@
 <!--pages/review_overview/review_overview.wxml-->
-<t-back-top theme="round" text="顶部" bind:to-top="onToTop"></t-back-top>
+<view class="my_top">
+    <t-back-top  theme="round" text="顶部" bind:to-top="onToTop"></t-back-top>      
+</view>
+
 
 <view class="homeBox"></view>
     <view class="demo-title">{{course.courseName}}</view>
@@ -7,7 +10,7 @@
     <t-tag class="margin-16" theme="primary">{{course.departmentName}}</t-tag>
     <t-tag class="margin-16" variant="light-outline">{{course.credit}}学分</t-tag>
 </view>
-<view>评分总览</view>
+<view class="my-title">评分总览</view>
 <t-cell-group  class = "review" theme="card" bordered="false">
     
     <t-cell title="22-23-3学期" 
@@ -18,38 +21,62 @@
 
 
 
-<view class="wrapper">
-   <text>教师筛选</text>
+<!-- <view class="wrapper"> -->
+   <text class="my-title">教师筛选</text>
     <view class="block">
        <view class="flex-container">
-    <block wx:for="{{course.teachers}}" wx:key="index">
-      <view class="block">
-        <t-check-tag class="margin-16" size="large" variant="light" content="{{item}}"
-                   data-index="{{index}}"  bind:change="filterTeachers" />
-      </view>
-    </block>
-  </view>
+            <block wx:for="{{course.teachers}}" wx:key="index">
+                <!-- <view class="block"> -->
+                    <t-check-tag class="margin-16" size="large" variant="light" content="{{item}}"
+                        data-index="{{index}}"  bind:change="filterTeachers" />
+                <!-- </view> -->
+            </block>
+        </view>
     </view>
   
-</view>
+<!-- </view> -->
 
-<view>评价详情</view>
+<view class="my-title">评价详情</view>
 <block wx:for="{{reviews_show}}" wx:for-item="review" wx:for-index = "i" wx:for-key = "review.id">
     <t-cell-group  class = "review" theme="card" bordered="false">
     
         <t-cell title="{{review.title}}" 
-        description = "{{review.teacher_name}}老师（{{review.semester}}学期)，{{review.time}}" hover = false />
+        description = "{{review.teacher_name}}老师（{{review.semester}}学期），{{review.time}}" hover = false />
         <t-cell description = "{{review.text}}"/>
     </t-cell-group>
 
-    <view class="button-example">
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">举报</t-button>
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "supportReview">赞</t-button>
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
-    </view>
+    <!-- <view class="button-example">
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">
+            <image class="my_img" src="../../images/review_overview/reportUnSelected.svg"></image>
+        </t-button>
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "supportReview">
+            <image mode="aspectFit" src="../../images/review_overview/reportUnSelected.svg"></image>
+        </t-button>
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">
+            <image mode="aspectFit" src="../../images/review_overview/reportUnSelected.svg"></image>
+        </t-button>
+    </view> -->
+
+    <view wx:if="{{addBookrackSucceed==false}}">
+     <view>
+        <image src="{{iconAddBookrackSucceed}}"></image>
+        <view class="{{addBookrackSucceed==false? 'active':''}}">{{bookAddBookrackSucceed}}</view>
+     </view>
+</view>
+<view wx:else>
+     <view bindtap="chooseAddBookrack">
+        <image src="{{iconAddBookrack}}"></image>
+        <view>{{bookAddBookrack}}</view>
+     </view>
+</view>
 
  </block>
 
+
+<!-- "pagePath": "pages/course-list/course-list",
+                "text": "课程列表",
+                "iconPath": "images/course-list/courseListUnSelected.png",
+                "selectedIconPath": "images/course-list/courseListSelected.png" -->
 
 
 

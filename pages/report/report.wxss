@@ -1,19 +1,10 @@
-  view input {
-    width: 100vw;
-    height: 80rpx;
-    border: 1px solid black;
-    border-radius: 8rpx;
-  }
-  .button-example {
-    margin: 0 32rpx;
-  }
-  .contentView{
+.contentView{
     width: 100%;
     margin-top: 40rpx;
   }
   .textarea_title{
     margin-left: 20rpx;
-    color: rgb(0, 0, 0)
+    color: gray
   }
   .textarea_bg{
     padding: 0 25rpx;
@@ -22,4 +13,5 @@
   textarea{
     width: 700rpx;
     padding: 25rpx 0;
-  }  
+  } 
+  

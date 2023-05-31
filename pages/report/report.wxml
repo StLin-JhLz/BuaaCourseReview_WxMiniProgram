@@ -1,0 +1,17 @@
+ <view class="contentView">
+  <view class="textarea_title">输入区域高度自适应，不会出现滚动条</view>
+  <view class="textarea_bg">
+    <textarea bindinput="textareaInput1" maxlength="-1" auto-height />
+  </view>
+</view>
+
+<view class="contentView">
+  <view class="textarea_title">输入区域高度固定，有滚动条</view>
+  <view class="textarea_bg">
+    <textarea bindinput="textareaInput2" style="height: 4em" maxlength="-1" />
+  </view>
+</view> 
+
+
+
+
