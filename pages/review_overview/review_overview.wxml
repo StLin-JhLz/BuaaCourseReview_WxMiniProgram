@@ -43,8 +43,9 @@
     </t-cell-group>
 
     <view class="button-example">
-        <t-button theme="primary" size="small">赞</t-button>
-        <t-button theme="primary" size="small">踩</t-button>
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">举报</t-button>
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "supportReview">赞</t-button>
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
     </view>
 
  </block>
