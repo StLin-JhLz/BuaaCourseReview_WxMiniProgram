@@ -1,12 +1,12 @@
 {
     "pages": [
+        "pages/review_overview/review_overview",
         "pages/home-page/home-page",
         "pages/review_release/review_release",
         "pages/login_register/login/login",
         "pages/login_register/register/register",
         "pages/mine/mine",
         "pages/course-list/course-list",
-        "pages/review_overview/review_overview",
         "pages/home/home",
         "pages/button/button",
         "pages/tabs/tabs",
@@ -144,13 +144,13 @@
     },
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#0000ff",
+        "navigationBarBackgroundColor": "#88ccee",
         "backgroundColor": "#f6f6f6",
         "navigationBarTitleText": "北航课程评价",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
-        "backgroundColor": "#0000ff",
+        "backgroundColor": "#88ccee",
         "borderStyle": "white",
         "color": "#ffffff",
         "position": "bottom",
