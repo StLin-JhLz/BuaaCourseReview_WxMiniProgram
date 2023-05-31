@@ -6,6 +6,7 @@
     <t-input bindblur="CourseFit" placeholder="输入你想查询的课程"></t-input>
     <navigator url="../review_release/review_release">
         <!-- <t-fab icon="add" aria-label="增加">添加评测</t-fab> -->
-        <button style="color: rgb(255, 255, 255); background-color: blue;">发布评测</button>
+        <view class="my_button">发布评测</view>
+        <!-- <button style="color: rgb(255, 255, 255); background-color: blue;">发布评测</button> -->
     </navigator>    
 
