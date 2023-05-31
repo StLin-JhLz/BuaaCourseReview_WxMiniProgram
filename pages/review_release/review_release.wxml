@@ -2,27 +2,51 @@
 
 
 
-<t-cell class="mb-16" title="学期" arrow hover note="{{dateText}}" bind:click="onSeasonPicker" />
+<view class="example-search">
+        <t-search
+        value="{{searchValue}}"
+        center
+        placeholder="输入你想评价的课程名"
+        action="{{actionText}}"
+        bind:blur="blurHandle"
+        bind:focus="focusHandle"
+        bind:action-click="actionHandle"
+        bind:change="changeHandle"
+        />
+    </view>
+    
+    <scroll-view wx:if="{{focus}}"  scroll-y="true">
+        <view wx:for="{{course_list_show}}" wx:key="name">
+            <view class="scrollItem">
+                <view class="font1" space="nbsp" bind:tap="navigate_courseId" data-course = "{{item}}">   {{item.name}} ({{item.department}}, {{item.credit}}学分)</view>
+                <!-- <view class="font2" space="nbsp"> {{item.id}}   </view> -->
+            </view>
+        </view>
+    </scroll-view>
+ <t-cell title="课程" description="{{course_select_str}}"  />
 
-
+    <t-cell class="mb-16" title="教师" arrow hover note="{{teacherText}}" bind:click="onTeacherPicker" />
 <t-picker
-  visible="{{cityVisible}}"
-  value="{{cityValue}}"
-  data-key="city"
-  title="选择城市"
+  visible="{{teacherVisible}}"
+  value="{{teacherValue}}"
+  data-key="teacher"
+  title="选择教师"
   cancelBtn="取消"
   confirmBtn="确认"
   bindchange="onPickerChange"
   bindpick="onColumnChange"
   bindcancel="onPickerCancel"
 >
-  <t-picker-item options="{{citys}}" />
-</t-picker>
+  <t-picker-item options="{{teachers}}" /></t-picker>
+
+
+
+<t-cell class="mb-16" title="学期" arrow hover note="{{semesterText}}" bind:click="onSemesterPicker" />
 
 <t-picker
-  visible="{{dateVisible}}"
-  value="{{dateValue}}"
-  data-key="date"
+  visible="{{semesterVisible}}"
+  value="{{semesterValue}}"
+  data-key="semester"
   title="选择学期"
   cancelBtn="取消"
   confirmBtn="确认"
@@ -31,16 +55,16 @@
   bindcancel="onPickerCancel"
 >
   <t-picker-item options="{{years}}"></t-picker-item>
-  <t-picker-item options="{{seasons}}"></t-picker-item>
+  <t-picker-item options="{{semesters}}"></t-picker-item>
 </t-picker>
 
 <view class="demo-rate">
   <view class="demo-rate__title">总体评价</view>
-  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[0]}}" data-index="{{0}}" bind:change="onChange" showText="{{true}}" />
 </view>
 <view class="demo-rate">
     <view class="demo-rate__title">内容质量</view>
-  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[1]}}" data-index="{{1}}" bind:change="onChange" showText="{{true}}" />
 </view>
 <view class="demo-rate">
     <view class="demo-rate__title">工作量</view>
@@ -48,7 +72,7 @@
 </view>
 <view class="demo-rate">
     <view class="demo-rate__title">考核/给分</view>
-  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[3]}}" data-index="{{3}}" bind:change="onChange" showText="{{true}}" />
 </view>
 
 <t-textarea label="标题" placeholder="请输入标题（最多50字）" disableDefaultPadding="{{true}}" maxlength="50" autosize />

@@ -33,7 +33,7 @@ App({
 
     makeTestData() {
         const items = [
-            { name: '信息系统分析与设计', id: 'id', department:'计算机学院', credit:'2' },
+            { name: '软件工程', id: 'id', department:'计算机学院', credit:'2', teachers:['欧阳','孙青'] },
             { name: '学科技术前沿讲座', id: 'id' },
             { name: '计算机网络安全技术', id: 'id' },
             { name: '科研课堂', id: 'id' },
@@ -45,7 +45,6 @@ App({
             { name: '网络攻防技术', id: 'id' },
             { name: 'X86汇编程序设计', id: 'id' },
             { name: '物联网与大数据系统设计', id: 'id' },
-            { name: '软件工程', id: 'id' },
             { name: '机器学习工程基础', id: 'id' },
             { name: '人机交互', id: 'id' },
             { name: '虚拟现实理论与算法', id: 'id' },

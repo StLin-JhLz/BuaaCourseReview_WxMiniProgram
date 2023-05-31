@@ -52,3 +52,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 32rpx;
   }
+
+  .example-search {
+    background-color: #fff;
+    padding: 16rpx 32rpx;
+  }

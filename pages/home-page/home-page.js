@@ -34,7 +34,7 @@ Page({
         var list = this.data.course_list;		//先把第二条json存起来
         var list2 = [];		//定义一个数组
         //循环去取数据
-        for(var i=0;i<list.length;i++){
+        for(var i=0;i<list.length;i++) {
           var string = list[i].name;
           //查询json里的name是否包含搜索的关键词，如果有就把他装进list2数组
           if(string.indexOf(e.detail.value) >= 0){
