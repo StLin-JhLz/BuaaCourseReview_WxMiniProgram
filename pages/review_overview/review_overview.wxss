@@ -89,24 +89,19 @@
   }
 
 
-/* 11111 */
-  .base-button .book-button-left {
-    display: flex;
-  }
-  .base-button .book-button-left view image {
-    padding-top: 10rpx; 
-    width: 50rpx;
-    height: 50rpx;
-    display: block;
-    margin: 0 auto;
-  }
-  .base-button .book-button-left view view {
-    width: 100%;
-    font-size: 20rpx;
-    color: #515151;
+
+/* 111 */
+
+/**index.wxss**/
+ 
+.tapimg1{  
+    width: 150rpx;
+    height: 150rpx;
   }
    
-  /* 点击后的样式 */
-  .active {
-    color: #8a8a8a !important;
+  .tapbtn1[plain]{
+    padding: 0;
+    border:none;   
+    width: 150rpx;
+    height: 150rpx;
   }

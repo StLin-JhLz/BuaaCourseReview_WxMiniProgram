@@ -4,21 +4,11 @@ const apis = APIS
 Page({
 
     
-    // 加入书架
-    chooseAddBookrack: function() {
-        let value = this.data.addBookrackSucceed;
-        this.setData({
-          addBookrackSucceed: !value
-        })
-        console.log(value)
-    },
+
     /**
      * 页面的初始数据
      */
     data: {
-            addBookrackSucceed: true,
-            iconAddBookrack: "../../images/review_overview/reportUnSelected.svg",         //添加书架图标
-            iconAddBookrackSucceed: "../../images/review_overview/reportSelected.svg",         //添加书籍成功图标    
 
         course:{
             courseName : "",
