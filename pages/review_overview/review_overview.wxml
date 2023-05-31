@@ -58,17 +58,17 @@
     </view> -->
 
     <view wx:if="{{addBookrackSucceed==false}}">
-     <view>
-        <image src="{{iconAddBookrackSucceed}}"></image>
-        <view class="{{addBookrackSucceed==false? 'active':''}}">{{bookAddBookrackSucceed}}</view>
-     </view>
-</view>
-<view wx:else>
-     <view bindtap="chooseAddBookrack">
-        <image src="{{iconAddBookrack}}"></image>
-        <view>{{bookAddBookrack}}</view>
-     </view>
-</view>
+        <view>
+            <image src="{{iconAddBookrackSucceed}}"></image>
+            <view class="{{addBookrackSucceed==false? 'active':''}}">{{bookAddBookrackSucceed}}</view>
+        </view>
+    </view>
+    <view wx:else>
+        <view bindtap="chooseAddBookrack">
+            <image src="{{iconAddBookrack}}"></image>
+            <view>{{bookAddBookrack}}</view>
+        </view>
+    </view>
 
  </block>
 
