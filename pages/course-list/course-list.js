@@ -1,7 +1,6 @@
 // pages/course-list/course-list.js
-const image = 'https://tdesign.gtimg.com/miniprogram/images/example2.png';
-const items = new Array(12).fill({ label: '计算机网络实验', image }, 0, 12);
-var course_list_json = require('../../my_data/course_list')
+import { APIS } from "../../utils/api.js"
+const apis = APIS
 
 Page({
   offsetTopList: [],
@@ -10,47 +9,14 @@ Page({
     sideBarIndex: 1,
     scrollTop: 0,
     // categories: course_list_json.courseList
-    categories: [
-      {
-        label: '01 材院',
-        title: '01 材料学院',
-        badgeProps: {},
-        items,
-      },
-      {
-        label: '06 计院',
-        title: '06 计算机学院',
-        badgeProps: {
-          dot: true,
-        },
-        items: items.slice(0, 9),
-      },
-      {
-        label: '23 高工',
-        title: '23 沈元荣誉学院',
-        badgeProps: {},
-        items: items.slice(0, 9),
-      },
-      {
-        label: '73 书院',
-        title: '标题四',
-        badgeProps: {
-          count: 6,
-        },
-        items: items.slice(0, 6),
-      },
-      {
-        label: '智慧树',
-        title: '标题五',
-        badgeProps: {},
-        items: items.slice(0, 3),
-      },
-    ]
+    categories: [], // 课程列表
   },
   onLoad() {
+    this.setData({
+        categories : getApp().globalData.course_list
+    });
     const query = wx.createSelectorQuery().in(this);
     const { sideBarIndex } = this.data;
-
     query
       .selectAll('.title')
       .boundingClientRect((rects) => {
@@ -58,6 +24,18 @@ Page({
         this.setData({ scrollTop: rects[sideBarIndex].top });
       })
       .exec();
+  },
+
+  onShow() {
+      
+  },
+
+  clickCourse(event){
+      const id = event.currentTarget.dataset.id;
+      getApp().globalData.navigate_courseId = id;
+    wx.navigateTo({
+        url: '/pages/review_overview/review_overview?id=' + id,
+      });
   },
 
   onTabsChange(e) {
@@ -84,4 +62,5 @@ Page({
       this.setData({ sideBarIndex: index });
     }
   },
+
 });

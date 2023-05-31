@@ -2,21 +2,53 @@
 <t-back-top theme="round" text="顶部" bind:to-top="onToTop"></t-back-top>
 
 <view class="homeBox"></view>
-    <view class="demo-title">{{courseName}}</view>
+    <view class="demo-title">{{course.courseName}}</view>
     <view class="block">
-    <t-tag class="margin-16" theme="primary">{{departmentName}}</t-tag>
-    <t-tag class="margin-16" variant="light-outline">{{credit}}学分</t-tag>
+    <t-tag class="margin-16" theme="primary">{{course.departmentName}}</t-tag>
+    <t-tag class="margin-16" variant="light-outline">{{course.credit}}学分</t-tag>
 </view>
-
-<t-cell-group title="标题" class = "review" theme="card" bordered="false">
+<view>评分总览</view>
+<t-cell-group  class = "review" theme="card" bordered="false">
     
-    <t-cell title="{{reviewTitle}}" 
-    description = "{{reviewTeacher}}老师（{{reviewSemester}}学期)，{{reviewDate}}" hover = false />
-    <t-cell description = "{{reviewContent}}"/>
+    <t-cell title="22-23-3学期" 
+    description = "总分:5.0 内容质量:5 工作量:5 考核给分:5" hover = false />
+    <t-cell title="21-22-3学期" 
+    description = "总分:5.0 内容质量:5 工作量:5 考核给分:5" hover = false />
 </t-cell-group>
 
-<view class="button-example">
-  <t-button theme="primary" size="small">赞</t-button>
-  <t-button theme="primary" size="small">踩</t-button>
+
+
+<view class="wrapper">
+   <text>教师筛选</text>
+    <view class="block">
+       <view class="flex-container">
+    <block wx:for="{{course.teachers}}" wx:key="index">
+      <view class="block">
+        <t-check-tag class="margin-16" size="large" variant="light" content="{{item}}"
+                   data-index="{{index}}"  bind:change="filterTeachers" />
+      </view>
+    </block>
+  </view>
+    </view>
+  
 </view>
+
+<view>评价详情</view>
+<block wx:for="{{reviews_show}}" wx:for-item="review" wx:for-index = "i" wx:for-key = "review.id">
+    <t-cell-group  class = "review" theme="card" bordered="false">
+    
+        <t-cell title="{{review.title}}" 
+        description = "{{review.teacher_name}}老师（{{review.semester}}学期)，{{review.time}}" hover = false />
+        <t-cell description = "{{review.text}}"/>
+    </t-cell-group>
+
+    <view class="button-example">
+        <t-button theme="primary" size="small">赞</t-button>
+        <t-button theme="primary" size="small">踩</t-button>
+    </view>
+
+ </block>
+
+
+
 

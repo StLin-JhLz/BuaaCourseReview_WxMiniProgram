@@ -3,11 +3,7 @@
         "pages/review_overview/review_overview",
         "pages/course-list/course-list",
         "pages/home-page/home-page",
-        
-        
-        
         "pages/review_release/review_release",
-        
         "pages/login_register/login/login",
         "pages/login_register/register/register",
         "pages/mine/mine",
@@ -61,12 +57,10 @@
         "pages/notice-bar/notice-bar",
         "pages/image-viewer/image-viewer",
         "pages/result/result",
+        
         "pages/result/result-page",
         "pages/link/link",
-        "pages/release/release",
-        "pages/info-feedback/info-feedback",
-        "pages/concerning/concerning",
-        "pages/statistics/statistics"
+        "pages/release/release"
     ],
     "subpackages": [
         {
@@ -143,20 +137,19 @@
         }
     ],
     "usingComponents": {
-        "t-fab": "tdesign-miniprogram/fab/fab",
         "t-demo": "./components/demo-block/index",
         "t-button": "tdesign-miniprogram/button/button",
         "t-icon": "tdesign-miniprogram/icon/icon"
     },
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#88ccee",
+        "navigationBarBackgroundColor": "#0000ff",
         "backgroundColor": "#f6f6f6",
         "navigationBarTitleText": "北航课程评价",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
-        "backgroundColor": "#88ccee",
+        "backgroundColor": "#0000ff",
         "borderStyle": "white",
         "color": "#ffffff",
         "position": "bottom",
