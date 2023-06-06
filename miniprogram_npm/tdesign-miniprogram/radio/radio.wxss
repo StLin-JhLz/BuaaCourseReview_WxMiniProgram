@@ -62,7 +62,7 @@
   margin-right: 16rpx;
 }
 .t-radio__icon--checked {
-  color: var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #7097ab)));
 }
 .t-radio__icon--disabled {
   cursor: not-allowed;
@@ -89,7 +89,7 @@
   position: absolute;
   width: 5rpx;
   border-radius: 2rpx;
-  background: var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  background: var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #7097ab)));
   transform-origin: top center;
 }
 .t-radio__icon-line:before {
@@ -111,7 +111,7 @@
 .t-radio__icon-dot {
   width: 84rpx;
   height: 84rpx;
-  border: 3px solid var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  border: 3px solid var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #7097ab)));
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -127,7 +127,7 @@
   display: block;
   width: 48rpx;
   height: 48rpx;
-  background: var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  background: var(--td-radio-icon-checked-color, var(--td-brand-color, var(--td-primary-color-7, #7097ab)));
   border-radius: 50%;
 }
 .t-radio__icon-dot--disabled {

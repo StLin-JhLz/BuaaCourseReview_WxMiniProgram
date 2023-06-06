@@ -3,50 +3,95 @@
     <t-back-top  theme="round" text="顶部" bind:to-top="onToTop"></t-back-top>      
 </view>
 
-
 <view class="homeBox"></view>
     <view class="demo-title">{{course.courseName}}</view>
+    <view class="bottom-space"></view>
     <view class="block">
     <t-tag class="margin-16" theme="primary">{{course.departmentName}}</t-tag>
     <t-tag class="margin-16" variant="light-outline">{{course.credit}}学分</t-tag>
 </view>
-<view class="my-title">评分总览</view>
-<t-cell-group  class = "review" theme="card" bordered="false">
-    
-    <t-cell title="22-23-3学期" 
-    description = "总分:5.0 内容质量:5 工作量:5 考核给分:5" hover = false />
-    <t-cell title="21-22-3学期" 
-    description = "总分:5.0 内容质量:5 工作量:5 考核给分:5" hover = false />
-</t-cell-group>
-
-
-
+<view class="bottom-space2"></view>
 <!-- <view class="wrapper"> -->
-   <text class="my-title">教师筛选</text>
+    <text class="my-title">教师筛选</text>
     <view class="block">
        <view class="flex-container">
     <block wx:for="{{course.teachers}}" wx:key="index">
-     
-        <t-check-tag class="margin-16" size="large" variant="light" content="{{item}}"
+        <t-check-tag class="margin-16" size="large" variant="light-outline" content="{{item}}"
                    data-index="{{index}}"  bind:change="filterTeachers" />
-      
     </block>
   </view>
     </view>
+           
+
+<view class="my-title">评分总览</view>
+
+
+<view class="rounded-box">
+  <text class="text_overview_title">共有{{reviews_show_cnt}}条评价（总分/质量/工作量/考核）</text> <br></br>
+  <block wx:for="{{overviews}}" wx:for-item="overview" wx:for-index="i">
+    <rich-text class="text_overview_title">
+      <text>{{overview.semester}}学期（{{overview.reviews_cnt}}条）：</text>
+      <text wx:if="{{overview.rating_total >= 4}}" style="color: green;">{{overview.rating_total}}</text>
+      <text wx:elif="{{overview.rating_total > 2 && overview.rating_total < 4}}" style="color: #ff9900;">{{overview.rating_total}}</text>
+      <text wx:else style="color: red;">{{overview.rating_total}}</text>
+      <text>/</text>
+      <text wx:if="{{overview.rating_quality >= 4}}" style="color: green;">{{overview.rating_quality}}</text>
+      <text wx:elif="{{overview.rating_quality > 2 && overview.rating_quality < 4}}" style="color: #ff9900;">{{overview.rating_quality}}</text>
+      <text wx:else style="color: red;">{{overview.rating_quality}}</text>
+      <text>/</text>
+      <text wx:if="{{overview.rating_workload >= 4}}" style="color: green;">{{overview.rating_workload}}</text>
+      <text wx:elif="{{overview.rating_workload > 2 && overview.rating_workload < 4}}" style="color: #ff9900;">{{overview.rating_workload}}</text>
+      <text wx:else style="color: red;">{{overview.rating_workload}}</text>
+      <text>/</text>
+      <text wx:if="{{overview.rating_assesment >= 4}}" style="color: green;">{{overview.rating_assesment}}</text>
+      <text wx:elif="{{overview.rating_assesment > 2 && overview.rating_assesment < 4}}" style="color: #ff9900;">{{overview.rating_assesment}}</text>
+      <text wx:else style="color: red;">{{overview.rating_assesment}}</text>
+    </rich-text>
+  </block>
+  <t-icon type="success" size="16"></t-icon>
+</view>
+
+<!-- <t-cell-group  class = "review" theme="card" bordered="false">
+
+    <t-cell title="22-23-3学期" 
+
+    description = "总分:5.0 内容质量:5 工作量:5 考核给分:5" hover = false />
+    <t-cell>
+        
+        <view>
+            <view>Cell with Icon</view>
+        </view>
+    </t-cell> -->
+
+
+    
+
+    <!-- <t-cell title="21-22-3学期" 
+    description = "总分:5.0 内容质量:5 工作量:5 考核给分:5" hover = false />
+</t-cell-group> -->
+<!-- <view class="bottom-space2"></view> -->
+
+
+
   
 <!-- </view> -->
-
 <view class="my-title">评价详情</view>
+<view class="bottom-space2"></view>
 <block wx:for="{{reviews_show}}" wx:for-item="review" wx:for-index = "i" wx:for-key = "review.id">
-    <t-cell-group  class = "review" theme="card" bordered="false">
+    <!-- <t-cell-group  class = "review" theme="card" bordered="false">
     
         <t-cell title="{{review.title}}" 
-        description = "{{review.teacher_name}}老师（{{review.semester}}学期），{{review.time}}" hover = false />
-        <t-cell description = "{{review.text}}"/>
-    </t-cell-group>
+        description = "{{review.teacher_name}}老师（{{review.semester}}学期），{{review.time}}" hover = false /> -->
+        
+
+<t-cell-group class="review" theme="card" bordered="false">
+  <t-cell title="{{review.title}}" description="{{review.teacher_name}}老师（{{review.semester}}学期），{{review.time}}" hover="false" />
+  <t-cell class="review-text" description="{{review.text}}" />
+
+</t-cell-group>
 
     <view class="button-example">
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">举报</t-button>
+        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">Report</t-button>
         <view> {{state_text}}</view>
         <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "supportReview">赞</t-button>
         <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
@@ -54,7 +99,7 @@
 
 
  </block>
-
+ <view class="bottom-space2"></view>
 
 
 <!-- "pagePath": "pages/course-list/course-list",

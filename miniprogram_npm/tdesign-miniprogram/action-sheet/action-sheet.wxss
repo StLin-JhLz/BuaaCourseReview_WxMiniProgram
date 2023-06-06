@@ -161,7 +161,7 @@
   transition: all 0.4s ease-in;
 }
 .t-action-sheet__dots-item.t-is-active {
-  background-color: #0052d9;
+  background-color: #128fc8;
 }
 .t-action-sheet__safe {
   padding-bottom: constant(safe-area-inset-bottom);

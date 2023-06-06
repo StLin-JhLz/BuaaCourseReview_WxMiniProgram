@@ -40,7 +40,6 @@ Page({
     navigate_courseId(event) {
         const course = event.currentTarget.dataset.course;
         var teachers = [];
-        
         for (let i=0; i<course.teachers.length; i++) {
             let tmp = {};
             tmp["label"] = course.teachers[i];

@@ -1,11 +1,14 @@
 @font-face {
     font-family: 'SHSN';
-    src: url('/assets/SourceHanSans-Normal.ttf');
+    src: url('/assets/NotoSansHans-Regular.otf')NotoSansHans-Regular;
   }
-.page {
-  background: #f6f6f669;
-  font-family: 'SHSN', sans-serif;
+:root {
+    --font-family: Arial;
+}
 
+page {
+  background: #efefef;
+  font-family: 'SHSN', sans-serif;
 }
 
 .demo {

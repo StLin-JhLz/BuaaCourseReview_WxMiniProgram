@@ -12,19 +12,28 @@
     margin-top: 48rpx;
   }
   
-  .block .margin-16:not(:last-child) {
+  /* .block .margin-16:not(:last-child) {
     margin-right: 32rpx;
+  } */
+  .block .margin-16 {
+    /* margin-right: 32rpx; */
+    margin-top: 15rpx;
   }
 
 .review{
-    margin: 3% auto;
+    margin: 300% auto;
+    
 }
 
 .button-example {
+    font-family: var(--font-family);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 0 32rpx;
+    /* margin: 0 32rpx; */
+    margin: 3% auto;
+    margin-top : 3% auto;
+    margin-bottom: 3% auto;
   }
   
 
@@ -105,3 +114,48 @@
     width: 150rpx;
     height: 150rpx;
   }
+  .review-text {
+    white-space: pre-line;
+}
+
+.bottom-space {
+    padding-bottom: 10rpx;
+  }
+
+  .bottom-space2 {
+    padding-bottom: 15rpx;
+  }
+
+  .icon-container {
+    margin-right: 10rpx; /* 调整图标与其他内容的间距 */
+  }
+  
+
+  
+  .rounded-box {
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 15rpx; /* 圆角半径，根据需求调整 */
+    padding: 10rpx; /* 内边距，根据需求调整 */
+    margin: 3% auto;
+    width:90%;
+  }
+  
+  .text_overview_title {
+    color: #000000; /* 文字颜色，根据需求调整 */
+    font-size: 30rpx;
+    display:flex;
+    align-items:center;
+    margin:25rpx;
+    /* margin-left : 25rpx;
+    margin-right: 25rpx; */
+  }
+  .text_overview_main {
+    color: #000000; /* 文字颜色，根据需求调整 */
+    font-size: 30rpx;
+    display:flex;
+    align-items:center;
+    margin:25rpx;
+    /* margin-left : 25rpx;
+    margin-right: 25rpx; */
+  }
+  

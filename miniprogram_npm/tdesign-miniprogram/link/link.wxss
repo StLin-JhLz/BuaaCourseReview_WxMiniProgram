@@ -50,19 +50,19 @@
   font-size: 36rpx;
 }
 .t-link--primary {
-  color: var(--td-link-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-link-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
 }
 .t-link--primary.t-link--underline::after {
-  border-color: var(--td-link-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  border-color: var(--td-link-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
 }
 .t-link--primary.t-link--disabled {
   color: var(--td-link-primary-disabled-color, var(--td-brand-color-disabled, var(--td-primary-color-3, #b5c7ff)));
 }
 .t-link--primary.t-link--hover {
-  color: var(--td-link-primary-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #003cab)));
+  color: var(--td-link-primary-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #128fc8)));
 }
 .t-link--primary.t-link--hover.t-link--underline::after {
-  border-color: var(--td-link-primary-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #003cab)));
+  border-color: var(--td-link-primary-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #128fc8)));
 }
 .t-link--success {
   color: var(--td-link-success-color, var(--td-success-color, var(--td-success-color-5, #2ba471)));
@@ -104,10 +104,10 @@
   color: var(--td-link-default-disabled-color, var(--td-text-color-disabled, var(--td-font-gray-4, rgba(0, 0, 0, 0.26))));
 }
 .t-link--default.t-link--hover {
-  color: var(--td-link-default-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #003cab)));
+  color: var(--td-link-default-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #128fc8)));
 }
 .t-link--default.t-link--hover.t-link--underline::after {
-  border-color: var(--td-link-default-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #003cab)));
+  border-color: var(--td-link-default-active-color, var(--td-brand-color-active, var(--td-primary-color-8, #128fc8)));
 }
 .t-link--danger {
   color: var(--td-link-danger-color, var(--td-error-color, var(--td-error-color-6, #d54941)));

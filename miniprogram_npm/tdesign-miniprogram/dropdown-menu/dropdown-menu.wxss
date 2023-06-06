@@ -58,7 +58,7 @@
   color: var(--td-dropdown-menu-colorm, var(--td-font-gray-1, rgba(0, 0, 0, 0.9)));
 }
 .t-dropdown-menu__item--active {
-  color: var(--td-dropdown-menu-active-colorm, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-dropdown-menu-active-colorm, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
 }
 .t-dropdown-menu__item--disabled {
   color: var(--td-dropdown-menu-disabled-colorm, var(--td-font-gray-4, rgba(0, 0, 0, 0.26)));

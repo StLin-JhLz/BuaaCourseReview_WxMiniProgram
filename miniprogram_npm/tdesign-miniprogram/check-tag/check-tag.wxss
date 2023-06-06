@@ -95,8 +95,8 @@
 }
 .t-tag--dark.t-tag--primary {
   color: var(--td-font-white-1, #ffffff);
-  border-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
-  background-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  border-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
+  background-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
 }
 .t-tag--dark.t-tag--success {
   color: var(--td-font-white-1, #ffffff);
@@ -122,8 +122,8 @@
   background-color: var(--td-tag-default-light-color, var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3)));
 }
 .t-tag--outline.t-tag--primary {
-  color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
-  border-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
+  border-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
   background-color: var(--td-tag-primary-light-color, var(--td-brand-color-light, var(--td-primary-color-1, #f2f3ff)));
 }
 .t-tag--outline.t-tag--success {
@@ -165,7 +165,7 @@
   background-color: var(--td-tag-default-light-color, var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3)));
 }
 .t-tag--light.t-tag--primary {
-  color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
   border-color: var(--td-tag-primary-light-color, var(--td-brand-color-light, var(--td-primary-color-1, #f2f3ff)));
   background-color: var(--td-tag-primary-light-color, var(--td-brand-color-light, var(--td-primary-color-1, #f2f3ff)));
 }
@@ -193,8 +193,8 @@
   background-color: var(--td-tag-default-light-color, var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3)));
 }
 .t-tag--light-outline.t-tag--primary {
-  color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
-  border-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
+  border-color: var(--td-tag-primary-color, var(--td-brand-color, var(--td-primary-color-7, #128fc8)));
   background-color: var(--td-tag-primary-light-color, var(--td-brand-color-light, var(--td-primary-color-1, #f2f3ff)));
 }
 .t-tag--light-outline.t-tag--success {

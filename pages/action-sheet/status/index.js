@@ -15,7 +15,7 @@ Component({
           {
             label: '自定义选项',
             icon: 'app',
-            color: '#0052D9',
+            color: '#128fc8',
           },
           {
             label: '失效选项',

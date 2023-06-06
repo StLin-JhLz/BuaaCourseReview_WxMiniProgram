@@ -9,7 +9,7 @@
   background-color: #ed7b2f;
 }
 .favor-btn {
-  background-color: #0052d9;
+  background-color: #128fc8;
 }
 .t-swipe-cell {
   margin-bottom: 32rpx;

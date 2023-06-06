@@ -8,7 +8,7 @@
 }
 
 .card--active {
-  border-color: #0052d9;
+  border-color: #128fc8;
 }
 
 .card--active::after {
@@ -18,7 +18,7 @@
   left: 0;
   top: 0;
   width: 0;
-  border: 14px solid #0052d9;
+  border: 14px solid #128fc8;
   border-bottom-color: transparent;
   border-right-color: transparent;
 }

@@ -46,6 +46,12 @@ Page({
           });
     },
 
+    handleClick() {
+      wx.navigateTo({
+        url: '/pages/review_release/review_release',
+      });
+    },
+
     changeHandle(e) {
         const { value } = e.detail;
         this.setData({

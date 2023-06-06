@@ -1,6 +1,7 @@
 // pages/review_overview/review_overview.js
 import { APIS } from "../../utils/api.js"
 const apis = APIS
+
 Page({
 
     
@@ -9,7 +10,6 @@ Page({
      * 页面的初始数据
      */
     data: {
-
         course:{
             courseName : "",
             departmentName : "",
@@ -18,8 +18,18 @@ Page({
             teachers_name2index:{},
             teachers_filter : [],
         },
+        overviews:[{
+            semester:"",
+            reviews_cnt:"",
+            rating_total : 5,
+            rating_quality : 5,
+            rating_workload : 5,
+            rating_assesment : 5,
+        }],
         reviews:[],
+        reviews_cnt:0,
         reviews_show:[],
+        reviews_show_cnt : 0,
         state_text :"已举报"
     },
     
@@ -46,6 +56,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
+        const self = this
         const course_id = getApp().globalData.navigate_courseId;
         console.log(course_id);
         if (apis.main.api_undefined == true)
@@ -64,8 +75,10 @@ Page({
               //console.log(res.data); // 返回的数据
               self.setData({
                 course: res.data.course,
-                reviews: res.data.reviews
+                reviews: res.data.reviews,
+                
               })
+              
             },
             fail: function (err) {
               // 请求失败的回调函数
@@ -75,6 +88,9 @@ Page({
               // 请求完成的回调函数，无论成功还是失败都会执行
             }
           });
+        self.setData({reviews_cnt:this.data.reviews.length})
+
+       
         //创建teachers_filters数组
         for (let i = 0; i < this.data.course.teachers.length; i++) {
             this.data.course.teachers_filter.push(0);
@@ -91,7 +107,87 @@ Page({
         });
         // 初始化review_show
         this.setData({
-            "reviews_show" : this.data.reviews 
+            "reviews_show" : this.data.reviews ,
+        });
+        this.setData({
+            reviews_show_cnt: this.data.reviews_show.length
+        });
+
+        this.makeRateScore();
+        
+    },
+
+    makeRateScore() {
+         //排序，获得评分总览
+         this.sortBySemester();
+         const overview_src = {
+            semester:"",
+            reviews_cnt:0,
+            rating_total : 0,
+            rating_quality : 0,
+            rating_workload : 0,
+            rating_assesment : 0,
+        };
+        var overviews = [];
+        var overview = {...overview_src};
+        var semester = "0";
+        var i=0;
+        for(; i<this.data.reviews_show.length; i++) {
+            if (this.data.reviews_show[i].semester.localeCompare(semester) != 0) {
+                if (i != 0) {
+                    overview.semester = semester;
+                    overview.rating_total /= overview.reviews_cnt;
+                    overview.rating_quality /= overview.reviews_cnt;
+                    overview.rating_workload /= overview.reviews_cnt;
+                    overview.rating_assesment /= overview.reviews_cnt;
+                    overview.rating_total = overview.rating_total.toFixed(1);
+                    overview.rating_quality = overview.rating_quality.toFixed(1);
+                    overview.rating_workload = overview.rating_workload.toFixed(1);
+                    overview.rating_assesment = overview.rating_assesment.toFixed(1);
+                    overviews.push({...overview});
+                    overview = {...overview_src};
+                    console.log(overviews[0].semester);
+                } 
+            }
+            semester = this.data.reviews_show[i].semester;
+            overview.rating_total += this.data.reviews_show[i].rating_total;
+            overview.rating_quality += this.data.reviews_show[i].rating_quality;
+            overview.rating_workload += this.data.reviews_show[i].rating_workload;
+            overview.rating_assesment += this.data.reviews_show[i].rating_assesment;
+            overview.reviews_cnt ++;
+            
+        } 
+        if(i!=0){
+            overview.semester = semester;
+            overview.rating_total /= overview.reviews_cnt;
+            overview.rating_quality /= overview.reviews_cnt;
+            overview.rating_workload /= overview.reviews_cnt;
+            overview.rating_assesment /= overview.reviews_cnt;
+            overview.rating_total = overview.rating_total.toFixed(1);
+            overview.rating_quality = overview.rating_quality.toFixed(1);
+            overview.rating_workload = overview.rating_workload.toFixed(1);
+            overview.rating_assesment = overview.rating_assesment.toFixed(1);
+            overviews.push({...overview});
+            console.log(overviews[0].semester);
+            overview = overview_src;
+        }
+        
+        
+        this.setData({overviews:overviews});
+    },
+
+    sortByTime() {
+        //排序，获得评分总览
+        this.data.reviews_show.sort((a,b)=>{
+            return a.time.localeCompare(b.time) ;
+        });
+    },
+
+    sortBySemester() {
+        this.data.reviews_show.sort((a,b)=>{
+            if(a.semester.localeCompare(b.semester) *-1 == 0)
+                return a.time.localeCompare(b.time) ;
+            return a.semester.localeCompare(b.semester) *-1;
         });
     },
 
@@ -150,6 +246,7 @@ Page({
             this.setData({
                 "reviews_show" : this.data.reviews 
             })
+           
         } else {
             this.setData({
                 "reviews_show" : []
@@ -161,7 +258,12 @@ Page({
             this.setData({
                 "reviews_show" : this.data.reviews_show
             })
+            
         }
+        this.makeRateScore();
+        this.setData({
+            reviews_show_cnt: this.data.reviews_show.length
+        });
     },
     
     reportReview(event) {
@@ -181,14 +283,14 @@ Page({
             courseName : "软件工程",
             departmentName : "计算机学院",
             credit : "2",
-            teachers: ['欧阳元新','孙青','测试一','测试二','测试三'],
+            teachers: ['欧阳元新','孙青','测试一','测试二','测试三', '测试四'],
             teachers_filter:[],
             teachers_name2index:{}
         };
         this.setData({
             course: course,
         })
-        var a = {
+        var a = [{
             id : "1afbc",
             user_id : "1afbc",
             time : "2022/09/02",
@@ -198,31 +300,48 @@ Page({
             teacher_name : "欧阳元新",
             semester : "21-22-3",
             rating_total : 5,
-            rating_quality : 5,
+            rating_quality : 1.0,
             rating_workload : 5,
             rating_assesment : 5,
             title : "好课",
-            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
-        };
-        var b = {
+            text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+            status : 0, // 0 未举报 1 已举报 2 已删除
+        }, {
             id : "1afbc",
             user_id : "1afbc",
-            time : "2022/09/02",
+            time : "2022/09/01",
             agree_cnt : "5",
             disagree_cnt : "3",
             course_id : "1afbcd",
             teacher_name : "孙青",
-            semester : "21-22-3",
+            semester : "20-21-3",
             rating_total : 5,
             rating_quality : 5,
             rating_workload : 5,
             rating_assesment : 5,
             title : "好课",
-            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
-        };
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评\n价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        },{
+            id : "1afbc",
+            user_id : "1afbc",
+            time : "2022/09/01",
+            agree_cnt : "5",
+            disagree_cnt : "3",
+            course_id : "1afbcd",
+            teacher_name : "孙青",
+            semester : "20-21-3",
+            rating_total : 1.0,
+            rating_quality : 4,
+            rating_workload : 5,
+            rating_assesment : 5,
+            title : "好课",
+            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评\n价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        }];
+        
         //console.log(this.data.length);
-        this.data.reviews.push(a);
-        this.data.reviews.push(b);
+        a.forEach(element => {this.data.reviews.push(element)});
+        // this.data.reviews.push(a);
+        // this.data.reviews.push(b);
         this.setData({
            reviews : this.data.reviews,
         })

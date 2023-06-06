@@ -7,6 +7,7 @@
         "t-icon": "tdesign-miniprogram/icon/icon",
         "t-back-top": "tdesign-miniprogram/back-top/back-top",
         "t-button": "tdesign-miniprogram/button/button",
-        "t-check-tag": "tdesign-miniprogram/check-tag/check-tag"
+        "t-check-tag": "tdesign-miniprogram/check-tag/check-tag",
+        "t-progress": "tdesign-miniprogram/progress/progress"
     }
 }

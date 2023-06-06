@@ -87,7 +87,7 @@
 .t-search__search-action {
   margin-left: 30rpx;
   font-size: var(--td-search-font-size, var(--td-font-size-m, 32rpx));
-  color: var(--td-search-action-color, var(--td-brand-color, var(--td-primary-color-7, #0052d9)));
+  color: var(--td-search-action-color, var(--td-brand-color, var(--td-primary-color-7, #7097ab)));
 }
 .t-search__placeholder {
   color: var(--td-search-placeholder-color, var(--td-font-gray-3, rgba(0, 0, 0, 0.4)));
