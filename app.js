@@ -36,16 +36,16 @@ App({
         })
 
         for (let i=0; i<this.globalData.college_course_list.length; i++) {
-            for(let j=0; j<this.globalData.college_course_list[i].items.length; j++) {
-                this.globalData.course_list.push(this.globalData.college_course_list[i].items[j]);
-                //console.log(j+this.globalData.college_course_list[i].items[j].name);
+            for(let j=0; j<this.globalData.college_course_list[i].courses.length; j++) {
+                this.globalData.course_list.push(this.globalData.college_course_list[i].courses[j]);
+                //console.log(j+this.globalData.college_course_list[i].courses[j].name);
             }
         }
         
     },
 
     makeTestData() {
-        const items = [
+        const courses = [
             { name: '软件工程', id: 'id', department:'计算机学院', credit:'2', teachers:['欧阳','孙青'] },
             { name: '学科技术前沿讲座', id: 'id' },
             { name: '计算机网络安全技术', id: 'id' },
@@ -82,7 +82,7 @@ App({
              name:"材料科学与工程学院",
              num:"01",
              name_s:"材料",
-             items:items,
+             courses:courses,
             },
             {
              name:"电子信息工程学院",
@@ -325,67 +325,67 @@ App({
         //       label: '42计算机',
         //       title: '06 计算机学院',
         //       badgeProps: {},
-        //       items: items,
+        //       courses: courses,
         //     },
         //     {
         //       label: '8经管',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '09 数学',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '10 生医',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '11 人文',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '12 外语',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '13 交通',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '14 可靠',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '15 宇航',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '16 飞行',
         //       title: '',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '23 高工',
         //       title: '23 沈元荣誉学院',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '73 书院',
@@ -393,13 +393,13 @@ App({
         //       badgeProps: {
         //         count: 6,
         //       },
-        //       items: [],
+        //       courses: [],
         //     },
         //     {
         //       label: '智慧树',
         //       title: '标题五',
         //       badgeProps: {},
-        //       items: [],
+        //       courses: [],
         //     },
         //   ];
     }
