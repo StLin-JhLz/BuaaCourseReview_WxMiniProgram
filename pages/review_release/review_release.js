@@ -1,3 +1,5 @@
+import { APIS } from "../../utils/api.js"
+const apis = APIS
 Page({
     data: {
       teacherText: '',
@@ -5,15 +7,18 @@ Page({
       semesterText: '',
       semesterValue: [],
       years: [
-        { label: '2021-2022', value: '2021' },
-        { label: '2020-2021', value: '2020' },
-        { label: '2019-2020', value: '2019' },
+        { label: '22-23', value: '22-23' },
+        { label: '21-22', value: '21-22' },
+        { label: '20-21', value: '20-21' },
+        { label: '19-20', value: '19-20' },
+        { label: '18-19', value: '18-19' },
+        { label: '17-18', value: '17-18' },
       ],
       semesters: [
-        { label: '秋季', value: '1' },
-        { label: '春季', value: '3' },
-        { label: '暑假', value: '4' },
-        { label: '寒假', value: '2' },
+        { label: '秋季', value: '-1' },
+        { label: '春季', value: '-3' },
+        { label: '暑假', value: '-4' },
+        { label: '寒假', value: '-2' },
       ],
       teachers:[],
       value: [0,0,0,0],
@@ -30,12 +35,133 @@ Page({
           course_list : [],
           course_list_show : [],
 
+      title : "",
+      text:"",
+      value1:0,
+      value2:0,
+      value3:0,
+      value4:0,
 
     },
+    submit() {
+      console.log("submit");
+      // 获取当前日期
+      const currentDate = new Date();
+      // 获取年份
+      const year = currentDate.getFullYear();
+      // 获取月份（注意月份是从 0 开始的）
+      const month = currentDate.getMonth() + 1;
+      // 获取日期
+      const day = currentDate.getDate();
+      const time_str = year + "/" + month + "/" + day;
+      const review = {
+        //id : "1afbc", 缺省，交给后端生成
+        user_id : getApp().globalData.user_name, //  TODO 
+        time : time_str,
+        agree_cnt : 0,
+        disagree_cnt : 0,
+        //course_id : "1afbcd", TODO 等待搜索框补全
+        teacher_name : "欧阳元新",
+        semester : "21-22-3",
+        // rating_total : 5, 缺省
+        // rating_quality : 1.0, 缺省
+        // rating_workload : 5, 缺省
+        // rating_assesment : 5, 缺省
+        title : "好课",
+        text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+      };
+
+
+      wx.request({
+        url: apis.main.url + apis.release.url, // 请求的 URL
+        method: apis.release.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
+        data: { // 请求的参数，以键值对的形式传递
+          review : review // todo
+        },
+        // header: { // 请求的头部信息，以键值对的形式传递
+        //   'Content-Type': 'application/json'
+        // },
+        success: function (res) {
+          // 请求成功的回调函数
+          //console.log(res.data); // 返回的数据
+          self.setData({
+            course: res.data.course,
+            reviews: res.data.reviews,
+            
+          })
+          
+        },
+        fail: function (err) {
+          // 请求失败的回调函数
+          wx.showToast({
+            title: '提交失败，建议先将评价内容保存到本地以防丢失',
+            icon:'fail',  
+          })
+        },
+        complete: function () {
+          // 请求完成的回调函数，无论成功还是失败都会执行
+        }
+      });
+    },
+
+    input1(e) {
+      const { value } = e.detail;
+      this.setData({title:value});
+    },
+
+    input2() {
+      const { value } = e.detail;
+      this.setData({text:value});
+    },
+
+    onChange1(e) { //打分
+      // const { index } = e.currentTarget.dataset;
+      const { value } = e.detail;
+      this.setData({value1:value});
+      // this.setData({
+      //   [`value[${index}]`]: value,
+      // });
+    },
+
+    onChange2(e) { //打分
+      const { value } = e.detail;
+      this.setData({value2:value});
+    },
+
+    onChange3(e) { //打分
+      const { value } = e.detail;
+      this.setData({value3:value});
+    },
+
+    onChange4(e) { //打分
+      const { value } = e.detail;
+      this.setData({value4:value});
+    },
+
+    semesterConfirm(event) {
+      const value = event.currentTarget.dataset.value;
+      const label = event.currentTarget.dataset.label;
+      const columns = event.currentTarget.dataset.columns;
+      // 使用传递的参数进行相应的逻辑处理
+      console.log('Confirm clicked with value:', value);
+      console.log('Label:', label);
+      console.log('Columns:', columns);
+    },
+
+
+
     onLoad() {
+      wx.onKeyboardHeightChange(this.onKeyboardHeightChange);
         this.setData({
             course_list : getApp().globalData.course_list,
         });
+    },
+    onKeyboardHeightChange(event) {
+      const { height } = event.detail;
+      const bottomDistance = height + 'px';
+      this.setData({
+        keyboardBottomDistance: bottomDistance
+      });
     },
     navigate_courseId(event) {
         const course = event.currentTarget.dataset.course;
@@ -83,13 +209,7 @@ Page({
       onSemesterPicker() {
         this.setData({ semesterVisible: true });
       },
-      onChange(e) { //打分
-        const { index } = e.currentTarget.dataset;
-        const { value } = e.detail;
-        this.setData({
-          [`value[${index}]`]: value,
-        });
-      },
+      
 
       changeHandle(e) { // 搜索课程名
         const { value } = e.detail;

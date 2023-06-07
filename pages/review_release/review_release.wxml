@@ -52,6 +52,7 @@
   confirmBtn="确认"
   bindchange="onPickerChange"
   bindpick="onColumnChange"
+  bind:confirm = "semesterConfirm"
   bindcancel="onPickerCancel"
 >
   <t-picker-item options="{{years}}"></t-picker-item>
@@ -60,22 +61,22 @@
 
 <view class="demo-rate">
   <view class="demo-rate__title">总体评价</view>
-  <t-rate value="{{value[0]}}" data-index="{{0}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[0]}}" data-index="{{0}}" bind:change="onChange1" showText="{{true}}" />
 </view>
 <view class="demo-rate">
     <view class="demo-rate__title">内容质量</view>
-  <t-rate value="{{value[1]}}" data-index="{{1}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[1]}}" data-index="{{1}}" bind:change="onChange2" showText="{{true}}" />
 </view>
 <view class="demo-rate">
     <view class="demo-rate__title">工作量</view>
-  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[2]}}" data-index="{{2}}" bind:change="onChange3" showText="{{true}}" />
 </view>
 <view class="demo-rate">
     <view class="demo-rate__title">考核/给分</view>
-  <t-rate value="{{value[3]}}" data-index="{{3}}" bind:change="onChange" showText="{{true}}" />
+  <t-rate value="{{value[3]}}" data-index="{{3}}" bind:change="onChange4" showText="{{true}}" />
 </view>
 
-<t-textarea label="标题" placeholder="请输入标题（最多50字）" disableDefaultPadding="{{true}}" maxlength="50" autosize />
+<t-textarea label="标题" placeholder="请输入标题（最多50字）" disableDefaultPadding="{{true}}" maxlength="50" bind:change = "input1" autosize />
 <t-divider  />
 
 <t-textarea
@@ -84,11 +85,19 @@
   placeholder="设置最大字符个数"
   maxlength="1000"
   disableDefaultPadding="{{true}}"
+  bind:change = "input2"
   indicator
   autosize
 />
 
 <view class="button-example">
-  <t-button theme="light" block size="large">保存草稿</t-button>
-  <t-button theme="primary" block size="large">提交</t-button>
+  <!-- <t-button theme="light" block size="large" >保存草稿</t-button> -->
+ <t-button theme="primary" block size="large" bind:tap = "submit">提交</t-button>
 </view>
+
+<!-- <view class="button">
+     <button bindtap='save_draft' class="buttonStyle">保存草稿</button>
+    <button bindtap='submit' class="buttonStyle">提交</button>
+  </view> -->
+
+  <view style="margin-bottom: {{keyboardBottomDistance}};"></view>

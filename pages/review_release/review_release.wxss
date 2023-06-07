@@ -48,12 +48,29 @@
 
   .button-example {
     margin: 0 32rpx;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32rpx;
+    /* display: grid; 分栏 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(2, 1fr);
+    gap: 32rpx; */
   }
 
   .example-search {
     background-color: #fff;
     padding: 16rpx 32rpx;
+  }
+
+  .button {
+    margin-top: 60rpx; /* 调整顶部边距 */
+    font-family: "等线", sans-serif;
+  }
+  
+  .buttonStyle {
+    border-radius: 20rpx; /* 调整圆角大小 */
+    background-color: rgb(73, 144, 192);
+    color: white;
+    padding: 20rpx 40rpx; /* 调整内边距 */
+    font-size: 32rpx; /* 调整字体大小 */
+    margin: 10rpx 0; /* 调整上下边距 */
   }

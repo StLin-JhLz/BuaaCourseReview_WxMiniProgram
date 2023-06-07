@@ -1,4 +1,4 @@
-export const APIS ={
+export const APIS ={    
     main:{
         //url: "http://127.0.0.1:8080",
         url : "",
@@ -12,7 +12,7 @@ export const APIS ={
         url: "/api/register",
         method: "POST"
     },
-    review_release:{
+    release:{
         url: "/api/review/release",
         method: "POST"
     },

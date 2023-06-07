@@ -8,7 +8,7 @@ App({
         navigate_courseId: null, // 初始化全局变量 courseId
         college_course_list:[],
         course_list:[],
-        user_name:null,
+        user_name:"TEST", // 应当设为Null
     },
     onShow() {
         
