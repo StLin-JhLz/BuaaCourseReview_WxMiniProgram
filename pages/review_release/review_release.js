@@ -115,27 +115,39 @@ Page({
     },
 
     onChange1(e) { //打分
-      // const { index } = e.currentTarget.dataset;
+      const { index } = e.currentTarget.dataset;
       const { value } = e.detail;
       this.setData({value1:value});
-      // this.setData({
-      //   [`value[${index}]`]: value,
-      // });
+      this.setData({
+        [`value[${index}]`]: value,
+      });
     },
 
     onChange2(e) { //打分
       const { value } = e.detail;
       this.setData({value2:value});
+      const { index } = e.currentTarget.dataset;
+      this.setData({
+        [`value[${index}]`]: value,
+      });
     },
 
     onChange3(e) { //打分
       const { value } = e.detail;
       this.setData({value3:value});
+      const { index } = e.currentTarget.dataset;
+      this.setData({
+        [`value[${index}]`]: value,
+      });
     },
 
     onChange4(e) { //打分
       const { value } = e.detail;
       this.setData({value4:value});
+      const { index } = e.currentTarget.dataset;
+      this.setData({
+        [`value[${index}]`]: value,
+      });
     },
 
     semesterConfirm(event) {
