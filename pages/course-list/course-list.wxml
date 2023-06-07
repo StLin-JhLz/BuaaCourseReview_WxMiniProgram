@@ -25,7 +25,7 @@
     <view wx:for="{{categories}}" wx:key="index" class="section">
       <view class="title">{{item.num}} {{item.name || item.name_s}}</view>
       <t-grid column="{{2}}" border="{{false}}">
-        <block wx:for="{{item.courses}}" wx:key="index" wx:for-item="course">
+        <block wx:for="{{item.courses_show}}" wx:key="index" wx:for-item="course">
           <t-grid-item
             text="{{course.name}}"
             bind:click = "clickCourse"

@@ -12,8 +12,23 @@ Page({
     categories: [], // 课程列表
   },
   onLoad() {
+
+
+    const categories = getApp().globalData.college_course_list;
+    for (let i = 0; i < categories.length; i++) {
+      for (let j = 0; j < categories[i].courses.length; j++) {
+        // console.log(categories[i].courses[j].id.charAt(1));
+        categories[i].courses[j].module = categories[i].courses[j].id.charAt(1);
+        // console.log(categories[i].courses[j].module);
+      }
+      categories[i].courses_show = [];
+      categories[i].courses_show = categories[i].courses_show.concat(categories[i].courses); // 初始化：全部加入
+      // console.log(categories[i].courses_show);
+    }
+    
+
     this.setData({
-        categories : getApp().globalData.college_course_list
+      categories : categories
     });
     const query = wx.createSelectorQuery().in(this);
     const { sideBarIndex } = this.data;
@@ -39,8 +54,28 @@ Page({
   },
 
   onTabsChange(e) {
-
-    this.setData({ catValue: e.detail.value })
+    const value = e.detail.value;
+    const categories = this.data.categories;
+    // console.log(value);
+    if (value === '-1') { // 筛选“全部” 全部加入
+      for (let i = 0; i < categories.length; i++) {
+        categories[i].courses_show = [];
+        categories[i].courses_show = categories[i].courses_show.concat(categories[i].courses); // 初始化：全部加入
+      }
+    } else { // 其它筛选情况
+      // console.log("test"+value);
+      for (let i = 0; i < categories.length; i++) {
+        categories[i].courses_show = [];
+        for (let j = 0; j < categories[i].courses.length; j++) {
+          if (categories[i].courses[j].module === value)
+            categories[i].courses_show.push(categories[i].courses[j]);
+        }
+        console.log("len" + categories[i].courses_show.length);
+      }
+    }
+    this.setData({
+      categories:categories
+    })
   },
 
   onSideBarChange(e) {

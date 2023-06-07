@@ -1,4 +1,4 @@
-import { APIS } from "../../utils/api.js"
+import { APIS } from "../../../utils/api.js"
 const apis = APIS
 
 Page({
