@@ -11,12 +11,13 @@ Page({
      */
     data: {
         course:{
-            courseName : "",
-            departmentName : "",
-            credit : "",
+            id : "",
+            name : "",
+            department : "",
             teachers: [],
             teachers_name2index:{},
             teachers_filter : [],
+            teachers_filter_cnt : 0,
         },
         overviews:[{
             semester:"",
@@ -30,7 +31,8 @@ Page({
         reviews_cnt:0,
         reviews_show:[],
         reviews_show_cnt : 0,
-        state_text :"已举报"
+        state_text :"已举报",
+        sort: 0, //0 发布时间 1 学期
     },
     
     methods: {
@@ -114,6 +116,11 @@ Page({
         });
 
         this.makeRateScore();
+        this.setData({
+            "course.teachers_filter_cnt" : 0,
+            sort:0,
+        });
+        console.log(this.data.course.teachers_filter_cnt);
         
     },
 
@@ -179,6 +186,8 @@ Page({
     sortByTime() {
         //排序，获得评分总览
         this.data.reviews_show.sort((a,b)=>{
+            if(a.time.localeCompare(b.time)  == 0)
+                return a.semester.localeCompare(b.semester) *-1;
             return a.time.localeCompare(b.time) ;
         });
     },
@@ -262,7 +271,8 @@ Page({
         }
         this.makeRateScore();
         this.setData({
-            reviews_show_cnt: this.data.reviews_show.length
+            "course.teachers_filter_cnt" : cnt,
+            reviews_show_cnt: this.data.reviews_show.length,
         });
     },
     
@@ -280,9 +290,9 @@ Page({
 
     makeTestData() {
         var course = {
-            courseName : "软件工程",
-            departmentName : "计算机学院",
-            credit : "2",
+            id : "B3I063210",
+            name : "软件工程",
+            department : "计算机学院",
             teachers: ['欧阳元新','孙青','测试一','测试二','测试三', '测试四'],
             teachers_filter:[],
             teachers_name2index:{}
@@ -305,7 +315,6 @@ Page({
             rating_assesment : 5,
             title : "好课",
             text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
-            status : 0, // 0 未举报 1 已举报 2 已删除
         }, {
             id : "1afbc",
             user_id : "1afbc",
@@ -344,6 +353,7 @@ Page({
         // this.data.reviews.push(b);
         this.setData({
            reviews : this.data.reviews,
+          
         })
         //console.log(this.data.reviews.push(a));
     }

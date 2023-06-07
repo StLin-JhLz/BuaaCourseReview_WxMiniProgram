@@ -4,5 +4,6 @@
         "t-notice-bar": "tdesign-miniprogram/notice-bar/notice-bar",
         "t-fab": "tdesign-miniprogram/fab/fab",
         "t-search": "tdesign-miniprogram/search/search"
-    }
+    },
+    "navigationBarTitleText": "北航课程评价"
 }

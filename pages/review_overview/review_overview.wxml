@@ -4,11 +4,11 @@
 </view>
 
 <view class="homeBox"></view>
-    <view class="demo-title">{{course.courseName}}</view>
+    <view class="demo-title">{{course.name}}</view>
     <view class="bottom-space"></view>
     <view class="block">
-    <t-tag class="margin-16" theme="primary">{{course.departmentName}}</t-tag>
-    <t-tag class="margin-16" variant="light-outline">{{course.credit}}学分</t-tag>
+    <t-tag class="margin-16" theme="primary">{{course.department}}</t-tag>
+    <t-tag class="margin-16" variant="light-outline">{{course.id}}</t-tag>
 </view>
 <view class="bottom-space2"></view>
 <!-- <view class="wrapper"> -->
@@ -27,7 +27,10 @@
 
 
 <view class="rounded-box">
+  <view wx:if="{{course.teachers_filter_cnt == 0}}"> <text class="text_overview_title">展示本课程全部教师班级的评价</text></view>
+  <view wx:if="{{course.teachers_filter_cnt != 0}}"> <text class="text_overview_title" >已筛选{{course.teachers_filter_cnt}}位教师</text></view>
   <text class="text_overview_title">共有{{reviews_show_cnt}}条评价（总分/质量/工作量/考核）</text> <br></br>
+  <view wx:if="{{reviews_show_cnt < 3 && reviews_show_cnt >= 1}}"> <text class="text_overview_title" >当前数据较少，请注意鉴别是否有代表性</text></view>
   <block wx:for="{{overviews}}" wx:for-item="overview" wx:for-index="i">
     <rich-text class="text_overview_title">
       <text>{{overview.semester}}学期（{{overview.reviews_cnt}}条）：</text>
@@ -48,6 +51,7 @@
       <text wx:else style="color: red;">{{overview.rating_assesment}}</text>
     </rich-text>
   </block>
+  <view wx:if="{{reviews_show_cnt == 0}}"> <text class="text_overview_title" >当前暂无评价，快来填写吧，你可以帮助到更多人~</text></view>
   <t-icon type="success" size="16"></t-icon>
 </view>
 
@@ -75,7 +79,7 @@
 
   
 <!-- </view> -->
-<view class="my-title">评价详情</view>
+<view class="my-title" wx:if="{{reviews_show_cnt != 0}}">评价详情</view>
 <view class="bottom-space2"></view>
 <block wx:for="{{reviews_show}}" wx:for-item="review" wx:for-index = "i" wx:for-key = "review.id">
     <!-- <t-cell-group  class = "review" theme="card" bordered="false">
@@ -91,10 +95,10 @@
 </t-cell-group>
 
     <view class="button-example">
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "reportReview">Report</t-button>
-        <view> {{state_text}}</view>
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "supportReview">赞</t-button>
-        <t-button theme="primary" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
+        <t-button theme="danger" size="small" data-id = "{{review.id}}" bind:change = "reportReview">Report</t-button>
+        <view> {{review.agree_cnt - review.disagree_cnt}}</view>
+        <t-button theme="light" size="small" data-id = "{{review.id}}"  bind:change = "supportReview">赞</t-button>
+        <t-button theme="light" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
     </view>
 
 
