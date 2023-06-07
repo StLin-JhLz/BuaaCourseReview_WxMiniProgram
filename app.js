@@ -82,6 +82,7 @@ App({
              name:"材料科学与工程学院",
              num:"01",
              name_s:"材料",
+             items:items,
             },
             {
              name:"电子信息工程学院",

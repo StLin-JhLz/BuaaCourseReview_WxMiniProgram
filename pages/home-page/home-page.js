@@ -62,6 +62,13 @@ Page({
         }
       },
 
+      hideDropdown (event) {
+
+          this.setData({
+            showDropdown: false
+          });
+      },
+
     onLoad() {
         
         
@@ -148,15 +155,15 @@ Page({
   
       focusHandle() {
         this.setData({
-            focus : true,
-          course_list_showtionText: '取消',
+            showDropdown : true,
+          // course_list_showtionText: '取消',
         });
       },
   
       blurHandle() {
         this.setData({
-            focus : false,
-          course_list_showtionText: '',
+            showDropdown : false,
+          // course_list_showtionText: '',
         });
       },
   
