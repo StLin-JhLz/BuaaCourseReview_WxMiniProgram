@@ -3,7 +3,24 @@
     <view class="homeBox"></view>
     <view class="demo-title">欢迎</view>
     <t-notice-bar visible="{{true}}" theme="warning" content="内容提示：目前已经更新新学期课表"></t-notice-bar>
+
+
+    <!-- search相关 -->
     <view class="example-search">
+  <input class="search-input" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" />
+  <view class="dropdown-menu" wx:if="{{ showDropdown }}">
+    <scroll-view class="dropdown-scroll" scroll-y>
+      <block wx:if="{{ searchResults.length > 0 }}" wx:for="{{ searchResults }}" wx:key="index">
+        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">
+          <text class="dropdown-name">{{ item.name }}</text>
+          <text class="dropdown-department">{{ item.department }}</text>
+        </view>
+      </block>
+      <view class="no-matches" wx:if="{{ searchResults.length === 0 }}">暂无匹配项</view>
+    </scroll-view>
+  </view>
+</view>
+    <!-- <view class="example-search">
         <t-search
         value="{{value}}"
         center
@@ -14,7 +31,8 @@
         bind:action-click="actionHandle"
         bind:change="changeHandle"
         />
-    </view>
+    </view> -->
+
     
     <scroll-view wx:if="{{focus}}"  scroll-y="true">
         <view wx:for="{{course_list_show}}" wx:key="name">

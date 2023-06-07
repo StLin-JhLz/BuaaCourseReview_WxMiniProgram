@@ -1,14 +1,16 @@
 import gulpError from './utils/gulpError';
 const test = true
+import { APIS } from "utils/api.js"
+const apis = APIS
 
 App({
-
     globalData: {
         navigate_courseId: null, // 初始化全局变量 courseId
         college_course_list:[],
         course_list:[],
     },
     onShow() {
+        
         if (gulpError !== 'gulpErrorPlaceHolder') {
             wx.redirectTo({
                 url: `/pages/gulp-error/index?gulpError=${gulpError}`,
@@ -16,11 +18,21 @@ App({
         }
     },
     onLaunch() {
+        const self = this;
         if (test == true) {
             this.makeTestData();
-        }
+        } 
 
-        //wx.request
+        wx.request({
+          url: apis.main.url + apis.courselist.url ,
+          method : apis.couselist.method,
+          success(res) {
+              self.globalData.college_course_list = college_course_list;
+          },
+          fail() {
+            console.log("fail in app.js");
+          }
+        })
 
         for (let i=0; i<this.globalData.college_course_list.length; i++) {
             for(let j=0; j<this.globalData.college_course_list[i].items.length; j++) {

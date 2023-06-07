@@ -1,11 +1,11 @@
 <!--pages/course-list/course-list.wxml-->
 <t-tabs defaultValue="{{0}}" theme="card" bind:change="onTabsChange" space-evenly="{{false}}" >
   <t-tab-panel label="全部" value="0" />
-  <t-tab-panel label="基础课" value="1" />
-  <t-tab-panel label="核专" value="2" />
-  <t-tab-panel label="一般专" value="3" />
-  <t-tab-panel label="核通" value="4" />
-  <t-tab-panel label="一般通" value="5" />
+  <t-tab-panel label="基础" value="1" />
+  <t-tab-panel label="核心专业" value="2" />
+  <t-tab-panel label="一般专业" value="3" />
+  <t-tab-panel label="核心通识" value="4" />
+  <t-tab-panel label="一般通识" value="5" />
   <t-tab-panel label="体育" value="6" />
   <t-tab-panel label="其他" value="7" />
   <!-- <t-tab-panel wx:for="{{7}}" wx:key="index" label="选项" value="{{index}}" /> -->

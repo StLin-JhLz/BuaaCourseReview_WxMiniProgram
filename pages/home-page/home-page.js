@@ -1,5 +1,8 @@
+const app = getApp(); // 引入全局的 App 实例
+
 Page({
     data: {
+
         //用于搜索
         focus : false,
       value: '',
@@ -8,13 +11,59 @@ Page({
       course_list : [],
       course_list_show : [],
       imageUrl : '',
+      //search相关
+      searchInput: '',
+        showDropdown: false,
+        searchResults: [],
+        // course_list: [
+        // { title: 'Computer Science and Technology', subtitle: '计算机科学与技术' },
+        // { title: 'Software Engineering', subtitle: '软件工程' },
+        // { title: 'Information Security', subtitle: '信息安全' },
+        // // 其他数据项...
+        // ]
     },
   
+    //search相关
+    handleSearchInput(e) {
+        console.log("Helloworld");
+        const inputText = e.detail.value.trim();
+        const keywords = inputText.split(' ');
+    
+        if (keywords.length > 0) {
+          const results = this.data.course_list.filter((result) => {
+            return keywords.every((keyword) => {
+              return result.title.includes(keyword);
+            });
+          });
+    
+          this.setData({
+            searchInput: inputText,
+            showDropdown: true,
+            searchResults: results,
+          });
+        } else {
+          this.setData({
+            searchInput: inputText,
+            showDropdown: true,
+            searchResults: [],
+          });
+        }
+      },
+
     onLoad() {
+        console.log("Helloworld");
+        console.log(this.data.course_list.length);
+        
         this.setData({
             course_list : getApp().globalData.course_list,
         });
-        this.fetchImage();
+       
+        // this.fetchImage();
+    },
+
+    onShow() {
+        console.log(this.data.course_list.length);
+        console.log("hello");
     },
 
     fetchImage() {
