@@ -15,17 +15,17 @@ Page({
       searchInput: '',
         showDropdown: false, // 是否展示下拉框
         searchResults: [],
-        // course_list: [
-        // { title: 'Computer Science and Technology', subtitle: '计算机科学与技术' },
-        // { title: 'Software Engineering', subtitle: '软件工程' },
-        // { title: 'Information Security', subtitle: '信息安全' },
-        // // 其他数据项...
-        // ]
+        course_list: [
+        { title: 'Computer Science and Technology', subtitle: '计算机科学与技术' },
+        { title: 'Software Engineering', subtitle: '软件工程' },
+        { title: 'Information Security', subtitle: '信息安全' },
+        // 其他数据项...
+        ]
     },
     
     selectItem(event) {
-      // var selectedItem = event.currentTarget.dataset.item;
-      // console.log('选中的课程信息：', selectedItem);
+      var selectedItem = event.currentTarget.dataset.item;
+      console.log('选中的课程信息：', selectedItem);
 
       const id = event.currentTarget.dataset.item.id;
         wx.navigateTo({
