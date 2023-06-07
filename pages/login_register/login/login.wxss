@@ -1,31 +1,37 @@
 .loginBox {
-    width: 80%;
-    margin: 30% auto;
-  }
-  
-  .loginButton {
-    margin-top: 100rpx;
-  }
+  width: 80%;
+  margin: 150rpx auto; /* 调整垂直居中的距离 */
+  text-align: center;
+  font-family: "等线", sans-serif;
+}
 
-/* pages/login/login.wxss
-page {
-    background: #ffffff;
-  }
-  .button-example {
-    margin: 0 32rpx;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32rpx;
-  }
-  
-  .button-example:not(:last-child) {
-    margin-bottom: 32rpx;
-  }
+.title {
+  font-size: 50rpx; /* 调整字体大小 */
+  font-weight: bold;
+  margin-bottom: 50rpx; /* 调整底部边距 */
+}
 
-  .input-example {
-    padding-bottom: constant(safe-area-inset-bottom);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  .t-input {
-    margin-bottom: 32rpx;
-  } */
+.subtitle {
+  font-size: 30rpx; /* 调整字体大小 */
+  color: #999;
+  margin-bottom: 40rpx; /* 调整底部边距 */
+}
+
+.roundedInput {
+  border-radius: 20rpx; /* 调整圆角大小 */
+  font-family: "等线", sans-serif;
+}
+
+.loginButton {
+  margin-top: 60rpx; /* 调整顶部边距 */
+  font-family: "等线", sans-serif;
+}
+
+.buttonStyle {
+  border-radius: 20rpx; /* 调整圆角大小 */
+  background-color: rgb(73, 144, 192);
+  color: white;
+  padding: 20rpx 40rpx; /* 调整内边距 */
+  font-size: 32rpx; /* 调整字体大小 */
+  margin: 10rpx 0; /* 调整上下边距 */
+}

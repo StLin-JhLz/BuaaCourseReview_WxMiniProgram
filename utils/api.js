@@ -1,6 +1,7 @@
 export const APIS ={
     main:{
-        url: "http://127.0.0.1:8080",
+        //url: "http://127.0.0.1:8080",
+        url : "",
         api_undefined: true //是否使用测试数据展示效果
     },
     login :{
@@ -17,7 +18,7 @@ export const APIS ={
     },
     review:{
         url: "/api/review",
-        method: "POST"
+        method: "GET"
     },
     courselist:{
         url: "/api/course_list",

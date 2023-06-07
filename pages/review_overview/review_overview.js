@@ -92,7 +92,7 @@ Page({
           });
         self.setData({reviews_cnt:this.data.reviews.length})
 
-       
+        this.data.course.teachers_filter = [];
         //创建teachers_filters数组
         for (let i = 0; i < this.data.course.teachers.length; i++) {
             this.data.course.teachers_filter.push(0);
@@ -120,7 +120,7 @@ Page({
             "course.teachers_filter_cnt" : 0,
             sort:0,
         });
-        console.log(this.data.course.teachers_filter_cnt);
+        //console.log(this.data.course.teachers_filter_cnt);
         
     },
 

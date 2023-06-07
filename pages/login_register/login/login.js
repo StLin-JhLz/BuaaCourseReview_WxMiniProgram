@@ -40,7 +40,7 @@ Page({
         return
       }
       // 查询数据库，校验账号密码是否正确
-
+      
       wx.request({
         url: apis.main.url + apis.login.url, //仅为示例，并非真实的接口地址
         method: apis.login.method,
@@ -52,7 +52,21 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success (res) {
-          console.log(res.data)
+          if(res.data.res==0) {
+            console.log("登录成功");
+            getApp().globalData.user_name = account; // 记录；
+            wx.setStorage({key:"user_name", data:account});//存入缓存
+            wx.navigateTo({url:'/pages/home-page/home-page'}); //跳转到首页
+          } else {
+            wx.showToast({
+              title: '用户名或密码错误，登录失败',
+              icon: 'none',
+              duration: 1000,
+              mask: true,
+            });
+            console.log("登录失败");
+          }
+          
         },
         fail (res) {
             console.log(res.data)

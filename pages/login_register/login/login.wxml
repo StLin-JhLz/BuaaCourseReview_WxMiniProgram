@@ -1,34 +1,16 @@
 <view class="loginBox">
-  <t-input bindclear="inputChange" bindchange="inputChange" data-prop='account' value="{{formData.account}}" prefixIcon="user-avatar" placeholder="请输入账号" clearable />
+  <view class="title">快速登录到北航课程测评</view>
+  <view class="subtitle">发布评论与对评论的举报需要登录才可进行操作。开发者希望通过用户登录尽可能提高恶意破坏测评平台氛围的成本。 </view>
+  <view class="subtitle">账户功能仅用于对恶意刷屏、恶意举报的用户进行监测，并不会影响平台的匿名性。 为保护用户隐私，平台不使用微信登录。</view>
+  <t-input class="roundedInput" bindclear="inputChange" bindchange="inputChange" data-prop='account' value="{{formData.account}}" prefixIcon="user-avatar" placeholder="请输入账号" clearable />
 
-  <t-input bindclear="inputChange" bind:click='changEye' bindchange="inputChange" data-prop='password' value="{{formData.password}}" prefixIcon="lock-on" placeholder="请输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable />
+  <t-input class="roundedInput" bindclear="inputChange" bind:click='changEye' bindchange="inputChange" data-prop='password' value="{{formData.password}}" prefixIcon="lock-on" placeholder="请输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable />
 
   <view class="loginButton">
-    <t-button bindtap='login' theme="primary" size="large" block>登录</t-button>
+    <button bindtap='login' class="buttonStyle">登录</button>
   </view>
 
   <view class="loginButton">
-    <t-button bindtap='register' theme="primary" size="large" block>无账号，注册</t-button>
+    <button bindtap='register' class="buttonStyle">快速注册</button>
   </view>
 </view>
-
-
-
-<!-- pages/login/login.wxml
-
-<t-input label="用户名" placeholder=""></t-input>
-<t-input label="密码" type="password" value="{{textPassword}}" clearable />
-  <view class="button-example">
-  <t-button theme="primary" size="large" tap = "login1">登录</t-button>
-  <t-button theme="light" size="large" tap = "register">注册</t-button>
-  <t-button size="large">清空</t-button>
-</view>
-
-<view> {{l_r}}</view>
-<view wx:if="{{l_r == 1}}">
-    <view>登录</view>
-</view>
-<view wx:elif="{{l_r==2}}">
-    <view>注册</view>
-</view>
- -->

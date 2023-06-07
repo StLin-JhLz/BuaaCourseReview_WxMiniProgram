@@ -1,17 +1,21 @@
 <!--pages/login_register/register/register.wxml-->
 
 <view class="loginBox">
-  <t-input bindclear="inputChange" bindchange="inputChange" data-prop='account' value="{{formData.account}}" prefixIcon="user-avatar" placeholder="请输入账号" clearable />
+<view class="title">快速注册</view>
+  <view class="subtitle">发布评论与对评论的举报需要登录才可进行操作。开发者希望通过用户登录尽可能提高恶意破坏测评平台氛围的成本。 </view>
+  <view class="subtitle">账户功能仅用于对恶意刷屏、恶意举报的用户进行监测，并不会影响平台的匿名性。 为保护用户隐私，平台不使用微信登录。</view>
+  <t-input class="roundedInput" bindclear="inputChange" bindchange="inputChange" data-prop='account' value="{{formData.account}}" prefixIcon="user-avatar" placeholder="请输入账号" clearable />
 
-  <t-input bindclear="inputChange" bind:click='changEye' bindchange="inputChange" data-prop='password' value="{{formData.password}}" prefixIcon="lock-on" placeholder="请输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable />
+  <t-input class="roundedInput" bindclear="inputChange" bind:click='changEye' bindchange="inputChange" data-prop='password' value="{{formData.password}}" prefixIcon="lock-on" placeholder="请输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable />
 
-  <t-input bindclear="inputChange" bind:click='changEye_confirm' bindchange="inputChange" data-prop='password_confirm' value="{{formData.password_confirm}}" prefixIcon="lock-on" placeholder="请再次输入密码" suffixIcon="{{ { name: showPassword_confirm?'browse':'browse-off' } }}" type="{{showPassword_confirm?'':'password'}}" clearable />
+  <t-input class="roundedInput" bindclear="inputChange" bind:click='changEye_confirm' bindchange="inputChange" data-prop='password_confirm' value="{{formData.password_confirm}}" prefixIcon="lock-on" placeholder="请再次输入密码" suffixIcon="{{ { name: showPassword_confirm?'browse':'browse-off' } }}" type="{{showPassword_confirm?'':'password'}}" clearable />
 
-  <view class="loginButton">
-    <t-button bindtap='register' theme="primary" size="large" block>注册</t-button>
+ <view class="loginButton">
+    <button bindtap='register' class="buttonStyle">注册</button>
   </view>
 
   <view class="loginButton">
-    <t-button bindtap='login' theme="primary" size="large" block>已有账户，登录</t-button>
+    <button bindtap='login' class="buttonStyle">已有账号，去登录</button>
   </view>
 </view>
+

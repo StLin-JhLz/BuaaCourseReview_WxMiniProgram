@@ -8,6 +8,7 @@ App({
         navigate_courseId: null, // 初始化全局变量 courseId
         college_course_list:[],
         course_list:[],
+        user_name:null,
     },
     onShow() {
         
@@ -23,7 +24,24 @@ App({
         if (test == true) {
             this.makeTestData();
         } 
-
+        //检测是否有登录缓存
+        wx.getStorage({
+            key: 'user_name',
+            success: function(res) {
+                if(res.data != null) {
+                    console.log("登录成功"); // 缓存数据
+                    self.globalData.user_name = res.data;
+                } else {
+                    console.log("登录失败");
+                }
+              
+            },
+            fail: function(res) {
+              // 获取缓存数据失败
+              console.log("登录失败");
+            }
+        });
+          
         wx.request({
           url: apis.main.url + apis.courselist.url ,
           method : apis.courselist.method,

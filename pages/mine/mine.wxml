@@ -1,3 +1,19 @@
+<view wx:if="{{user_name != null}}">
+  <t-cell class="mb-16" title="当前账户: {{user_name}}" arrow hover></t-cell>
+</view>
+
+<view wx:if="{{user_name == null}}">
+  <navigator url="../login_register/login/login">
+    <t-cell class="mb-16" title="登录" arrow hover ></t-cell>   
+    </navigator>
+</view>
+
+<view wx:if="{{user_name != null}}">
+  <navigator url="../login_register/login/login">
+    <t-cell class="mb-16" title="登出" bind:tap = "logOut" arrow hover ></t-cell>   
+    </navigator>
+</view>
+
 <navigator url="../info-feedback/info-feedback">
     <t-cell class="mb-16" title="信息反馈" arrow hover ></t-cell>
 </navigator>
@@ -7,8 +23,10 @@
 <navigator url="../statistics/statistics">
     <t-cell class="mb-16" title="统计" arrow hover ></t-cell>   
 </navigator>
-<navigator url="../login_register/login/login">
-    <t-cell class="mb-16" title="登出" arrow hover ></t-cell>   
-</navigator>
+
+
+
+
+
 <!--只实现了界面-->
 

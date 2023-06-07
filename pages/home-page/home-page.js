@@ -115,9 +115,22 @@ Page({
     },
 
     handleClick() {
-      wx.navigateTo({
-        url: '/pages/review_release/review_release',
-      });
+      if (getApp().globalData.user_name == null) {
+        wx.showToast({
+          title: '发布评测前请先登录',
+          icon: 'none',
+          duration: 1000,
+          mask: true,
+        });
+        wx.navigateTo({
+          url: '/pages/login_register/register/register',
+        });
+      } else {
+        wx.navigateTo({
+          url: '/pages/review_release/review_release',
+        });
+      }
+      
     },
 
     changeHandle(e) {

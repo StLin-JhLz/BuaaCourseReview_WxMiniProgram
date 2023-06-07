@@ -1,3 +1,5 @@
+import { APIS } from "../../../utils/api.js"
+const apis = APIS
 Page({
     data: {
       formData: {},
@@ -55,41 +57,34 @@ Page({
       // 查询数据库，校验账号密码是否正确
 
       wx.request({
-        url: 'buaa.edu.cn/api/user/login', //仅为示例，并非真实的接口地址
+        url: apis.main.url + apis.register.url, //仅为示例，并非真实的接口地址
+        method: apis.register.method,
         data: {
-          account: account,
+          user_name: account,
           password: password
         },
         header: {
           'content-type': 'application/json' // 默认值
         },
         success (res) {
+          if(res.data.res == 0) {
             wx.showToast({
-                icon: 'none',
-                title: "注册成功",
-              })
-              return
+              icon: 'none',
+              title: "注册成功",
+            });
+          }else if (res.data.res==1) {
+            wx.showToast({
+              icon: 'none',
+              title: "用户名重复",
+            });
+          }else{
+            wx.showToast({
+              icon: 'none',
+              title: "注册失败",
+            });
+          }
         }
         })     
-            // 查询数据库，校验账号密码是否正确
-    // wx.cloud.database().collection('user').where({
-    //   account: account,
-    //   password: password
-    // }).get().then(
-    //   res => {
-    //     let data = res.data
-    //     if (data.length > 0) {
-    //       wx.showToast({
-    //         icon: "success",
-    //         title: "登录成功",
-    //       })
-    //     } else {
-    //       wx.showToast({
-    //         icon: "error",
-    //         title: "账号或密码错误，请重试",
-    //       })
-    //     }
-    //   })
     wx.showToast({
         icon: 'none',
         title: "注册失败",
