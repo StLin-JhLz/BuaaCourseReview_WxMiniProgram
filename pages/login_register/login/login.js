@@ -1,3 +1,6 @@
+import { APIS } from "../../utils/api.js"
+const apis = APIS
+
 Page({
     data: {
       formData: {},
@@ -39,9 +42,10 @@ Page({
       // 查询数据库，校验账号密码是否正确
 
       wx.request({
-        url: 'buaa.edu.cn/api/user/login', //仅为示例，并非真实的接口地址
+        url: apis.main.url + apis.login.url, //仅为示例，并非真实的接口地址
+        method: apis.login.method,
         data: {
-          account: account,
+          user_name: account,
           password: password
         },
         header: {
