@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/search_test/search_test",
         "pages/home-page/home-page",
+        "pages/search_test/search_test",
+        
         "pages/review_overview/review_overview",
         "pages/course-list/course-list",
         "pages/review_release/review_release",
