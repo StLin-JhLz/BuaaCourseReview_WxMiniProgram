@@ -1,6 +1,6 @@
 export const APIS ={
     main:{
-        url: "",
+        url: "http://127.0.0.1:8080",
         api_undefined: true //是否使用测试数据展示效果
     },
     login :{
