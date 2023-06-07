@@ -1,11 +1,12 @@
 <view class="search-container">
-  <view class="search-wrapper">
-    <input class="search-input" placeholder="请输入搜索内容" bindinput="onInput" style="width: 90%;" />
-  </view>
-  <view class="dropdown-menu" wx:if="{{ showDropdown }}" style="width: 90%;">
+  <input class="search-input" placeholder="请输入搜索内容" bindinput="onInput" />
+  <view class="dropdown-menu" wx:if="{{ showDropdown }}">
     <scroll-view class="dropdown-scroll" scroll-y>
       <block wx:if="{{ searchResults.length > 0 }}" wx:for="{{ searchResults }}" wx:key="index">
-        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">{{ item }}</view>
+        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">
+          <text class="dropdown-title">{{ item.title }}</text>
+          <text class="dropdown-subtitle">{{ item.subtitle }}</text>
+        </view>
       </block>
       <view class="no-matches" wx:if="{{ searchResults.length === 0 }}">暂无匹配项</view>
     </scroll-view>
