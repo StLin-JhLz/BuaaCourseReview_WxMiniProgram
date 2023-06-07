@@ -101,3 +101,13 @@
     /* z-index: 10; 确保遮罩层在其他元素之上 */
   }
   
+  .fab-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .fab {
+    color: #e68351;
+  }
+  

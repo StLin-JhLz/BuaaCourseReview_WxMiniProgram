@@ -94,16 +94,26 @@
 
 </t-cell-group>
 
-    <view class="button-example">
+    <!-- <view class="button-example">
         <t-button theme="danger" size="small" data-id = "{{review.id}}" bind:change = "reportReview">Report</t-button>
         <view> {{review.agree_cnt - review.disagree_cnt}}</view>
         <t-button theme="light" size="small" data-id = "{{review.id}}"  bind:change = "supportReview">赞</t-button>
         <t-button theme="light" size="small" data-id = "{{review.id}}" bind:change = "opposeReview">踩</t-button>
+    </view> -->
+    <view class="bottom-space2"></view>
+    <view class="button-container">
+        <button class="report-button">举报</button>
+        <view class="button-right-container">
+            <button class="support-button">赞同</button>
+        <button class="oppose-button">反对</button>
+        </view>
     </view>
+    <view class="bottom-space2"></view>
 
 
- </block>
- <view class="bottom-space2"></view>
+
+    </block>
+    <view class="bottom-space2"></view>
 
 
 <!-- "pagePath": "pages/course-list/course-list",
@@ -111,5 +121,12 @@
                 "iconPath": "images/course-list/courseListUnSelected.png",
                 "selectedIconPath": "images/course-list/courseListSelected.png" -->
 
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
 
 

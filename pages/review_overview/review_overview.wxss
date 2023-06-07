@@ -159,3 +159,48 @@
     margin-right: 25rpx; */
   }
   
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15rpx;
+  }
+  
+  .report-button {
+    text-align: center;
+    line-height: 62rpx;
+    width: 100rpx;
+    height: 62rpx;
+    background-color: #A40101 ;
+    color: white;
+    margin-right: 10rpx;
+    margin-left: 15rpx;
+    align-self: flex-start;
+    border-radius: 15rpx;
+    padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
+  }
+  
+  .button-right-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .support-button, .oppose-button {
+    text-align: center;
+    line-height: 62rpx;
+    width: 100rpx;
+    height: 62rpx;  
+    background-color: #A40101;
+    color: white;
+    border-radius: 15rpx;
+    padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
+  }
+  
+  .support-button {
+    background-color: #198A00;
+  }
+  
+  .oppose-button {
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+  }
+  

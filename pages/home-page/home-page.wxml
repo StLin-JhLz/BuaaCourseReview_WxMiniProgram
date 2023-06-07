@@ -69,7 +69,11 @@
         <!-- <button style="color: rgb(255, 255, 255); background-color: blue;">发布评测</button> -->
     </navigator>  
 
-    <view class = "fab"><t-fab class = "fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" style="right: 30%; bottom: 32px; color: #e68351;" text="发布评测" /></view>  
+    <!-- <view class = "fab"><t-fab class = "fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" style="right: 30%; bottom: 32px; color: #e68351;" text="发布评测" /></view>   -->
+    <view class="fab-container">
+        <t-fab class="fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" text="发布评测" />
+    </view>
+
 
     
 
