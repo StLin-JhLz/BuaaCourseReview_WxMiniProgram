@@ -39,6 +39,7 @@ Page({
   },
 
   onTabsChange(e) {
+
     this.setData({ catValue: e.detail.value })
   },
 
