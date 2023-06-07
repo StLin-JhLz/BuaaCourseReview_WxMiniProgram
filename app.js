@@ -77,6 +77,7 @@ App({
             { name: '高级算法设计与分析', id: 'id' },
             { name: '新型计算机系统设计与性能优化', id: 'id' }
           ];      
+        
         this.globalData.college_course_list = [
             {
              name:"材料科学与工程学院",
@@ -320,6 +321,9 @@ App({
              name_s:"高教园",
             },
            ];
+           for(let i=1; i<this.globalData.college_course_list.length;i++) {
+            this.globalData.college_course_list[i].courses = [];
+        }  
         // this.globalData.college_course_list = [ 
         //     {
         //       label: '42计算机',
