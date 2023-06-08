@@ -31,17 +31,17 @@
 </view>
 
 
-  <scroll-view wx:if="{{focus}}"  scroll-y="true">
+  <!-- <scroll-view wx:if="{{focus}}"  scroll-y="true">
         <view wx:for="{{course_list_show}}" wx:key="name">
             <view class="scrollItem">
                 <view class="font1" space="nbsp" bind:tap="navigate_courseId" data-id = "{{item.id}}">   {{item.name}} ({{item.department}}, {{item.credit}}学分)</view>
-                <!-- <view class="font2" space="nbsp"> {{item.id}}   </view> -->
+              
             </view>
         </view>
-    </scroll-view>
+    </scroll-view> -->
 
 <!-- 课程推荐 -->
-<view class="parent-container">
+<view class="parent-container" bind:tap = "navigate_courseId">
 <view class="container">
   <view class="box">
     <view class="content" style="line-height: 1.5;">
