@@ -1,9 +1,6 @@
-@font-face {
-    font-family: 'SHSN';
-    src: url('/assets/NotoSansHans-Regular.otf')NotoSansHans-Regular;
-  }
+
 :root {
-    --font-family: Arial;
+    font-family: "等线", sans-serif;
 }
 
 page {

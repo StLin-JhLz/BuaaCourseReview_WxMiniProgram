@@ -13,6 +13,7 @@ page, view, text, input, textarea {
   .example-search {
     background-color: #eeeeee;
     padding: 16rpx 32rpx;
+    font-family: "等线", sans-serif;
   }
   
   .search-input {
@@ -134,3 +135,9 @@ page, view, text, input, textarea {
     font-size: 32rpx; /* 调整字体大小 */
     margin: 10rpx 0; /* 调整上下边距 */
   }
+
+  /* 输入框placeholder */
+.phcolor{ 
+  /* color: #18acff; */
+  font-family: "等线", sans-serif;
+}

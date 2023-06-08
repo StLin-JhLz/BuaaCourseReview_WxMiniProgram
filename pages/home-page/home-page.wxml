@@ -6,7 +6,7 @@
 
 <!-- 搜索 -->
 <view class="example-search">
-  <input class="search-input" id="searchInput" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" 
+  <input class="search-input" id="searchInput" placeholder-class="phcolor" input-class="phcolor"  placeholder="输入你想查询的课程名" bindinput="handleSearchInput" 
     bind:focus = "focusHandle" bind:blur = "blurHandle"/>
   <view class="dropdown-menu" wx:if="{{ showDropdown }}">
     <scroll-view class="dropdown-scroll" scroll-y>
@@ -35,11 +35,13 @@
 <view class="parent-container">
 <view class="container">
   <view class="box">
-    <view class="title">标题</view>
-    <view class="subtitle">副标题</view>
     <view class="content">
-      正文内容
+      {{str_text}}
     </view>
+    
+    <view class="subtitle">{{str_subtitle}}</view>
+    <view class="title">{{str_title}}</view>
+    
   </view>
 </view>
 </view>

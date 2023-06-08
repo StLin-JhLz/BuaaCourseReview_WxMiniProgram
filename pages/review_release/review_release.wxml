@@ -3,7 +3,7 @@
 
 <!-- new search -->
 <view class="example-search">
-  <input class="search-input" id="searchInput" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" 
+  <input class="search-input" id="searchInput" placeholder="输入你想查询的课程名"  placeholder-class="phcolor" bindinput="handleSearchInput" 
     bind:focus = "focusHandle" bind:blur = "blurHandle"/>
   <view class="dropdown-menu" wx:if="{{ showDropdown }}">
     <scroll-view class="dropdown-scroll" scroll-y>
