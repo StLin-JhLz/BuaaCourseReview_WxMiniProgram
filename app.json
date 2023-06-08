@@ -1,12 +1,11 @@
 {
     "pages": [
         "pages/home-page/home-page",
-        "pages/login_register/login/login",
-       
+        "pages/review_release/review_release",
         "pages/review_overview/review_overview",
+        "pages/login_register/login/login",
         "pages/course-list/course-list",
         "pages/search_test/search_test",
-        "pages/review_release/review_release",
         "pages/login_register/register/register",
         "pages/mine/mine",
         "pages/home/home",

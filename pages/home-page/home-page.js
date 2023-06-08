@@ -174,6 +174,7 @@ Page({
       },
   
       blurHandle() {
+        console.log("focus");
         this.setData({
             showDropdown : false,
           // course_list_showtionText: '',

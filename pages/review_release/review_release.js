@@ -2,6 +2,18 @@ import { APIS } from "../../utils/api.js"
 const apis = APIS
 Page({
     data: {
+        //search相关
+      searchInput: '',
+      showDropdown: false, // 是否展示下拉框
+      searchResults: [],
+      course_list: [
+      { title: 'Computer Science and Technology', subtitle: '计算机科学与技术' },
+      { title: 'Software Engineering', subtitle: '软件工程' },
+      { title: 'Information Security', subtitle: '信息安全' },
+      // 其他数据项...
+      ],
+        // search相关
+
       teacherText: '',
       teacherValue: [],
       semesterText: '',
@@ -37,13 +49,98 @@ Page({
 
       title : "",
       text:"",
+      score:"",
       value1:0,
       value2:0,
       value3:0,
       value4:0,
 
     },
+    //search相关
+    handleSearchInput(e) {
+        console.log("Helloworld");
+        const inputText = e.detail.value.trim();
+        const keywords = inputText.split(' ');
+    
+        if (keywords.length > 0) {
+          const results = this.data.course_list.filter((result) => {
+            return keywords.every((keyword) => {
+              return result.name.includes(keyword);
+            });
+          });
+    
+          this.setData({
+            searchInput: inputText,
+            showDropdown: true,
+            searchResults: results,
+          });
+        } else {
+          this.setData({
+            searchInput: inputText,
+            showDropdown: true,
+            searchResults: [],
+          });
+        }
+      },
+
+      hideDropdown (event) {
+
+          this.setData({
+            showDropdown: false
+          });
+      },
+
+      focusHandle() {
+          console.log("focus");
+        this.setData({
+            showDropdown : true,
+          // course_list_showtionText: '取消',
+        });
+      },
+  
+      blurHandle() {
+        console.log("focus");
+        this.setData({
+            showDropdown : false,
+          // course_list_showtionText: '',
+        });
+      },
+
+      selectItem(event) {
+        var selectedItem = event.currentTarget.dataset.item;
+        console.log('选中的课程信息：', selectedItem);
+  
+        const id = event.currentTarget.dataset.item.id;
+        //   wx.navigateTo({
+        //       url: '/pages/review_overview/review_overview?id=' + id,
+        //     });
+        console.log(id);
+        this.setData({
+            showDropdown : false,
+        })
+        // 在这里可以对选中的课程信息进行进一步处理
+      },
+    //   if(parseFloat(value1) * parseFloat(value2) * parseFloat(value3) * parseFloat(value4) == 0)
     submit() {
+        if(this.data.value1 * this.data.value2 * this.data.value3 * this.data.value4 == 0){
+            wx.showToast({
+                title: '请完成评分',
+                icon : "error",
+              })
+              return
+      }else if(this.data.title.length == 0){
+        wx.showToast({
+            title: '标题不能为空',
+            icon : "error",
+          })
+          return
+      }else if(this.data.text.length < 10){
+        wx.showToast({
+          title: '正文不能少于10个字',
+          icon : "error",
+        })
+        return
+    }
       console.log("submit");
       // 获取当前日期
       const currentDate = new Date();
@@ -113,6 +210,11 @@ Page({
       const { value } = e.detail;
       this.setData({text:value});
     },
+
+    input3() {
+        const { value } = e.detail;
+        this.setData({score:value});
+      },
 
     onChange1(e) { //打分
       const { index } = e.currentTarget.dataset;
@@ -258,19 +360,19 @@ Page({
         //console.log("length"+this.data.course_list_show.length);
       },
   
-      focusHandle() {
-        this.setData({
-            focus : true,
-          course_list_showtionText: '取消',
-        });
-      },
+    //   focusHandle() {
+    //     this.setData({
+    //         focus : true,
+    //       course_list_showtionText: '取消',
+    //     });
+    //   },
   
-      blurHandle() {
-        this.setData({
-            focus : false,
-          course_list_showtionText: '',
-        });
-      },
+    //   blurHandle() {
+    //     this.setData({
+    //         focus : false,
+    //       course_list_showtionText: '',
+    //     });
+    //   },
   
       course_list_showtionHandle() {
         this.setData({

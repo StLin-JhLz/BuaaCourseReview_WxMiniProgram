@@ -1,4 +1,61 @@
 /* pages/review_release/review_release.wxss */
+
+/* search相关 */
+/* home-page.wxss */
+.homeBox {
+    width: 80%;
+    margin: 30% auto; 
+  }
+  
+  .example-search {
+    background-color: #eeeeee;
+    padding: 16rpx 32rpx;
+  }
+  
+  .search-input {
+    width: 90% auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+    max-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;
+  }
+  
+  .dropdown-scroll {
+    height: 100%;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .dropdown-department {
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .no-matches {
+    padding: 10px;
+    text-align: center;
+    color: #999;
+  }
+  /*11  */
 .mb-16 {
     margin-bottom: 32rpx;
   }

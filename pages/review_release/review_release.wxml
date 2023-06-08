@@ -1,8 +1,25 @@
 <!--pages/review_release/review_release.wxml-->
 
 
-
+<!-- new search -->
 <view class="example-search">
+  <input class="search-input" id="searchInput" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" 
+    bind:focus = "focusHandle" bind:blur = "blurHandle"/>
+  <view class="dropdown-menu" wx:if="{{ showDropdown }}">
+    <scroll-view class="dropdown-scroll" scroll-y>
+      <block wx:if="{{ searchResults.length > 0 }}" wx:for="{{ searchResults }}" wx:key="index">
+        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">
+          <text class="dropdown-name">{{ item.name }}</text>
+          <text class="dropdown-department">{{ item.department }}</text>
+        </view>
+      </block>
+      <view class="no-matches" wx:if="{{ searchResults.length === 0 }}">暂无匹配项</view>
+    </scroll-view>
+  </view>
+  <!-- <view class="mask" wx:if="{{ showDropdown }}" catchtap="hideDropdown"></view> -->
+</view>
+<!-- 11 -->
+<!-- <view class="example-search">
         <t-search
         value="{{searchValue}}"
         center
@@ -13,7 +30,7 @@
         bind:action-click="actionHandle"
         bind:change="changeHandle"
         />
-    </view>
+    </view> -->
     
     <scroll-view wx:if="{{focus}}"  scroll-y="true">
         <view wx:for="{{course_list_show}}" wx:key="name">
@@ -82,13 +99,16 @@
 <t-textarea
   t-class="external-class"
   label="正文"
-  placeholder="设置最大字符个数"
+  placeholder="请输入正文"
   maxlength="1000"
   disableDefaultPadding="{{true}}"
   bind:change = "input2"
   indicator
   autosize
 />
+
+<t-textarea label="你的成绩(可选)" placeholder="分享你的成绩有助于同学们进行更全面的判断" disableDefaultPadding="{{true}}" maxlength="10" bind:change = "input3" autosize />
+<t-divider  />
 
 <view class="button-example">
   <!-- <t-button theme="light" block size="large" >保存草稿</t-button> -->
