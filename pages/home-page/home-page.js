@@ -202,7 +202,9 @@ Page({
       },
 
     navigate_courseId(event) {
-        const id = event.currentTarget.dataset.id;
+        // const id = event.currentTarget.dataset.id;
+        const id = this.data.course_recommend.id;
+        console.log("navigate" + id);
         wx.navigateTo({
             url: '/pages/review_overview/review_overview?id=' + id,
           });
