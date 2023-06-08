@@ -158,4 +158,16 @@ page, view, text, input, textarea {
     font-size: 14px;
   }
   
+  .bottom-space2 {
+    padding-bottom: 15rpx;
+  }
+
+.page-background {
+    background-image: url('https://www.bing.com/images/search?view=detailV2&insightsToken=bcid_S0WqITux1LEFqxcxoNWLuD9SqbotqVTdPws&FORM=ANCMS1&iss=SBIUPLOADGET#enterInsights');
+    background-size: cover;
+  }
+  
+  
+  
+  
 

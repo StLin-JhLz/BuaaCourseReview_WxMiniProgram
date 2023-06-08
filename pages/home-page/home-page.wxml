@@ -1,4 +1,11 @@
 <!--pages/home-page/home-page.wxml-->
+<!-- 背景图 -->
+<view class="page-background">
+  <!-- 页面内容 -->
+</view>
+
+<view class="bottom-space2"></view>
+<view class="bottom-space2"></view>
 <!-- 标题 -->
     <view class="homeBox"></view>
     <view class="demo-title">欢迎</view>
@@ -35,7 +42,7 @@
 <view class="parent-container">
 <view class="container">
   <view class="box">
-    <view class="content">
+    <view class="content" style="line-height: 1.5;">
       {{str_text}}
     </view>
     
@@ -64,38 +71,6 @@
 
 
 
-    <!-- search相关 -->
-    <!-- <view class="example-search" bindtap="hideDropdown">
-  <input class="search-input" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" />
-  <view class="dropdown-menu" wx:if="{{ showDropdown }}">
-    <scroll-view class="dropdown-scroll" scroll-y>
-      <block wx:if="{{ searchResults.length > 0 }}" wx:for="{{ searchResults }}" wx:key="index">
-        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">
-          <text class="dropdown-name">{{ item.name }}</text>
-          <text class="dropdown-department">{{ item.department }}</text>
-        </view>
-      </block>
-      <view class="no-matches" wx:if="{{ searchResults.length === 0 }}">暂无匹配项</view>
-    </scroll-view>
-  </view>
-</view> -->
-
-
-
-
-
-    <!-- <view class="example-search">
-        <t-search
-        value="{{value}}"
-        center
-        placeholder="输入你想查询的课程名"
-        action="{{actionText}}"
-        bind:blur="blurHandle"
-        bind:focus="focusHandle"
-        bind:action-click="actionHandle"
-        bind:change="changeHandle"
-        />
-    </view> -->
 
     
   
