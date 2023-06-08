@@ -67,7 +67,10 @@ Page({
             url: apis.main.url + apis.review.url, // 请求的 URL
             method: apis.review.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
             data: { // 请求的参数，以键值对的形式传递
-              course_id : course_id // todo
+              course_id : course_id, // todo
+              agree_cnt : agree_cnt,
+              disagree_cnt : disagree_cnt,
+              report_cnt : report_cnt
             },
             // header: { // 请求的头部信息，以键值对的形式传递
             //   'Content-Type': 'application/json'
@@ -277,8 +280,10 @@ Page({
     },
     
     reportReview(event) {
-
-    } ,
+        const reviewId = event.currentTarget.dataset.id;
+        // 在这里处理举报操作
+        // 可以使用reviewId来获取对应的评价对象，然后更新report_cnt值
+      },
     
     supportReview(event) {
 
@@ -319,8 +324,8 @@ Page({
             id : "1afbc",
             user_id : "1afbc",
             time : "2022/09/01",
-            agree_cnt : "5",
-            disagree_cnt : "3",
+            agree_cnt : "5000",
+            disagree_cnt : "3000",
             course_id : "1afbcd",
             teacher_name : "孙青",
             semester : "20-21-3",
