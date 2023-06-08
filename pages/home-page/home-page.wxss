@@ -3,7 +3,10 @@
 page, view, text, input, textarea {
   font-family: "等线", sans-serif;
 }
-  
+.page-background {
+    background-image: url('https://gitee.com/lin-shihan1/buaa-course-review_wx-mini-program/blob/main/images/mine/mineUnSelected.png');
+    background-size:cover;
+  } 
 .homeBox {
     width: 80%;
     margin: 30% auto; 
@@ -157,5 +160,14 @@ page, view, text, input, textarea {
   .content {
     font-size: 14px;
   }
+  
+  .bottom-space2 {
+    padding-bottom: 15rpx;
+  }
+
+
+  
+  
+  
   
 
