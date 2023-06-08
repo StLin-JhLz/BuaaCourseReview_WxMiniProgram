@@ -10,6 +10,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        buttonText: '时间排序',
+        buttonColor: '#ccc',
         isClicked: false,
         isAgreed: false,
         isOpposed: false,
@@ -47,6 +49,24 @@ Page({
     /*
         按钮选中
     */
+   handleButtonClick() {
+    const buttonText = this.data.buttonText === '时间排序' ? '学期排序' : '时间排序';
+    this.setData({
+      buttonText: buttonText
+    });
+  },
+   handleButtonTouchStart() {
+    this.setData({
+      buttonColor: '#ccc' // 设置按下时的背景色
+    });
+  },
+
+  handleButtonTouchEnd() {
+    this.setData({
+      buttonColor: '#C9A048' // 恢复初始的背景色
+    });
+  },
+
    toggleClicked() {
     this.setData({
       isClicked: !this.data.isClicked,

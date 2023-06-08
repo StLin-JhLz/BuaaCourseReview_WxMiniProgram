@@ -220,7 +220,7 @@ page, view, text, input, textarea {
   
   .oppose-button {
     margin-left: 10rpx;
-    margin-right: 15rpx;
+    margin-right: 5rpx;
   }
   
   .report-button-clicked {
@@ -266,11 +266,43 @@ page, view, text, input, textarea {
     line-height: 62rpx;
     width: 150rpx;
     height: 62rpx;  
-    background-color: rgb(155, 12, 12);
+    background-color: rgb(185, 47, 47);
     color: white;
     align-self: flex-start;
     border-radius: 15rpx;
     padding: 5rpx 8rpx;  
     margin-left: 10rpx;
-    margin-right: 15rpx;
+    margin-right: 5rpx;
   }
+
+  /* 评价详情同行按钮 */
+  /* 评价详情同行按钮 */
+.title-container {
+    display: flex;
+    align-items: flex-end; /* 将按钮与评价详情底边对齐 */
+  }
+  
+  .my-title {
+    font-size: 48rpx;
+    font-weight: 600;
+    line-height: 64rpx;
+    margin: 48rpx 32rpx 0;
+    color: var(--td-font-gray-1, rgb(201, 160, 72));
+  }
+  
+  .custom-button {
+    margin-right: 30rpx;  
+    width: 150rpx;
+    height: 64rpx; /* 与评价详情的行高一致 */
+    font-size: 30rpx;
+    background-color: #ccc;
+    color: #fff;
+    padding: 5rpx 10rpx;
+    border-radius: 15rpx;
+    margin-left: auto; /* 将按钮与右边框保持 25rpx 的间距 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    text-align: center;
+  }
+  
