@@ -2,6 +2,9 @@
 
 /* search相关 */
 /* home-page.wxss */
+page, view, text, input, textarea {
+  font-family: "等线", sans-serif;
+}
 .homeBox {
     width: 80%;
     margin: 30% auto; 
