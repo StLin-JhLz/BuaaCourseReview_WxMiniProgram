@@ -1,4 +1,8 @@
 /* pages/course-list/course-list.wxss */
+
+page, view, text, input, textarea {
+  font-family: "等线", sans-serif;
+}
 page {
     background-color: #fff;
   }

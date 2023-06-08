@@ -1,8 +1,65 @@
 <!--pages/home-page/home-page.wxml-->
-<!-- <text>pages/home-page/home-page.wxml</text> -->
+<!-- 标题 -->
     <view class="homeBox"></view>
     <view class="demo-title">欢迎</view>
     <t-notice-bar visible="{{true}}" theme="warning" content="内容提示：目前已经更新新学期课表"></t-notice-bar>
+
+<!-- 搜索 -->
+<view class="example-search">
+  <input class="search-input" id="searchInput" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" 
+    bind:focus = "focusHandle" bind:blur = "blurHandle"/>
+  <view class="dropdown-menu" wx:if="{{ showDropdown }}">
+    <scroll-view class="dropdown-scroll" scroll-y>
+      <block wx:if="{{ searchResults.length > 0 }}" wx:for="{{ searchResults }}" wx:key="index">
+        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">
+          <text class="dropdown-name">{{ item.name }}</text>
+          <text class="dropdown-department">{{ item.department }}</text>
+        </view>
+      </block>
+      <view class="no-matches" wx:if="{{ searchResults.length === 0 }}">暂无匹配项</view>
+    </scroll-view>
+  </view>
+</view>
+
+
+  <scroll-view wx:if="{{focus}}"  scroll-y="true">
+        <view wx:for="{{course_list_show}}" wx:key="name">
+            <view class="scrollItem">
+                <view class="font1" space="nbsp" bind:tap="navigate_courseId" data-id = "{{item.id}}">   {{item.name}} ({{item.department}}, {{item.credit}}学分)</view>
+                <!-- <view class="font2" space="nbsp"> {{item.id}}   </view> -->
+            </view>
+        </view>
+    </scroll-view>
+
+<!-- 课程推荐 -->
+<view class="parent-container">
+<view class="container">
+  <view class="box">
+    <view class="title">标题</view>
+    <view class="subtitle">副标题</view>
+    <view class="content">
+      正文内容
+    </view>
+  </view>
+</view>
+</view>
+
+
+
+<!-- 图片 -->
+    <image src="{{imageUrl}}" mode="aspectFit"></image>
+    <navigator url="../review_release/review_release">
+        <!-- <t-fab icon="add" aria-label="增加">添加评测</t-fab> -->
+        <!-- <view class="my_button">发布评测</view> -->
+        <!-- <button style="color: rgb(255, 255, 255); background-color: blue;">发布评测</button> -->
+    </navigator>  
+
+<!-- 提交评测按钮 -->
+    <!-- <view class = "fab"><t-fab class = "fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" style="right: 30%; bottom: 32px; color: #e68351;" text="发布评测" /></view>   -->
+    <view class="fab-container">
+        <t-fab class="fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" text="发布评测" />
+    </view>
+
 
 
     <!-- search相关 -->
@@ -21,22 +78,8 @@
   </view>
 </view> -->
 
-<view class="example-search">
-  <input class="search-input" id="searchInput" placeholder="输入你想查询的课程名" bindinput="handleSearchInput" 
-    bind:focus = "focusHandle" bind:blur = "blurHandle"/>
-  <view class="dropdown-menu" wx:if="{{ showDropdown }}">
-    <scroll-view class="dropdown-scroll" scroll-y>
-      <block wx:if="{{ searchResults.length > 0 }}" wx:for="{{ searchResults }}" wx:key="index">
-        <view class="dropdown-item" bindtap="selectItem" data-item="{{ item }}">
-          <text class="dropdown-name">{{ item.name }}</text>
-          <text class="dropdown-department">{{ item.department }}</text>
-        </view>
-      </block>
-      <view class="no-matches" wx:if="{{ searchResults.length === 0 }}">暂无匹配项</view>
-    </scroll-view>
-  </view>
-  <!-- <view class="mask" wx:if="{{ showDropdown }}" catchtap="hideDropdown"></view> -->
-</view>
+
+
 
 
     <!-- <view class="example-search">
@@ -53,27 +96,7 @@
     </view> -->
 
     
-    <scroll-view wx:if="{{focus}}"  scroll-y="true">
-        <view wx:for="{{course_list_show}}" wx:key="name">
-            <view class="scrollItem">
-                <view class="font1" space="nbsp" bind:tap="navigate_courseId" data-id = "{{item.id}}">   {{item.name}} ({{item.department}}, {{item.credit}}学分)</view>
-                <!-- <view class="font2" space="nbsp"> {{item.id}}   </view> -->
-            </view>
-        </view>
-    </scroll-view>
-
-    <image src="{{imageUrl}}" mode="aspectFit"></image>
-    <navigator url="../review_release/review_release">
-        <!-- <t-fab icon="add" aria-label="增加">添加评测</t-fab> -->
-        <!-- <view class="my_button">发布评测</view> -->
-        <!-- <button style="color: rgb(255, 255, 255); background-color: blue;">发布评测</button> -->
-    </navigator>  
-
-    <!-- <view class = "fab"><t-fab class = "fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" style="right: 30%; bottom: 32px; color: #e68351;" text="发布评测" /></view>   -->
-    <view class="fab-container">
-        <t-fab class="fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" text="发布评测" />
-    </view>
-
+  
 
     
 

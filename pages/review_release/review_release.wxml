@@ -32,17 +32,16 @@
         />
     </view> -->
     
-    <scroll-view wx:if="{{focus}}"  scroll-y="true">
+    <!-- <scroll-view wx:if="{{focus}}"  scroll-y="true">
         <view wx:for="{{course_list_show}}" wx:key="name">
             <view class="scrollItem">
                 <view class="font1" space="nbsp" bind:tap="navigate_courseId" data-course = "{{item}}">   {{item.name}} ({{item.department}}, {{item.credit}}学分)</view>
-                <!-- <view class="font2" space="nbsp"> {{item.id}}   </view> -->
             </view>
         </view>
-    </scroll-view>
+    </scroll-view> -->
  <t-cell title="课程" description="{{course_select_str}}"  />
 
-    <t-cell class="mb-16" title="教师" arrow hover note="{{teacherText}}" bind:click="onTeacherPicker" />
+    <t-cell class="mb-16" title="教师" arrow hover note="{{teacher_name_select}}" bind:click="onTeacherPicker" />
 <t-picker
   visible="{{teacherVisible}}"
   value="{{teacherValue}}"
@@ -50,7 +49,7 @@
   title="选择教师"
   cancelBtn="取消"
   confirmBtn="确认"
-  bindchange="onPickerChange"
+  bindchange="teacherConfirm"
   bindpick="onColumnChange"
   bindcancel="onPickerCancel"
 >
@@ -58,7 +57,7 @@
 
 
 
-<t-cell class="mb-16" title="学期" arrow hover note="{{semesterText}}" bind:click="onSemesterPicker" />
+<t-cell class="mb-16" title="学期" arrow hover note="{{semester_select}}" bind:click="onSemesterPicker" />
 
 <t-picker
   visible="{{semesterVisible}}"
@@ -67,9 +66,8 @@
   title="选择学期"
   cancelBtn="取消"
   confirmBtn="确认"
-  bindchange="onPickerChange"
+  bindchange="semesterConfirm"
   bindpick="onColumnChange"
-  bind:confirm = "semesterConfirm"
   bindcancel="onPickerCancel"
 >
   <t-picker-item options="{{years}}"></t-picker-item>
@@ -112,7 +110,7 @@
 
 <view class="button-example">
   <!-- <t-button theme="light" block size="large" >保存草稿</t-button> -->
- <t-button theme="primary" block size="large" bind:tap = "submit">提交</t-button>
+ <t-button theme="primary" block size="large" bind:tap = "submit">确认提交</t-button>
 </view>
 
 <!-- <view class="button">
