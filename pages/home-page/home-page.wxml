@@ -21,6 +21,7 @@
   </view>
 </view>
 
+
   <scroll-view wx:if="{{focus}}"  scroll-y="true">
         <view wx:for="{{course_list_show}}" wx:key="name">
             <view class="scrollItem">
