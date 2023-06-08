@@ -68,9 +68,6 @@ Page({
             method: apis.review.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
             data: { // 请求的参数，以键值对的形式传递
               course_id : course_id, // todo
-              agree_cnt : agree_cnt,
-              disagree_cnt : disagree_cnt,
-              report_cnt : report_cnt
             },
             // header: { // 请求的头部信息，以键值对的形式传递
             //   'Content-Type': 'application/json'
