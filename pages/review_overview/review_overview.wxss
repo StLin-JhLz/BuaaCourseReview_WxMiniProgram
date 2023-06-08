@@ -166,11 +166,14 @@
   }
   
   .report-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     line-height: 62rpx;
-    width: 100rpx;
+    width: 150rpx;
     height: 62rpx;
-    background-color: #A40101 ;
+    background-color: #922f2f;
     color: white;
     margin-right: 10rpx;
     margin-left: 15rpx;
@@ -179,24 +182,28 @@
     padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
   }
   
+  
   .button-right-container {
     display: flex;
     align-items: center;
   }
   
   .support-button, .oppose-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     line-height: 62rpx;
-    width: 100rpx;
+    width: 150rpx;
     height: 62rpx;  
-    background-color: #A40101;
+    background-color: #922f2f;
     color: white;
     border-radius: 15rpx;
     padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
   }
   
   .support-button {
-    background-color: #198A00;
+    background-color: #437438;
   }
   
   .oppose-button {
