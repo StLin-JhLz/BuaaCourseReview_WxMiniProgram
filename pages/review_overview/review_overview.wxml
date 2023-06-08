@@ -81,10 +81,10 @@
     <button class="report-button" bindtap="toggleClicked">举报</button>
   </view>
   <view class="button-container">
-  <button wx:if="{{isAgreed}}" class="support-button-clicked" bindtap="toggleAgreed">赞:{{review.agree_cnt}}</button>
-  <button wx:else class="support-button" bindtap="toggleAgreed">赞:{{review.agree_cnt}}</button>
-  <button wx:if="{{isOpposed}}" class="oppose-button-clicked" bindtap="toggleOpposed">踩:{{review.disagree_cnt}}</button>
-  <button wx:else class="oppose-button" bindtap="toggleOpposed">踩:{{review.disagree_cnt}}</button>
+  <button wx:if="{{review.isAgreed}}" class="support-button-clicked" bindtap="toggleAgreed" data-item="{{review.id}}" data-index = "{{i}}">赞:{{review.agree_cnt}}</button>
+  <button wx:else class="support-button" bindtap="toggleAgreed" data-item="{{review.id}}" data-index = "{{i}}">赞:{{review.agree_cnt}}</button>
+  <button wx:if="{{review.isOpposed}}" class="oppose-button-clicked" bindtap="toggleOpposed" data-item="{{review.id}}" data-index = "{{i}}" >踩:{{review.disagree_cnt}}</button>
+  <button wx:else class="oppose-button" bindtap="toggleOpposed" data-item="{{review.id}}" data-index = "{{i}}"  >踩:{{review.disagree_cnt}}</button>
 </view>
 
 </view>

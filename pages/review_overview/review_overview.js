@@ -11,7 +11,7 @@ Page({
      */
     data: {
         buttonText: '时间排序',
-        buttonColor: '#ccc',
+        buttonColor: '#C9A048',
         isClicked: false,
         isAgreed: false,
         isOpposed: false,
@@ -51,6 +51,10 @@ Page({
     */
    handleButtonClick() {
     const buttonText = this.data.buttonText === '时间排序' ? '学期排序' : '时间排序';
+    if (buttonText ==  '学期排序' )
+        this.sortBySemester();
+    else
+        this.sortByTime();
     this.setData({
       buttonText: buttonText
     });
@@ -68,22 +72,91 @@ Page({
   },
 
    toggleClicked() {
-    this.setData({
-      isClicked: !this.data.isClicked,
-    });
-  },
-    toggleAgreed() {
         this.setData({
-        isAgreed: !this.data.isAgreed,
-        isOpposed: false,
+            isClicked: !this.data.isClicked,
         });
     },
-    toggleOpposed() {
-        this.setData({
-        isOpposed: !this.data.isOpposed,
-        isAgreed: false,
-        });
+    toggleAgreed(event) { // 赞
+        const id = event.currentTarget.dataset.item;
+        const index = event.currentTarget.dataset.index;
+        const reviews_show = this.data.reviews_show;
+        const agreed = !reviews_show[index].isAgreed;
+        reviews_show[index].isAgreed = agreed;
+        var op;
+        if(!agreed) op = -1;
+        else op = 1;
+        console.log(op);
+        const self = this;
+        
+        reviews_show[index].agree_cnt = this.data.reviews_show[index].agree_cnt +op;
+        //test
+        // self.setData({
+        //    reviews_show:reviews_show
+        // })
+        wx.request({
+            url: apis.main.url + apis.interaction.url, // 请求的 URL
+            method: apis.interaction.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
+            data: { // 请求的参数，以键值对的形式传递
+              review_id: id, // todo
+              op:1,
+            },
+            // header: { // 请求的头部信息，以键值对的形式传递
+            //   'Content-Type': 'application/json'
+            // },
+            success: function (res) {
+                self.setData({
+                    reviews_show:reviews_show
+                 })
+            },
+            fail: function (err) {
+              console.log("点赞失败");
+            },
+            complete: function () {
+            }
+          });
+          
     },
+    toggleOpposed(event) {
+        const id = event.currentTarget.dataset.item;
+        const index = event.currentTarget.dataset.index;
+        const reviews_show = this.data.reviews_show;
+        const opposed = !reviews_show[index].isOpposed;
+        reviews_show[index].isOpposed = opposed;
+        var op;
+        if(!opposed) op = -1;
+        else op = 1;
+        console.log(op);
+        const self = this;
+        
+        reviews_show[index].disagree_cnt = this.data.reviews_show[index].disagree_cnt +op;
+        //test
+        // self.setData({
+        //    reviews_show:reviews_show
+        // })
+        wx.request({
+            url: apis.main.url + apis.interaction.url, // 请求的 URL
+            method: apis.interaction.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
+            data: { // 请求的参数，以键值对的形式传递
+              review_id: id, // todo
+              op:2,
+            },
+            // header: { // 请求的头部信息，以键值对的形式传递
+            //   'Content-Type': 'application/json'
+            // },
+            success: function (res) {
+                self.setData({
+                    reviews_show:reviews_show
+                 })
+            },
+            fail: function (err) {
+              console.log("点赞失败");
+            },
+            complete: function () {
+            }
+          });
+    },
+
+
     /**
      * 生命周期函数--监听页载
      */
@@ -169,7 +242,7 @@ Page({
 
     makeRateScore() {
          //排序，获得评分总览
-         this.sortBySemester();
+         this.sortByTime();
          const overview_src = {
             semester:"",
             reviews_cnt:0,
@@ -221,25 +294,36 @@ Page({
             console.log(overviews[0].semester);
             overview = overview_src;
         }
-        
+        for(let i=0; i<overviews.length; i++) {
+            overviews[i].isAgreed = 0;
+            overviews[i].isOpposed = 0;
+        }
         
         this.setData({overviews:overviews});
     },
 
     sortByTime() {
+        console.log("sortByTime");
         //排序，获得评分总览
         this.data.reviews_show.sort((a,b)=>{
             if(a.time.localeCompare(b.time)  == 0)
                 return a.semester.localeCompare(b.semester) *-1;
-            return a.time.localeCompare(b.time) ;
+            return a.time.localeCompare(b.time) *-1;
         });
+        this.setData({
+            reviews_show : this.data.reviews_show
+        })
     },
 
     sortBySemester() {
+        console.log("sortBySemester");
         this.data.reviews_show.sort((a,b)=>{
             if(a.semester.localeCompare(b.semester) *-1 == 0)
-                return a.time.localeCompare(b.time) ;
+                return a.time.localeCompare(b.time)*-1 ;
             return a.semester.localeCompare(b.semester) *-1;
+        });
+        this.setData({
+            reviews_show : this.data.reviews_show,
         });
     },
 
@@ -348,9 +432,9 @@ Page({
         var a = [{
             id : "1afbc",
             user_id : "1afbc",
-            time : "2022/09/02",
-            agree_cnt : "5",
-            disagree_cnt : "3",
+            time : "2020/09/02",
+            agree_cnt : 5,
+            disagree_cnt : 3,
             course_id : "1afbcd",
             teacher_name : "欧阳元新",
             semester : "21-22-3",
@@ -364,8 +448,8 @@ Page({
             id : "1afbc",
             user_id : "1afbc",
             time : "2022/09/01",
-            agree_cnt : "5000",
-            disagree_cnt : "3000",
+            agree_cnt : 5000,
+            disagree_cnt : 3000,
             course_id : "1afbcd",
             teacher_name : "孙青",
             semester : "20-21-3",
@@ -379,8 +463,8 @@ Page({
             id : "1afbc",
             user_id : "1afbc",
             time : "2022/09/01",
-            agree_cnt : "5",
-            disagree_cnt : "3",
+            agree_cnt : 5,
+            disagree_cnt : 3,
             course_id : "1afbcd",
             teacher_name : "孙青",
             semester : "20-21-3",
