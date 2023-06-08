@@ -13,6 +13,7 @@ Page({
         str_text: "",
         str_subtitle : "",
         str_title : "",
+        announcement:"",
     },
 
     /**
@@ -23,7 +24,7 @@ Page({
         if (apis.main.api_undefined == true)
             this.makeTestData();
         wx.request({
-            url: apis.mainurl + apis.recommend.url, // 请求的 URL
+            url: apis.main.url + apis.recommend.url, // 请求的 URL
             method: apis.recommend.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
             data: { // 请求的参数，以键值对的形式传递
             },
@@ -46,6 +47,8 @@ Page({
               // 请求完成的回调函数，无论成功还是失败都会执行
             }
           });
+        
+         
         var str_text;
         var str_subtitle;
         var str_title;
@@ -64,7 +67,7 @@ Page({
     },
 
     makeTestData() {
-        this.course_recommend.setData({
+        this.setData({course_recommend:{
             id : "1afbc",
             user_id : "1afbc",
             time : "2022/09/02",
@@ -80,7 +83,11 @@ Page({
             rating_assesment : 5,
             title : "好课",
             text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
-        });
+        }});
+        this.setData({
+          announcement: "公告",
+        })
+        console.log(this.data.announcement);
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

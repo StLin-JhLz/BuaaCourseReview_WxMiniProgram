@@ -28,6 +28,7 @@ Page({
         str_text: "",
         str_subtitle : "",
         str_title : "",
+        announcement:"",
     },
     
     selectItem(event) {
@@ -109,6 +110,30 @@ Page({
               // 请求完成的回调函数，无论成功还是失败都会执行
             }
           });
+          wx.request({
+            url: apis.main.url + apis.announcement.url, // 请求的 URL
+            method: apis.announcement.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
+            data: { // 请求的参数，以键值对的形式传递
+            },
+            // header: { // 请求的头部信息，以键值对的形式传递
+            //   'Content-Type': 'application/json'
+            // },
+            success: function (res) {
+              // 请求成功的回调函数
+              //console.log(res.data); // 返回的数据
+              self.setData({
+                announcement:res.data.res
+              })
+            },
+            fail: function (err) {
+              // 请求失败的回调函数
+              console.log("获取公告失败");
+              return
+            },
+            complete: function () {
+              // 请求完成的回调函数，无论成功还是失败都会执行
+            }
+          });
         var str_text;
         var str_subtitle;
         var str_title;
@@ -146,7 +171,7 @@ Page({
         title : "好课",
         text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
     };
-      this.setData({course_recommend:course_recommend});
+      this.setData({course_recommend:course_recommend, announcement:"公告"});
   },
 
     onShow() {
