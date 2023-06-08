@@ -173,8 +173,8 @@
     line-height: 62rpx;
     width: 150rpx;
     height: 62rpx;
-    background-color: #922f2f;
-    color: white;
+    background-color: #cacaca;
+    color: rgb(0, 0, 0);
     margin-right: 10rpx;
     margin-left: 15rpx;
     align-self: flex-start;
@@ -188,7 +188,7 @@
     align-items: center;
   }
   
-  .support-button, .oppose-button {
+  .oppose-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,14 +196,24 @@
     line-height: 62rpx;
     width: 150rpx;
     height: 62rpx;  
-    background-color: #922f2f;
-    color: white;
+    background-color: #fa9b9b;
+    color: rgb(151, 14, 14);
     border-radius: 15rpx;
     padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
   }
-  
+
   .support-button {
-    background-color: #437438;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 62rpx;
+    width: 150rpx;
+    height: 62rpx;  
+    background-color: #AFDAA5;
+    color: rgb(0, 141, 12);
+    border-radius: 15rpx;
+    padding: 5rpx 8rpx;
   }
   
   .oppose-button {
@@ -211,3 +221,54 @@
     margin-right: 15rpx;
   }
   
+  .report-button-clicked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 62rpx;
+    width: 150rpx;
+    height: 62rpx;
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+    margin-right: 10rpx;
+    margin-left: 15rpx;
+    align-self: flex-start;
+    border-radius: 15rpx;
+    padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
+  }
+
+  .support-button-clicked{
+    /* 点击后的样式 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 62rpx;
+    width: 150rpx;
+    height: 62rpx;  
+    background-color: rgb(33, 143, 33);
+    color: white;
+    align-self: flex-start;
+    border-radius: 15rpx;
+    padding: 5rpx 8rpx; /* 根据宽度和高度比例计算得出 */
+  }
+
+
+   
+  .oppose-button-clicked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 62rpx;
+    width: 150rpx;
+    height: 62rpx;  
+    background-color: rgb(155, 12, 12);
+    color: white;
+    align-self: flex-start;
+    border-radius: 15rpx;
+    padding: 5rpx 8rpx;  
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+  }

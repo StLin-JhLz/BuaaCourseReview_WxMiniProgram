@@ -10,6 +10,9 @@ Page({
      * 页面的初始数据
      */
     data: {
+        isClicked: false,
+        isAgreed: false,
+        isOpposed: false,
         course:{
             id : "",
             name : "",
@@ -41,6 +44,26 @@ Page({
         },
     },
 
+    /*
+        按钮选中
+    */
+   toggleClicked() {
+    this.setData({
+      isClicked: !this.data.isClicked,
+    });
+  },
+    toggleAgreed() {
+        this.setData({
+        isAgreed: !this.data.isAgreed,
+        isOpposed: false,
+        });
+    },
+    toggleOpposed() {
+        this.setData({
+        isOpposed: !this.data.isOpposed,
+        isAgreed: false,
+        });
+    },
     /**
      * 生命周期函数--监听页载
      */

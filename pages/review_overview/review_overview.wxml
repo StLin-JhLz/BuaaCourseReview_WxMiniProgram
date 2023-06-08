@@ -90,12 +90,21 @@
 
     <view class="bottom-space2"></view>
     <view class="button-container">
-        <button class="report-button" data-id="{{review.id}}" bind:tap="reportReview">举报:{{review.report_cnt}}</button>
-        <view class="button-right-container">
-            <button class="support-button" data-id="{{review.id}}" bind:tap="supportReview">赞:{{review.agree_cnt}}</button>
-            <button class="oppose-button" data-id="{{review.id}}" bind:tap="opposeReview">踩:{{review.disagree_cnt}}</button>
-        </view>
-    </view>
+  <view wx:if="{{isClicked}}">
+    <button class="report-button-clicked" bindtap="toggleClicked">举报:{{review.report_cnt}}</button>
+  </view>
+  <view wx:else>
+    <button class="report-button" bindtap="toggleClicked">举报:{{review.report_cnt}}</button>
+  </view>
+  <view class="button-container">
+  <button wx:if="{{isAgreed}}" class="support-button-clicked" bindtap="toggleAgreed">赞:{{review.agree_cnt}}</button>
+  <button wx:else class="support-button" bindtap="toggleAgreed">赞:{{review.agree_cnt}}</button>
+  <button wx:if="{{isOpposed}}" class="oppose-button-clicked" bindtap="toggleOpposed">踩:{{review.disagree_cnt}}</button>
+  <button wx:else class="oppose-button" bindtap="toggleOpposed">踩:{{review.disagree_cnt}}</button>
+</view>
+
+</view>
+
     <view class="bottom-space2"></view>
     </block>
     <view class="bottom-space2"></view>
