@@ -1,6 +1,7 @@
 <!--pages/home-page/home-page.wxml-->
 <!-- 背景图 -->
-<view class="page-background" style="background-image: url('../../images/back_img/backIMG.png');">
+<view class="page-background" 
+    style="background-image: url('../../images/back_img/backIMG.png' ); background-size:cover; background-repeat: round; opacity: 1.0;">
   <!-- 页面内容 -->
 
 

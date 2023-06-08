@@ -1,1 +1,26 @@
-/* pages/statistics/statistics.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  
+  .image {
+    width: 200rpx;
+    height: 200rpx;
+    margin-bottom: 10rpx;
+  }
+  
+  .text {
+    font-size: 54rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+  }
+
+  .page-background {
+    background: linear-gradient(to bottom, #128fc8, #efefef);
+  }
+  
+  
