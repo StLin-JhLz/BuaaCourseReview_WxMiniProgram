@@ -1,8 +1,9 @@
 <!--pages/home-page/home-page.wxml-->
 <!-- 背景图 -->
-<view class="page-background">
+<view class="page-background" style="background-image: url('../../images/back_img/backIMG.png');">
   <!-- 页面内容 -->
-</view>
+
+
 
 <view class="bottom-space2"></view>
 <view class="bottom-space2"></view>
@@ -69,7 +70,7 @@
         <t-fab class="fab" icon="add" button-props="{{fabButton}}" bind:click="handleClick" text="发布评测" />
     </view>
 
-
+</view>
 
 
     

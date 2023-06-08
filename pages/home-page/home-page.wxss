@@ -3,7 +3,10 @@
 page, view, text, input, textarea {
   font-family: "等线", sans-serif;
 }
-  
+.page-background {
+    background-image: url('https://gitee.com/lin-shihan1/buaa-course-review_wx-mini-program/blob/main/images/mine/mineUnSelected.png');
+    background-size:cover;
+  } 
 .homeBox {
     width: 80%;
     margin: 30% auto; 
@@ -162,10 +165,7 @@ page, view, text, input, textarea {
     padding-bottom: 15rpx;
   }
 
-.page-background {
-    background-image: url('https://www.bing.com/images/search?view=detailV2&insightsToken=bcid_S0WqITux1LEFqxcxoNWLuD9SqbotqVTdPws&FORM=ANCMS1&iss=SBIUPLOADGET#enterInsights');
-    background-size: cover;
-  }
+
   
   
   
