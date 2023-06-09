@@ -10,7 +10,9 @@
 <view class="bottom-space2"></view>
 <!-- 标题 -->
     <view class="homeBox"></view>
-    <view class="demo-title">欢迎</view>
+    <!-- d6a400 -->
+    
+    <view class="demo-title" style="color:#d6a400;">BuaaClass</view>
     <t-notice-bar visible="{{true}}" theme="warning" content="{{announcement}}"></t-notice-bar>
 
 <!-- 搜索 -->

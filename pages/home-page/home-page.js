@@ -171,7 +171,7 @@ Page({
         title : "好课",
         text : "学到了很多东西，包括前端的微信小程序开发方法，后端的数据库相关知识。还有老师上课讲的软件工程相关知识。希望能在课程开始的时候讲下工具链，感觉直接上手有点难",
     };
-      this.setData({course_recommend:course_recommend, announcement:"公告"});
+      this.setData({course_recommend:course_recommend, announcement:"公告：欢迎使用北航课程宝，本学期课程已经更新"});
   },
 
     onShow() {

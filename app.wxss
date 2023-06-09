@@ -12,7 +12,7 @@ page {
   padding-bottom: 56rpx;
 }
 .demo-title {
-  font-size: 54rpx;
+  font-size: 48rpx;
   font-weight: 700;
   line-height: 64rpx;
   margin: 48rpx 32rpx 0;
