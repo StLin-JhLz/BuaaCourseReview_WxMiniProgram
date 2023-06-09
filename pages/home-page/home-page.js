@@ -162,14 +162,14 @@ Page({
         disagree_cnt : "3",
         course_id : "1afbcd",
         course_name:"软件工程",
-        teacher_name : "欧阳元新",
+        teacher_name : "孙青",
         semester : "21-22-3",
         rating_total : 5,
         rating_quality : 1.0,
         rating_workload : 5,
         rating_assesment : 5,
         title : "好课",
-        text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+        text : "学到了很多东西，包括前端的微信小程序开发方法，后端的数据库相关知识。还有老师上课讲的软件工程相关知识。希望能在课程开始的时候讲下工具链，感觉直接上手有点难",
     };
       this.setData({course_recommend:course_recommend, announcement:"公告"});
   },
