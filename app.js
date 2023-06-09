@@ -95,253 +95,256 @@ App({
             { name: '高级算法设计与分析', id: 'B1A12345' },
             { name: '新型计算机系统设计与性能优化', id: 'B1A12345' }
           ];      
+        this.globalData.college_course_list = 
+        [{name: '材料科学与工程学院', num: '01', name_s: '材料', courses: [{id: 'B3I012210', name: '材料现代研究方法', department: '材料科学与工程学院'}, {id: 'B3J013330', name: '薄膜技术基础', department: '材料科学与工程学院'}, {id: 'B3I014320', name: '科研课堂', department: '材料科学与工程学院'}, {id: 'B3I012810', name: '纳米材料研究方法', department: '材料科学与工程学院'}, {id: 'B3I012800', name: '纳米材料化学', department: '材料科学与工程学院'}, {id: 'B1A012140', name: '物理化学B', department: '材料科学与工程学院'}, {id: 'B3I012220', name: '物理冶金原理', department: '材料科学与工程学院'}, {id: 'B3J013640', name: '电子陶瓷材料', department: '材料科学与工程学院'}, {id: 'B3J013320', name: '金属功能材料', department: '材料科学与工程学院'}, {id: 'B3J013930', name: '材料表面与界面', department: '材料科学与工程学院'}, {id: 'B3J013820', name: '材料加工设备与自动化', department: '材料科学与工程学院'}, {id: 'B2G010440', name: '金相技能训练', department: '材料科学与工程学院'}, {id: 'B3I012230', name: '高分子化学', department: '材料科学与工程学院'}, {id: 'B3J012240', name: '材料制备传输原理', department: '材料科学与工程学院'}, {id: 'B2G014900', name: '纳米材料概论及其发展前沿', department: '材料科学与工程学院'}, {id: 'B3I01340A', name: '量子力学基础', department: '材料科学与工程学院'}, {id: 'B2F010110', name: '材料概论', department: '材料科学与工程学院'}, {id: 'B2F010211', name: '走进材料——从原子到器件', department: '材料科学与工程学院'}, {id: 'B3J013440', name: '新型功能材料', department: '材料科学与工程学院'}, {id: 'B3I013280', name: '航空航天结构材料', department: '材料科学与工程学院'}, {id: 'B3I013290', name: '纳米材料基础', department: '材料科学与工程学院'}, {id: 'B3J013310', name: '金属结构材料', department: '材料科学与工程学院'}, {id: 'B3J013340', name: '材料设计与模拟', department: '材料科学与工程学院'}, {id: 'B3J013410', name: '固体物理', department: '材料科学与工程学院'}, {id: 'B3J013420', name: '量子力学与统计', department: '材料科学与工程学院'}, {id: 'B3J013430', name: '计算材料学', department: '材料科学与工程学院'}, {id: 'B3J013510', name: '材料腐蚀科学与防护', department: '材料科学与工程学院'}, {id: 'B3J013520', name: '电化学测试技术', department: '材料科学与工程学院'}, {id: 'B3J013530', name: '新能源材料化学', department: '材料科学与工程学院'}, {id: 'B3J013710', name: '聚合物基复合材料', department: '材料科学与工程学院'}, {id: 'B3J013620', name: '新能源材料', department: '材料科学与工程学院'}, {id: 'B3J013630', name: '无机非金属材料化学', department: '材料科学与工程学院'}, {id: 'B3J013720', name: '高分子材料', department: '材料科学与工程学院'}, {id: 'B3J013740', name: '高分子材料功能设计及应用', department: '材料科学与工程学院'}, {id: 'B3J013920', name: '低維材料物理', department: '材料科学与工程学院'}, {id: 'B3J014520', name: '仪器分析基础', department: '材料科学与工程学院'}, {id: 'B3J013610', name: '无机非金属材料基础', department: '材料科学与工程学院'}, {id: 'B2G014421', name: 'Explore the Materials: From an Atom to a Device （on-line）', department: '材料科学与工程学院'}]}, {name: '电子信息工程学院', num: '02', name_s: '电子', courses: [{id: 'B3J023150', name: '嵌入式系统原理与应用', department: '电子信息工程学院'}, {id: 'B2G020211', name: '发明、创新与创业', department: '电子信息工程学院'}, {id: 'B1B023130', name: '电子电路设计训练', department: '电子信息工程学院'}, {id: 'B3I023230', name: '自动控制原理', department: '电子信息工程学院'}, {id: 'B3J023110', name: '图像信号处理', department: '电子信息工程学院'}, {id: 'B3I022240', name: '电磁基础实验', department: '电子信息工程学院'}, {id: 'B3I022270', name: '电磁场理论', department: '电子信息工程学院'}, {id: 'B1B021150', name: '电子设计基础训练', department: '电子信息工程学院'}, {id: 'B3I023260', name: '电磁兼容原理', department: '电子信息工程学院'}, {id: 'B3I022230', name: 'FPGA基础', department: '电子信息工程学院'}, {id: 'B3I023200', name: '通信原理', department: '电子信息工程学院'}, {id: 'B3I022180', name: '信号与系统', department: '电子信息工程学院'}, {id: 'B3I022160', name: '电子电路（1）', department: '电子信息工程学院'}, {id: 'B2G020251', name: '大学学习及研究方法概论', department: '电子信息工程学院'}, {id: 'B3I023210', name: '信息论基础', department: '电子信息工程学院'}, {id: 'B1B023150', name: '微机原理与接口技术', department: '电子信息工程学院'}, {id: 'B1B022200', name: '信号与系统', department: '电子信息工程学院'}, {id: 'B3I024960', name: '科研课堂', department: '电子信息工程学院'}, {id: 'B2F020450', name: '北斗高性能导航与应用', department: '电子信息工程学院'}, {id: 'B2F020370', name: '创业创新理论和实践', department: '电子信息工程学院'}, {id: 'B2F020280', name: '微波成像技术前沿', department: '电子信息工程学院'}, {id: 'B2F020320', name: '万物互联——无线网络的前世今生', department: '电子信息工程学院'}, {id: 'B3J023300', name: '运筹学', department: '电子信息工程学院'}, {id: 'B2F020350', name: '复杂网络前沿探讨', department: '电子信息工程学院'}, {id: 'B2G020261', name: '科技论文写作', department: '电子信息工程学院'}, {id: 'B3J024310', name: '现代空中交通管理', department: '电子信息工程学院'}, {id: 'B3J023240', name: '现代通信天线', department: '电子信息工程学院'}, {id: 'B3J024440', name: '应用光学', department: '电子信息工程学院'}, {id: 'B3I023930', name: '综合创新-综合设计', department: '电子信息工程学院'}, {id: 'B3J023200', name: '微波电路与封装', department: '电子信息工程学院'}, {id: 'B3J023370', name: '集成电路设计原理', department: '电子信息工程学院'}, {id: 'B3J023490', name: '射频与微波系统', department: '电子信息工程学院'}, {id: 'B1B021120L', name: 'C语言程序设计', department: '电子信息工程学院'}, {id: 'B1B021121L', name: 'C语言程序设计', department: '电子信息工程学院'}, {id: 'B2G020271', name: '电子信息文献导读', department: '电子信息工程学院'}, {id: 'B2F020420', name: '电磁兼容技术前沿', department: '电子信息工程学院'}, {id: 'B3I022330', name: '电磁科技前沿', department: '电子信息工程学院'}]}, {name: '自动化科学与电气工程学院', num: '03', name_s: '自动化', courses: [{id: 'B3J034830', name: '科研课堂', department: '自动化科学与电气工程学院'}, {id: 'B1B032030', name: '电路测试（2）', department: '自动化科学与电气工程学院'}, {id: 'B1B032020', name: '电路测试（1）', department: '自动化科学与电气工程学院'}, {id: 'B1B032160', name: '电气技术实践（1）', department: '自动化科学与电气工程学院'}, {id: 'B1B032060', name: '电工电子技术', department: '自动化科学与电气工程学院'}, {id: 'B1B032011L', name: '电气技术实践(1)', department: '自动化科学与电气工程学院'}, {id: 'B1B032140', name: '电工电子技术B', department: '自动化科学与电气工程学院'}, {id: 'B1B03202B', name: '模拟电路B', department: '自动化科学与电气工程学院'}, {id: 'B3J033370', name: '导航技术', department: '自动化科学与电气工程学院'}, {id: 'B2F030380', name: '科技写作', department: '自动化科学与电气工程学院'}, {id: 'B3I033400', name: '机电一体化系统设计与实践', department: '自动化科学与电气工程学院'}, {id: 'B3I03346A', name: '电机设计', department: '自动化科学与电气工程学院'}, {id: 'B3I033170', name: '计算机控制系统', department: '自动化科学与电气工程学院'}, {id: 'B3J035100', name: '基于MWorks的控制系统建模与仿真实践', department: '自动化科学与电气工程学院'}, {id: 'B1B03203B', name: '数字电路B', department: '自动化科学与电气工程学院'}, {id: 'B1B032120', name: '数字电子技术基础', department: '自动化科学与电气工程学院'}, {id: 'B3I03347A', name: '高电压技术', department: '自动化科学与电气工程学院'}, {id: 'B3J033440', name: '飞行控制系统I', department: '自动化科学与电气工程学院'}, {id: 'B3I03349A', name: '电力系统分析(2)', department: '自动化科学与电气工程学院'}, {id: 'B3J034180', name: '航天器智能自主编队控制', department: '自动化科学与电气工程学院'}, {id: 'B1B032012', name: '电气技术实践（1）（英）', department: '自动化科学与电气工程学院'}, {id: 'B2G030330', name: '无人机自主控制与管理系统设计', department: '自动化科学与电气工程学院'}, {id: 'B3I03340A', name: '电气信息测试技术', department: '自动化科学与电气工程学院'}, {id: 'B3J033290', name: '制导与控制', department: '自动化科学与电气工程学院'}, {id: 'B3J033140', name: '模式识别与机器学习', department: '自动化科学与电气工程学院'}, {id: 'B3J034810', name: '信息系统集成技术', department: '自动化科学与电气工程学院'}, {id: 'B3J033540', name: '计算机软件技术基础', department: '自动化科学与电气工程学院'}, {id: 'B1B033160', name: '工程图学基础', department: '自动化科学与电气工程学院'}, {id: 'B2F030180', name: '电气工程学科回顾与展望', department: '自动化科学与电气工程学院'}, {id: 'B2F030240', name: '工业机器人控制实践', department: '自动化科学与电气工程学院'}, {id: 'B2F030290', name: '大数据与类脑智能', department: '自动化科学与电气工程学院'}, {id: 'B2F030210', name: '嵌入式系统与智能检测', department: '自动化科学与电气工程学院'}, {id: 'B2F030170', name: '数学、控制与智能', department: '自动化科学与电气工程学院'}, {id: 'B1B033170', name: '电气工程制图基础', department: '自动化科学与电气工程学院'}, {id: 'B1B033180', name: '“口袋”式FPGA应用创新实验', department: '自动化科学与电气工程学院'}, {id: 'B3I03344A', name: '航空航天器供电系统', department: '自动化科学与电气工程学院'}, {id: 'B1B032210', name: '材料力学', department: '自动化科学与电气工程学院'}, {id: 'B1B032190', name: '电磁场基础', department: '自动化科学与电气工程学院'}, {id: 'B3I03312A', name: '自动控制原理A（2）', department: '自动化科学与电气工程学院'}, {id: 'B3I033150', name: '数字信号处理', department: '自动化科学与电气工程学院'}, {id: 'B3I03311A', name: '自动控制原理A（1）', department: '自动化科学与电气工程学院'}, {id: 'B3J033330', name: '过程控制', department: '自动化科学与电气工程学院'}, {id: 'B3I033390', name: '机器人运动控制', department: '自动化科学与电气工程学院'}, {id: 'B3I033180', name: '计算机测试系统', department: '自动化科学与电气工程学院'}, {id: 'B3I03345A', name: '电力传动与控制系统', department: '自动化科学与电气工程学院'}, {id: 'B3J033520', name: '机械电子学', department: '自动化科学与电气工程学院'}, {id: 'B3I03348A', name: '电器设计基础', department: '自动化科学与电气工程学院'}, {id: 'B3J033420', name: '控制系统建模与仿真', department: '自动化科学与电气工程学院'}, {id: 'B2G030130', name: '飞行器自动控制导论', department: '自动化科学与电气工程学院'}, {id: 'B1B032110', name: '模拟电子技术基础', department: '自动化科学与电气工程学院'}, {id: 'B3J033190', name: '模式识别与智能系统技术', department: '自动化科学与电气工程学院'}, {id: 'B3J03439B', name: '综合创新实践课', department: '自动化科学与电气工程学院'}, {id: 'B2G030290', name: '飞机容错控制系统', department: '自动化科学与电气工程学院'}, {id: 'B3J033310', name: '航空测试系统', department: '自动化科学与电气工程学院'}, {id: 'B3J033650', name: '机器视觉', department: '自动化科学与电气工程学院'}, {id: 'B3I033320', name: '智能机器人基础', department: '自动化科学与电气工程学院'}, {id: 'B3J033380', name: '非线性控制', department: '自动化科学与电气工程学院'}, {id: '50G40360', name: '工业机器人控制实践', department: '自动化科学与电气工程学院'}, {id: 'B3J033510', name: '液压流体力学与液压传动技术', department: '自动化科学与电气工程学院'}, {id: 'B3J033160', name: '智能控制导论', department: '自动化科学与电气工程学院'}]}, {name: '能源与动力工程学院', num: '04', name_s: '能源', courses: [{id: 'B3J043960', name: '传感器与测试技术基础', department: '能源与动力工程学院'}, {id: 'B3I043440', name: '新能源技术基础', department: '能源与动力工程学院'}, {id: 'B3I042710', name: '工程流体力学', department: '能源与动力工程学院'}, {id: 'B3I042810', name: '空气动力学', department: '能源与动力工程学院'}, {id: 'B1A041210', name: '计算方法', department: '能源与动力工程学院'}, {id: 'B1A043220', name: '数理方程', department: '能源与动力工程学院'}, {id: 'B3I043850', name: '航空电推进原理', department: '能源与动力工程学院'}, {id: 'B3I043840', name: '航空能源存储与转换', department: '能源与动力工程学院'}, {id: 'B3I043870', name: '航空推进电机系统', department: '能源与动力工程学院'}, {id: 'B3I043480', name: '动力装置原理', department: '能源与动力工程学院'}, {id: 'B2G040190', name: '科技创新实践', department: '能源与动力工程学院'}, {id: 'B3I043450', name: '能源与动力测试', department: '能源与动力工程学院'}, {id: 'B3I043460', name: '能源互联网系统工程', department: '能源与动力工程学院'}, {id: 'OH04002', name: 'Office Hours', department: '能源与动力工程学院'}, {id: 'B3J042990', name: '科研课堂', department: '能源与动力工程学院'}, {id: 'B2F040140', name: '高等两相湍流燃烧学', department: '能源与动力工程学院'}, {id: 'B2F040260', name: '航空发动机概论', department: '能源与动力工程学院'}, {id: 'B2F040280', name: '航空发动机试验测试导论', department: '能源与动力工程学院'}, {id: 'B2F040180', name: '科学实验方法', department: '能源与动力工程学院'}, {id: 'B2F040290', name: '无人机动力', department: '能源与动力工程学院'}, {id: 'B3I043280', name: '航空发动机结构设计与强度(1)', department: '能源与动力工程学院'}, {id: 'B2F040160', name: '吸气式发动机燃烧技术', department: '能源与动力工程学院'}, {id: 'B3I043290', name: '航空发动机结构设计与强度(2)', department: '能源与动力工程学院'}, {id: 'B3J043930', name: '飞机结构与系统', department: '能源与动力工程学院'}, {id: 'B3I043860', name: '电推进控制', department: '能源与动力工程学院'}, {id: 'B3I043520', name: '航空发动机原理(3)', department: '能源与动力工程学院'}, {id: 'B3J043761', name: '颗粒物生成与排放(英文授课)', department: '能源与动力工程学院'}, {id: 'B3J043440', name: '航空燃气轮机制造工艺', department: '能源与动力工程学院'}, {id: 'B3I043530', name: '航空发动机控制原理', department: '能源与动力工程学院'}, {id: 'B3J043780', name: '燃烧装置设计', department: '能源与动力工程学院'}, {id: 'B3J043560', name: '数字控制系统', department: '能源与动力工程学院'}, {id: 'B3J043771', name: '替代航空燃料燃烧与排放(英文授课)', department: '能源与动力工程学院'}, {id: 'B3J043210', name: '分布式供给能技术', department: '能源与动力工程学院'}, {id: 'B2F040270', name: '航空发动机典型故障与设计关系', department: '能源与动力工程学院'}, {id: 'B3J043810', name: '新能源动力导论', department: '能源与动力工程学院'}, {id: 'B3J043240', name: '生物能源技术', department: '能源与动力工程学院'}, {id: 'B3J043420', name: '有限元基础', department: '能源与动力工程学院'}, {id: 'B3J043850', name: '储能技术', department: '能源与动力工程学院'}, {id: 'B3J043860', name: '节能减排', department: '能源与动力工程学院'}, {id: 'B3J043550', name: 'Matlab控制系统设计', department: '能源与动力工程学院'}, {id: 'B2G040110', name: '新能源技术概论', department: '能源与动力工程学院'}, {id: 'B3J043410', name: '机械振动基础', department: '能源与动力工程学院'}, {id: 'B3J043320', name: '多维气体动力学', department: '能源与动力工程学院'}, {id: 'B1A042230', name: '人工智能算法基础', department: '能源与动力工程学院'}, {id: 'B2G040180', name: '科学可视化入门', department: '能源与动力工程学院'}, {id: 'B3I043680', name: '电推进专业基础实验', department: '能源与动力工程学院'}]}, {name: '航空科学与工程学院', num: '05', name_s: '航空', courses: [{id: 'B1B052060', name: '材料力学A', department: '航空科学与工程学院'}, {id: 'B1B052040', name: '材料力学B', department: '航空科学与工程学院'}, {id: 'B1B052060L', name: '材料力学A', department: '航空科学与工程学院'}, {id: 'B1B052031L', name: '材料力学A', department: '航空科学与工程学院'}, {id: 'B3I053160', name: '飞行力学', department: '航空科学与工程学院'}, {id: 'B1B052021L', name: '理论力学A(2)', department: '航空科学与工程学院'}, {id: 'B3J05070A', name: '振动力学基础', department: '航空科学与工程学院'}, {id: 'B3J05058A', name: '复合材料力学', department: '航空科学与工程学院'}, {id: 'B3I05322B', name: '计算方法', department: '航空科学与工程学院'}, {id: 'B3J05013A', name: '飞行器工艺', department: '航空科学与工程学院'}, {id: 'B3J05019A', name: '复合材料结构设计', department: '航空科学与工程学院'}, {id: 'B3J05082A', name: '载人航天生命保障技术', department: '航空科学与工程学院'}, {id: 'B3J05078A', name: '飞机新能源技术', department: '航空科学与工程学院'}, {id: 'B2F050110', name: '航空航天概论A', department: '航空科学与工程学院'}, {id: 'B2F050410', name: '航空航天概论B', department: '航空科学与工程学院'}, {id: 'B1B05203A', name: '理论力学A(2)', department: '航空科学与工程学院'}, {id: 'B1B05204DL', name: '理论力学D（2）', department: '航空科学与工程学院'}, {id: 'B3I052140', name: '热工基础A(1)', department: '航空科学与工程学院'}, {id: 'B3I05312B', name: '飞机结构设计', department: '航空科学与工程学院'}, {id: 'B3J050441L', name: '实验流体力学', department: '航空科学与工程学院'}, {id: 'B3I05321B', name: '数理方程', department: '航空科学与工程学院'}, {id: 'B3J050611L', name: '结构分析中的有限元法', department: '航空科学与工程学院'}, {id: 'B3J05035A', name: '飞行仿真与试飞', department: '航空科学与工程学院'}, {id: 'B1B052140', name: '空气动力学上B', department: '航空科学与工程学院'}, {id: 'B3J05022B', name: '深度强化学习基础', department: '航空科学与工程学院'}, {id: 'B3J05086A', name: '人机与环境工程', department: '航空科学与工程学院'}, {id: 'B1B052120', name: '空气动力学A', department: '航空科学与工程学院'}, {id: 'B3I052150', name: '热工基础B', department: '航空科学与工程学院'}, {id: 'B1B052120L', name: '空气动力学A', department: '航空科学与工程学院'}, {id: 'B3I053121L', name: '飞机结构设计', department: '航空科学与工程学院'}, {id: 'B3J05067A', name: '塑性力学基础', department: '航空科学与工程学院'}, {id: 'B3J05075A', name: '空气调节技术', department: '航空科学与工程学院'}, {id: 'B1B052180', name: '热力学与统计物理', department: '航空科学与工程学院'}, {id: 'B3J05311A', name: '经典飞机设计实例解析', department: '航空科学与工程学院'}, {id: 'B3I053181L', name: '计算方法', department: '航空科学与工程学院'}, {id: 'B3J05038A', name: '航空飞行器系统工程概论', department: '航空科学与工程学院'}, {id: 'B3J05097A', name: '连续介质力学基础', department: '航空科学与工程学院'}, {id: 'B3I054020', name: '科研课堂', department: '航空科学与工程学院'}, {id: '50G05120', name: '航空航天技术', department: '航空科学与工程学院'}, {id: 'B3J05094A', name: '流体与粉体', department: '航空科学与工程学院'}, {id: 'B3J05024A', name: '结构优化设计', department: '航空科学与工程学院'}, {id: 'B3J05030A', name: '直升机飞行性能、操纵及稳定性', department: '航空科学与工程学院'}, {id: 'B3J05044A', name: '实验流体力学', department: '航空科学与工程学院'}, {id: 'B3J05041A', name: '计算流体力学', department: '航空科学与工程学院'}, {id: 'B3J050441', name: '实验流体力学(英文)', department: '航空科学与工程学院'}, {id: 'B3J05065A', name: '实验固体力学', department: '航空科学与工程学院'}, {id: 'B3J05021B', name: '航空工程大型通用软件应用（2）', department: '航空科学与工程学院'}, {id: 'B3I053310', name: '飞行器信息系统及网络技术', department: '航空科学与工程学院'}, {id: 'B3J05102A', name: '飞机结构工程导论', department: '航空科学与工程学院'}, {id: 'B3I053151L', name: '自动控制原理B', department: '航空科学与工程学院'}, {id: 'B3J05093A', name: '分子气体动力学', department: '航空科学与工程学院'}, {id: 'B2F050330', name: '动物运动的弹性机制', department: '航空科学与工程学院'}, {id: 'B2F050360', name: '飞行器乘员救生技术', department: '航空科学与工程学院'}, {id: 'B2F050160', name: '湍流起源', department: '航空科学与工程学院'}, {id: 'B2F050290', name: '飞机结冰与飞行安全', department: '航空科学与工程学院'}, {id: 'B3J05022A', name: '航空科学技术发展概论', department: '航空科学与工程学院'}, {id: 'B2G050270', name: 'AI及应用通识课', department: '航空科学与工程学院'}, {id: '50G40220', name: '大学生治学方法', department: '航空科学与工程学院'}, {id: 'B2F050390', name: '航空科学大观', department: '航空科学与工程学院'}, {id: 'B3I05319B', name: '飞行器环境控制', department: '航空科学与工程学院'}, {id: 'B3J05061A', name: '结构分析中的有限元法', department: '航空科学与工程学院'}, {id: 'B3J05063A', name: '疲劳可靠性', department: '航空科学与工程学院'}, {id: 'B3J05047A', name: '粘性流体力学', department: '航空科学与工程学院'}, {id: 'B3I053340', name: '飞行器导航原理', department: '航空科学与工程学院'}, {id: 'B3J050321L', name: '直升机总体设计', department: '航空科学与工程学院'}, {id: 'B3J050730', name: '大型客机总体气动设计', department: '航空科学与工程学院'}, {id: 'B1A05204B', name: '数理方程A', department: '航空科学与工程学院'}, {id: 'B3J050902', name: '航空工程师应知应会（下）', department: '航空科学与工程学院'}, {id: 'B3I053030', name: '数据结构与算法基础', department: '航空科学与工程学院'}, {id: 'B3I052130L', name: '热工基础A(1)', department: '航空科学与工程学院'}, {id: 'B1A052011L', name: '复变函数', department: '航空科学与工程学院'}]}, {name: '计算机学院', num: '06', name_s: '计算机', courses: [{id: 'B1B061100', name: '数据结构与程序设计(信息类)', department: '计算机学院'}, {id: 'B3I063130', name: '软件工程', department: '计算机学院'}, {id: 'B1B061040', name: '大学计算机基础', department: '计算机学院'}, {id: 'B3I062170', name: '面向对象设计与构造', department: '计算机学院'}, {id: 'B1B061060', name: '离散数学(信息类)', department: '计算机学院'}, {id: 'B3I064120', name: '计算机科学方法论', department: '计算机学院'}, {id: 'B3I063210', name: '计算机网络', department: '计算机学院'}, {id: 'B3J063940', name: 'FPGA多核并行计算', department: '计算机学院'}, {id: 'B1B061080', name: '大学计算机基础', department: '计算机学院'}, {id: 'B3I062270', name: '操作系统', department: '计算机学院'}, {id: 'B2G060220', name: '社会计算导论', department: '计算机学院'}, {id: 'B3J062820', name: '离散数学（3）', department: '计算机学院'}, {id: 'B3I061140', name: '离散数学（1）', department: '计算机学院'}, {id: 'B3J063610', name: '学科技术前沿讲座', department: '计算机学院'}, {id: 'B3I064640', name: '虚拟现实理论与算法', department: '计算机学院'}, {id: 'B3J060340', name: '人工智能安全导论', department: '计算机学院'}, {id: 'B3J063950', name: '信息系统分析与设计', department: '计算机学院'}, {id: 'B3J063390', name: '人工智能的计算与信息理论', department: '计算机学院'}, {id: 'B3J063520', name: '人工智能', department: '计算机学院'}, {id: 'B3J063220', name: 'X86汇编程序设计', department: '计算机学院'}, {id: 'B3J063240', name: '信号处理与信息推断', department: '计算机学院'}, {id: 'B3I063220', name: '计算机网络实验', department: '计算机学院'}, {id: 'B3J063851', name: '大数据分析', department: '计算机学院'}, {id: 'B3J063530', name: '软件项目管理', department: '计算机学院'}, {id: 'B3J062850', name: '社会计算', department: '计算机学院'}, {id: 'B3J063821', name: '电子商务', department: '计算机学院'}, {id: 'B3J064910', name: '数字图像处理', department: '计算机学院'}, {id: 'B3J062860', name: '计算引论', department: '计算机学院'}, {id: 'B3J062890', name: 'Unix系统', department: '计算机学院'}, {id: 'B3J063720', name: '网络攻防技术', department: '计算机学院'}, {id: 'B3J063871', name: '高级算法设计与分析', department: '计算机学院'}, {id: 'B3J063510', name: '人机交互 ', department: '计算机学院'}, {id: 'B3J063896', name: '物联网与大数据系统设计', department: '计算机学院'}, {id: 'B3J063260', name: '数据可视化分析技术', department: '计算机学院'}, {id: 'B3J063893', name: '机器学习工程基础', department: '计算机学院'}, {id: 'B3J063710', name: '计算机网络安全技术', department: '计算机学院'}, {id: 'B3J063970', name: '新型计算机系统设计与性能优化', department: '计算机学院'}, {id: 'B3J063270', name: '科研课堂', department: '计算机学院'}, {id: 'B3I064650', name: '虚拟现实人机交互', department: '计算机学院'}]}, {name: '机械工程及自动化学院', num: '07', name_s: '机械', courses: [{id: 'B3I073530', name: '机电一体化系统设计与实践', department: '机械工程及自动化学院'}, {id: 'B1B072080', name: '机械原理及设计', department: '机械工程及自动化学院'}, {id: 'B1B071270', name: '工程图学(2)', department: '机械工程及自动化学院'}, {id: 'B1B072050L', name: '机械原理及设计', department: '机械工程及自动化学院'}, {id: 'B3I073680', name: '机器人技术基础', department: '机械工程及自动化学院'}, {id: 'B1B072310', name: '机械原理', department: '机械工程及自动化学院'}, {id: 'B3I073531L', name: '机电一体化系统设计与实践', department: '机械工程及自动化学院'}, {id: 'B3I073431L', name: '测试技术基础', department: '机械工程及自动化学院'}, {id: 'B3I073260', name: '测试技术基础', department: '机械工程及自动化学院'}, {id: 'B1B073080', name: '机械设计综合实践A', department: '机械工程及自动化学院'}, {id: 'B3J073840', name: '材料成型原理', department: '机械工程及自动化学院'}, {id: 'B3J073130', name: '现代设计方法学', department: '机械工程及自动化学院'}, {id: 'B3J073940', name: '数字化设计与制造', department: '机械工程及自动化学院'}, {id: 'B1B073380', name: '机械设计综合实践', department: '机械工程及自动化学院'}, {id: 'B3J073231L', name: '计算机控制系统', department: '机械工程及自动化学院'}, {id: 'B3I073630', name: '微纳工程基础', department: '机械工程及自动化学院'}, {id: 'B3I073930', name: '微纳米物理及力学', department: '机械工程及自动化学院'}, {id: 'B3J073930', name: '智能生产与运作管理', department: '机械工程及自动化学院'}, {id: 'B3J073920', name: '智能制造技术与装备', department: '机械工程及自动化学院'}, {id: 'B3J073210', name: '先进加工技术', department: '机械工程及自动化学院'}, {id: 'B3J073610', name: '现代飞机制造工艺学', department: '机械工程及自动化学院'}, {id: 'B3I073890', name: '摄影与测量', department: '机械工程及自动化学院'}, {id: 'B3J073211L', name: '先进加工技术及装备', department: '机械工程及自动化学院'}, {id: 'B3I073820', name: '产品设计(2)', department: '机械工程及自动化学院'}, {id: 'B1B073090', name: '机械设计综合实践B', department: '机械工程及自动化学院'}, {id: 'B3I073740', name: '信息设计', department: '机械工程及自动化学院'}, {id: 'B3J073830', name: '交通工具造型设计', department: '机械工程及自动化学院'}, {id: 'B3J073750', name: '环境设计(1)', department: '机械工程及自动化学院'}, {id: 'B3J073760', name: '展示设计', department: '机械工程及自动化学院'}, {id: 'B3I072630', name: '工业设计方法', department: '机械工程及自动化学院'}, {id: 'B3I072640', name: '设计创意基础', department: '机械工程及自动化学院'}, {id: 'B3I072860', name: '产品模型制作(1)', department: '机械工程及自动化学院'}, {id: 'B3I072720', name: '设计色彩', department: '机械工程及自动化学院'}, {id: 'B3I072820', name: '色彩', department: '机械工程及自动化学院'}, {id: 'B3I072870', name: '表现技法(1)', department: '机械工程及自动化学院'}, {id: 'B3I073620', name: '环境展示设计实践', department: '机械工程及自动化学院'}, {id: 'B3I072110', name: '航空航天制造工程基础（I）', department: '机械工程及自动化学院'}, {id: 'B3I073310', name: '先进制造综合实验', department: '机械工程及自动化学院'}, {id: 'B3I073280', name: '微纳工程基础实验', department: '机械工程及自动化学院'}, {id: 'B1B072150', name: '材料与制造工程实验', department: '机械工程及自动化学院'}, {id: 'B3J072310', name: '工业软件开发基础综合实践', department: '机械工程及自动化学院'}, {id: 'B3I073110', name: '机器人结构设计综合实践', department: '机械工程及自动化学院'}, {id: 'B3J073140', name: '移动机器人技术基础', department: '机械工程及自动化学院'}, {id: 'B3I073230', name: '机器人控制技术基础', department: '机械工程及自动化学院'}, {id: 'B3J073910', name: '智能控制与测量技术', department: '机械工程及自动化学院'}, {id: 'B1B072121L', name: '工程材料学', department: '机械工程及自动化学院'}, {id: 'B3I072111L', name: '热工基础', department: '机械工程及自动化学院'}, {id: 'B3I072180', name: '视觉传达设计', department: '机械工程及自动化学院'}, {id: 'B3I072320L', name: '加工工艺学', department: '机械工程及自动化学院'}, {id: 'B3I072880', name: '设计材料', department: '机械工程及自动化学院'}, {id: 'B3I072170', name: '设计形态构成', department: '机械工程及自动化学院'}, {id: 'B3I073480', name: '控制工程基础', department: '机械工程及自动化学院'}, {id: 'B3I073870', name: '产品概念设计实践', department: '机械工程及自动化学院'}, {id: 'B2K070230', name: '工程美学赏析', department: '机械工程及自动化学院'}, {id: 'B3J075110', name: '科研课堂', department: '机械工程及自动化学院'}, {id: '50G01170', name: 'CAD与三维设计', department: '机械工程及自动化学院'}, {id: 'B2G070260', name: '机器人创新设计与竞赛', department: '机械工程及自动化学院'}, {id: 'B2G070140', name: 'OpenGL三维图形程序设计', department: '机械工程及自动化学院'}, {id: 'B2G070851', name: '先进制造工艺', department: '机械工程及自动化学院'}, {id: 'B2G071510', name: '智能制造工程概论', department: '机械工程及自动化学院'}, {id: 'B1B072160', name: '工程热学', department: '机械工程及自动化学院'}, {id: 'B2G070220', name: '产品创新设计方法导论', department: '机械工程及自动化学院'}, {id: 'B2G070330', name: '创意设计与木艺模型制作', department: '机械工程及自动化学院'}, {id: 'B2K070240', name: '创意思维之美', department: '机械工程及自动化学院'}, {id: 'B2F070150', name: '工业设计概论', department: '机械工程及自动化学院'}, {id: 'B2F070140', name: '机械工程概论', department: '机械工程及自动化学院'}, {id: 'B2F073510', name: '科技实践2：科学写作与报告', department: '机械工程及自动化学院'}, {id: 'B2F070230', name: '艺术与科学实验室', department: '机械工程及自动化学院'}, {id: 'B1B072031L', name: '机械设计基础A(1)', department: '机械工程及自动化学院'}, {id: 'B3J071111L', name: '机械工程引论', department: '机械工程及自动化学院'}, {id: 'B1B072820', name: '运筹学B', department: '机械工程及自动化学院'}, {id: 'B3I072920', name: '人机工程学', department: '机械工程及自动化学院'}, {id: 'B3I073610', name: '整合设计与产品开发实践', department: '机械工程及自动化学院'}, {id: 'B3I073940', name: '微纳系统装备与测量', department: '机械工程及自动化学院'}, {id: 'B3I073650', name: '系统动力学与振动基础', department: '机械工程及自动化学院'}, {id: 'B1B072040', name: '机械基础综合实验', department: '机械工程及自动化学院'}, {id: 'B3J073330', name: '数字信号处理及其应用', department: '机械工程及自动化学院'}]}, {name: '经济管理学院', num: '08', name_s: '经管', courses: [{id: 'B3I08224BL', name: '运筹学', department: '经济管理学院'}, {id: 'B3I083470', name: '审计学', department: '经济管理学院'}, {id: 'B3J083510', name: '领导力开发', department: '经济管理学院'}, {id: 'B3I08365C', name: '政治经济学', department: '经济管理学院'}, {id: 'B3I082290', name: '应用统计学', department: '经济管理学院'}, {id: 'B3I083900', name: '投入产出分析', department: '经济管理学院'}, {id: 'B3I08221C', name: '公司财务', department: '经济管理学院'}, {id: 'B2F080110', name: '经济管理', department: '经济管理学院'}, {id: 'B1B082130', name: 'Python数据分析', department: '经济管理学院'}, {id: 'B3I08223D', name: '机械制造基础', department: '经济管理学院'}, {id: 'B3I082120', name: '运筹学（2）', department: '经济管理学院'}, {id: 'B3I08333D', name: '管理信息系统', department: '经济管理学院'}, {id: 'B2F082210', name: '商法', department: '经济管理学院'}, {id: 'B3I08332C', name: '数据结构', department: '经济管理学院'}, {id: 'B3I083690', name: '工程项目风险管理', department: '经济管理学院'}, {id: 'B3I08270D', name: '中级财务会计', department: '经济管理学院'}, {id: 'B3J083640', name: '社会科学研究方法', department: '经济管理学院'}, {id: 'B3I08227C', name: '货币金融学', department: '经济管理学院'}, {id: 'B3I08398C', name: '营销工程与方法', department: '经济管理学院'}, {id: 'B3I08222BL', name: '宏观经济学', department: '经济管理学院'}, {id: 'B3I082151L', name: '应用统计学', department: '经济管理学院'}, {id: 'B3I083411L', name: '计量经济学', department: '经济管理学院'}, {id: 'B3I08375D', name: '跨国公司管理', department: '经济管理学院'}, {id: 'B3J082370', name: '成本管理', department: '经济管理学院'}, {id: 'B3I08111BL', name: '管理学', department: '经济管理学院'}, {id: 'B3I08148D', name: '大型数据库应用实验', department: '经济管理学院'}, {id: 'B3I08222B', name: '宏观经济学', department: '经济管理学院'}, {id: 'B3J085110', name: '科研课堂', department: '经济管理学院'}, {id: 'B2G088040', name: '碳中和能力提升项目', department: '经济管理学院'}, {id: 'B3I08365D', name: '人因工程', department: '经济管理学院'}, {id: 'B3I08392D', name: '时间序列分析', department: '经济管理学院'}, {id: 'B3J082120', name: '幸福心理学', department: '经济管理学院'}, {id: 'B3I08112BL', name: '会计学', department: '经济管理学院'}, {id: 'B3I08342CL', name: '投资学', department: '经济管理学院'}, {id: 'B3I08379D', name: '国际税收', department: '经济管理学院'}, {id: 'B3J083790L', name: '国际商务沟通', department: '经济管理学院'}, {id: 'B3I08223BL', name: '应用统计学', department: '经济管理学院'}, {id: 'B3I08228CL', name: '组织行为学', department: '经济管理学院'}, {id: 'B3I084260L', name: '商务伦理与多元文化冲突', department: '经济管理学院'}, {id: 'B3I08342D', name: '战略管理', department: '经济管理学院'}, {id: 'B3I083120', name: '资源经济学 ', department: '经济管理学院'}, {id: 'B3I082430', name: '发展经济学 ', department: '经济管理学院'}, {id: 'B3I083130', name: '工程合同管理', department: '经济管理学院'}, {id: 'B3I083160', name: '人工智能和深度学习', department: '经济管理学院'}, {id: 'B3J083660', name: '数字营销学 ', department: '经济管理学院'}, {id: 'B3I08387D', name: '金融计量学', department: '经济管理学院'}, {id: 'B3J083620', name: '企业资源计划', department: '经济管理学院'}, {id: 'B3I083850', name: '精算学 ', department: '经济管理学院'}, {id: 'B3I08361D', name: '信息系统分析与设计', department: '经济管理学院'}, {id: 'B3I083110', name: '产业经济学 ', department: '经济管理学院'}, {id: 'B3I08364D', name: '系统仿真及其应用', department: '经济管理学院'}, {id: 'B3I08389D', name: '行为金融学', department: '经济管理学院'}, {id: 'B3I083140', name: '金融机构与风险管理', department: '经济管理学院'}, {id: 'B3I08370D', name: '统计学习', department: '经济管理学院'}, {id: 'B3I083180', name: '现代管理科学方法', department: '经济管理学院'}, {id: 'B3J083680', name: '系统建模与评价方法', department: '经济管理学院'}, {id: 'B3J083560', name: '金融风险管理', department: '经济管理学院'}, {id: 'B3I083500', name: '非参数统计', department: '经济管理学院'}, {id: 'B3I08229C', name: '人力资源管理', department: '经济管理学院'}, {id: 'B3J083730', name: '用户体验度量 ', department: '经济管理学院'}, {id: 'B3J083170', name: '固定收益证券 ', department: '经济管理学院'}, {id: 'B3J083570', name: '量化交易与大数据金融', department: '经济管理学院'}, {id: 'B3I08371D', name: '技术创新管理', department: '经济管理学院'}, {id: 'B3I083980', name: '环境经济学', department: '经济管理学院'}, {id: 'B3J083720', name: '信息资源管理', department: '经济管理学院'}, {id: 'B3J083160', name: '公司治理', department: '经济管理学院'}, {id: 'B3I083560', name: '贝叶斯统计与计算', department: '经济管理学院'}, {id: 'B3J083330', name: '金融时间序列分析', department: '经济管理学院'}, {id: 'B3I08349D', name: '资本运营', department: '经济管理学院'}, {id: 'B2F080130', name: '创新创业方法论——基于案例与实践', department: '经济管理学院'}, {id: 'B2F080160', name: '证券投资学原理与应用', department: '经济管理学院'}, {id: 'B3I083820', name: 'R语言编程及应用', department: '经济管理学院'}, {id: 'B2F080150', name: '经济与管理前沿导论', department: '经济管理学院'}, {id: 'B2G080260', name: '领导力与团队管理', department: '经济管理学院'}, {id: 'B2G080140', name: '电子商务概论', department: '经济管理学院'}, {id: 'B3I08343D', name: '营销调研', department: '经济管理学院'}, {id: 'B3I08388D', name: '数理金融学', department: '经济管理学院'}, {id: 'B3I08367D', name: '工程进度管理', department: '经济管理学院'}, {id: 'B3I08356D', name: '决策与商务智能系统', department: '经济管理学院'}, {id: 'B2F080010', name: '创新思维与精益创业实践', department: '经济管理学院'}]}, {name: '数学科学学院', num: '09', name_s: '数院', courses: [{id: 'B1A09110A', name: '理科高等代数（2）', department: '数学科学学院'}, {id: 'B3I09244A', name: '数值分析', department: '数学科学学院'}, {id: 'B1A09108A', name: '理科数学分析（2）', department: '数学科学学院'}, {id: 'B1A09130A', name: '数学分析(II)', department: '数学科学学院'}, {id: 'B1A09134A', name: '高等代数(II)', department: '数学科学学院'}, {id: 'B3I09234A', name: '微分几何', department: '数学科学学院'}, {id: 'B1A09105A', name: '工科数学分析(2)', department: '数学科学学院'}, {id: 'B3J09312A', name: '三年级研讨课（2）', department: '数学科学学院'}, {id: 'B1A09204A', name: '概率统计A', department: '数学科学学院'}, {id: 'B3I09321A', name: '泛函分析', department: '数学科学学院'}, {id: 'B3J09334A', name: '范畴论及其应用', department: '数学科学学院'}, {id: 'B3I09224A', name: '拓扑学', department: '数学科学学院'}, {id: 'B1A09204B', name: '概率统计B', department: '数学科学学院'}, {id: 'B1A092050', name: '概率统计A', department: '数学科学学院'}, {id: 'B2G090230', name: '数学竞赛与思维创新（非数学专业类）', department: '数学科学学院'}, {id: 'B1A09103B', name: '线性代数', department: '数学科学学院'}, {id: 'B3I09311A', name: '微分几何', department: '数学科学学院'}, {id: 'B3I09214A', name: '复变函数', department: '数学科学学院'}, {id: 'B3I09302A', name: '算法设计与分析', department: '数学科学学院'}, {id: 'B1A091031L', name: '工科高等代数', department: '数学科学学院'}, {id: 'B1A091070L', name: '工科高等数学(2)', department: '数学科学学院'}, {id: 'B3J09394A', name: 'Fourier Analysis', department: '数学科学学院'}, {id: 'B3I09322A', name: '随机过程', department: '数学科学学院'}, {id: 'B2G090170', name: '高等数学方法应用（2）', department: '数学科学学院'}, {id: 'B2F090170', name: '应用数学分析（2）', department: '数学科学学院'}, {id: 'B2F090120', name: '数学分析原理选讲（2）', department: '数学科学学院'}, {id: 'B3J09392A', name: '统计学习 ', department: '数学科学学院'}, {id: 'B1A091091L', name: '工科高等数学(2)', department: '数学科学学院'}, {id: 'B3J09412A', name: '小波分析', department: '数学科学学院'}, {id: 'B3I09242A', name: '数理逻辑与集合论', department: '数学科学学院'}, {id: 'B3J09332A', name: '数字信号与图像处理', department: '数学科学学院'}, {id: 'B3J09342A', name: '计算机代数', department: '数学科学学院'}, {id: 'B3I09323A', name: '代数几何', department: '数学科学学院'}, {id: 'B3J09324A', name: '群表示论', department: '数学科学学院'}, {id: 'B1A09123A', name: '统计学导论', department: '数学科学学院'}, {id: 'B2G090180', name: '数学中的典型例题与技巧', department: '数学科学学院'}, {id: 'B3I09392A', name: '信息安全概论', department: '数学科学学院'}, {id: 'B3I09204A', name: '实变函数', department: '数学科学学院'}, {id: 'B2F090130', name: '数学前沿导论', department: '数学科学学院'}, {id: 'B3I09254A', name: '数理统计', department: '数学科学学院'}, {id: 'B3I09264A', name: '数学软件', department: '数学科学学院'}, {id: 'B3J09344A', name: '深度学习基础与实践', department: '数学科学学院'}, {id: 'B3J09354A', name: '量子信息数学前沿问题', department: '数学科学学院'}, {id: 'B3J095010', name: '科研课堂', department: '数学科学学院'}, {id: 'B2F090150', name: '线性代数应用案例选讲', department: '数学科学学院'}, {id: 'B3J09352A', name: '数学软件', department: '数学科学学院'}, {id: 'B3J09371A', name: '代数拓扑', department: '数学科学学院'}, {id: 'B2G090120', name: '复变函数与积分变换', department: '数学科学学院'}, {id: 'B3I09362A', name: '回归分析', department: '数学科学学院'}, {id: 'B3I09361A', name: '组合与图论', department: '数学科学学院'}, {id: 'B3I09131A', name: '数论引论', department: '数学科学学院'}, {id: 'B3I09352A', name: '数值逼近', department: '数学科学学院'}, {id: 'B1A09104BL', name: '线性代数', department: '数学科学学院'}, {id: 'B3J09372A', name: '网络安全', department: '数学科学学院'}]}, {name: '生物与医学工程学院', num: '10', name_s: '生医', courses: [{id: 'B3J103650', name: '人工器官基础 ', department: '生物与医学工程学院'}, {id: 'B3I104930', name: '科研课堂', department: '生物与医学工程学院'}, {id: 'B3I103830', name: '神经系统医学与工程', department: '生物与医学工程学院'}, {id: 'B1B102190', name: '计算机程序设计', department: '生物与医学工程学院'}, {id: 'B2F100151', name: '进化、行为与生态', department: '生物与医学工程学院'}, {id: 'B2F100150', name: '循环系统生理与心脑血管康复', department: '生物与医学工程学院'}, {id: 'B3I102230', name: '临床医学基础与医学伦理', department: '生物与医学工程学院'}, {id: '50G40260', name: '数字图像处理及应用', department: '生物与医学工程学院'}, {id: 'B3J103620', name: '植介入体检测技术', department: '生物与医学工程学院'}, {id: 'B3J103660', name: '植介入体设计与评价', department: '生物与医学工程学院'}, {id: 'B3J103640', name: '植介入体制造技术', department: '生物与医学工程学院'}, {id: 'B3J103180', name: '微流控技术及系统 ', department: '生物与医学工程学院'}, {id: 'B3J103110', name: '临床生物化学、血液及检验 ', department: '生物与医学工程学院'}, {id: 'B3J103170', name: '临床免疫学及检验', department: '生物与医学工程学院'}, {id: 'B3J100140', name: '医学成像系统', department: '生物与医学工程学院'}, {id: 'B3I103260', name: '生物材料', department: '生物与医学工程学院'}, {id: 'B3I103970', name: '健康信息工程实训', department: '生物与医学工程学院'}, {id: 'B3J100220', name: '细胞生物学实验', department: '生物与医学工程学院'}, {id: 'B1B102130', name: '数值计算方法', department: '生物与医学工程学院'}, {id: 'B1B102140', name: '数学物理方法', department: '生物与医学工程学院'}, {id: 'B3J100230', name: '微生物学实验', department: '生物与医学工程学院'}, {id: 'B3I102250', name: '细胞生物学', department: '生物与医学工程学院'}, {id: 'B3I102360', name: '细胞生物学', department: '生物与医学工程学院'}, {id: 'B3I103820', name: '循环系统医学与工程', department: '生物与医学工程学院'}, {id: 'B2G100150', name: '美容化妆品学', department: '生物与医学工程学院'}, {id: 'B1B102180', name: '机械设计基础', department: '生物与医学工程学院'}, {id: 'OH10001', name: 'Office Hours', department: '生物与医学工程学院'}, {id: 'OH10002', name: 'Office Hours', department: '生物与医学工程学院'}, {id: 'B2G100290', name: '生物医用可降解电子器件', department: '生物与医学工程学院'}, {id: 'B2G100260', name: '园艺疗法概论', department: '生物与医学工程学院'}, {id: 'B2G100330', name: '智能康复机器人导论', department: '生物与医学工程学院'}, {id: 'B2G100320', name: '中英文学术写作与展示', department: '生物与医学工程学院'}, {id: 'B3J100150', name: '实验动物学', department: '生物与医学工程学院'}, {id: 'B3J103140', name: '临检测试技术及装备', department: '生物与医学工程学院'}, {id: 'B3J103940', name: '生物医学图像处理', department: '生物与医学工程学院'}, {id: 'B3J103550', name: '机器学习 ', department: '生物与医学工程学院'}, {id: 'B3J103560', name: '神经科学基础 ', department: '生物与医学工程学院'}, {id: 'B3J103910', name: '生物医学仪器', department: '生物与医学工程学院'}, {id: 'B3J103920', name: '医用机器人', department: '生物与医学工程学院'}, {id: 'B3J103930', name: '生物医学仪器检测技术', department: '生物与医学工程学院'}, {id: 'B3J103420', name: '运动与康复医学基础', department: '生物与医学工程学院'}, {id: 'B3I102240', name: '微生物学', department: '生物与医学工程学院'}, {id: 'B3I101330', name: '基础医学概论2', department: '生物与医学工程学院'}, {id: 'B3I102330', name: '诊断学', department: '生物与医学工程学院'}, {id: 'B3I102910', name: '创新创业实训（1）', department: '生物与医学工程学院'}, {id: 'B2G100170', name: '动物行为与伦理', department: '生物与医学工程学院'}, {id: 'B3I103960', name: '有源医疗器械设计与检测实训', department: '生物与医学工程学院'}, {id: 'B3I103730', name: '医学伦理学', department: '生物与医学工程学院'}, {id: 'B3J100130', name: '定量生理学', department: '生物与医学工程学院'}, {id: 'B3J100330', name: '口腔医学与工程', department: '生物与医学工程学院'}, {id: 'B3I103740', name: '生物医学工程研究方法', department: '生物与医学工程学院'}, {id: 'B3J100160', name: '遗传学', department: '生物与医学工程学院'}, {id: 'B3J103230', name: '模式识别', department: '生物与医学工程学院'}, {id: 'B3J100240', name: '分子生物物理', department: '生物与医学工程学院'}, {id: 'B3I103930', name: '生化临床检验实训 ', department: '生物与医学工程学院'}, {id: 'B3I103810', name: '肌骨系统医学与工程', department: '生物与医学工程学院'}, {id: 'B3I102260', name: '生物化学', department: '生物与医学工程学院'}, {id: 'B2F100140', name: '生物与医学工程概论B', department: '生物与医学工程学院'}]}, {name: '人文社会科学学院', num: '11', name_s: '人文', courses: []}, {name: '外国语学院', num: '12', name_s: '外国语', courses: [{id: 'B3I123240', name: '高级德语(2)', department: '外国语学院'}, {id: 'B1C12208B', name: '大学英语B（4）', department: '外国语学院'}, {id: 'B1C12208A', name: '大学英语A（4）', department: '外国语学院'}, {id: 'B1C121100', name: '大学俄语4', department: '外国语学院'}, {id: 'B3I125291', name: '德语泛读(2)', department: '外国语学院'}, {id: 'B1C12108A', name: '大学英语A（2）', department: '外国语学院'}, {id: 'B1C12108B', name: '大学英语B（2）', department: '外国语学院'}, {id: 'B1C121080', name: '大学俄语2', department: '外国语学院'}, {id: 'B3I121380', name: '德语口语（2）', department: '外国语学院'}, {id: 'B3I121920', name: '英美经典要义II', department: '外国语学院'}, {id: 'B3I126240', name: '英语视听说（2）', department: '外国语学院'}, {id: 'B3I126261', name: '英语写作（1）', department: '外国语学院'}, {id: 'B3I126231', name: '综合英语（2）', department: '外国语学院'}, {id: 'B2G120421', name: '学术英语口语', department: '外国语学院'}, {id: 'B3J125000', name: '科研课堂', department: '外国语学院'}, {id: 'B3I126420', name: '综合德语（2）', department: '外国语学院'}, {id: 'B3I125251', name: '英语应用文写作', department: '外国语学院'}, {id: 'B3I126250', name: '英语语法', department: '外国语学院'}, {id: 'B1C122230', name: '二外日语（2）', department: '外国语学院'}, {id: 'B1C122220', name: '二外法语（2）', department: '外国语学院'}, {id: 'B3I122960', name: '中级德语2', department: '外国语学院'}, {id: 'B3I121390', name: '德语视听训练（2）', department: '外国语学院'}, {id: 'B3I122460', name: '中级德语口语(2)', department: '外国语学院'}, {id: 'B3I122980', name: '中级英语(2)', department: '外国语学院'}, {id: 'B2F120250', name: '德国概况（汉语授课）', department: '外国语学院'}, {id: 'B2F120170', name: '文学与人生', department: '外国语学院'}, {id: 'B2F120120', name: '英国社会与文化 （英语授课）', department: '外国语学院'}, {id: 'B3I122292', name: '德语写作(1)', department: '外国语学院'}, {id: 'B1C122210', name: '二外德语（2）', department: '外国语学院'}, {id: 'B3I125261', name: '汉英基础笔译', department: '外国语学院'}, {id: 'B3J122210', name: '基础口译（2）', department: '外国语学院'}, {id: 'B3J122240', name: '英语国家概况', department: '外国语学院'}, {id: 'B3J124220', name: '英语文学阅读(4）', department: '外国语学院'}, {id: 'B3I122440', name: '中级德语听力(2)', department: '外国语学院'}, {id: 'B3I124290', name: '中级英语听说写（2）', department: '外国语学院'}, {id: 'B2F120210', name: '语义学', department: '外国语学院'}, {id: 'B3I123260', name: '德语翻译实践(1)', department: '外国语学院'}, {id: 'B3J123910', name: '德语高级听力（2）', department: '外国语学院'}, {id: 'B3I123250', name: '德语国家文学史与作品选读(2)', department: '外国语学院'}, {id: 'B3J123440', name: '电影文学', department: '外国语学院'}, {id: 'B3J123940', name: '德语文学名著', department: '外国语学院'}, {id: 'B3J123920', name: '德语写作（3）', department: '外国语学院'}, {id: 'B1C123210', name: '二外德语（4）', department: '外国语学院'}, {id: 'B1C123220', name: '二外法语（4）', department: '外国语学院'}, {id: 'B1C123230', name: '二外日语（4）', department: '外国语学院'}, {id: 'B3J123950', name: '高级德语口语（2）', department: '外国语学院'}, {id: 'B3I123220', name: '高级视听说（2）', department: '外国语学院'}, {id: 'B2G120281', name: '英语学术论文及学术文本写作', department: '外国语学院'}, {id: 'B2G120441', name: '中西交流概要（II） ', department: '外国语学院'}, {id: 'B2G120411', name: '英语演讲名篇赏析', department: '外国语学院'}, {id: 'B3J123280', name: '话语分析', department: '外国语学院'}, {id: 'B3J123410', name: '英语小说选读', department: '外国语学院'}, {id: 'B3J123810', name: '英汉交替传译（2）', department: '外国语学院'}, {id: 'B3J123230', name: '计算语言学', department: '外国语学院'}, {id: 'B3J123820', name: '汉英交替传译（2）', department: '外国语学院'}, {id: 'B3J123830', name: '视译', department: '外国语学院'}, {id: 'B3J123840', name: '政经文本翻译', department: '外国语学院'}, {id: 'B3J123340', name: '莎士比亚', department: '外国语学院'}, {id: 'B3J123210', name: '句法学', department: '外国语学院'}, {id: 'B3J123420', name: '英语戏剧赏析', department: '外国语学院'}, {id: 'B3J124810', name: '科技翻译', department: '外国语学院'}, {id: 'B3I123140', name: '中国文化经典读译', department: '外国语学院'}, {id: 'B3I123820', name: '高级英语（2）', department: '外国语学院'}, {id: 'B1C121140', name: '大学日语（Ⅱ）', department: '外国语学院'}, {id: 'B3J123260', name: '语料库语言学', department: '外国语学院'}, {id: 'B2G120560', name: '大学日语（2）', department: '外国语学院'}, {id: 'B2G120230', name: '俄语二外（2） ', department: '外国语学院'}, {id: 'B2G120250', name: '俄语科技翻译(2)', department: '外国语学院'}, {id: '50G40280', name: '古希腊神话', department: '外国语学院'}, {id: '50G12510', name: '英汉语言文化对比与翻译', department: '外国语学院'}, {id: '50G40310', name: '英美时文选读', department: '外国语学院'}, {id: '50G12590', name: '翻译精品赏析', department: '外国语学院'}, {id: 'B3I121810', name: '综合英语（2）', department: '外国语学院'}]}, {name: '交通科学与工程学院', num: '13', name_s: '交通', courses: [{id: 'B3I13274A', name: '运筹学', department: '交通科学与工程学院'}, {id: 'B3I13292A', name: '交通大数据技术', department: '交通科学与工程学院'}, {id: 'B3I13332B', name: '交通安全工程', department: '交通科学与工程学院'}, {id: 'B3I13335A', name: '交通运输学', department: '交通科学与工程学院'}, {id: 'B3I13338A', name: '交通规划', department: '交通科学与工程学院'}, {id: 'B3I133361', name: '交通综合实验(二)', department: '交通科学与工程学院'}, {id: 'B3I13334A', name: '交通工程学', department: '交通科学与工程学院'}, {id: 'B3J13337A', name: '交通图像分析技术', department: '交通科学与工程学院'}, {id: 'B3I13293A', name: '车辆运用基础', department: '交通科学与工程学院'}, {id: 'B1B132110', name: '数据结构', department: '交通科学与工程学院'}, {id: 'B3I134380', name: '科研课堂', department: '交通科学与工程学院'}, {id: 'B3I13333B', name: '交通仿真', department: '交通科学与工程学院'}, {id: 'B2F130170', name: '智能交通导论', department: '交通科学与工程学院'}, {id: 'B2F130240', name: '互联网与交通大数据', department: '交通科学与工程学院'}, {id: 'B3I13356A', name: '飞行力学', department: '交通科学与工程学院'}, {id: 'B3I13314A', name: '汽车与发动机设计', department: '交通科学与工程学院'}, {id: 'B3I13337A', name: '交通大数据分析', department: '交通科学与工程学院'}, {id: 'B3I13357A', name: '系统安全性基础', department: '交通科学与工程学院'}, {id: 'B3I13366B', name: '航空发动机控制适航', department: '交通科学与工程学院'}, {id: 'B3I13354A', name: '飞机总体设计与适航', department: '交通科学与工程学院'}, {id: 'B3I13365B', name: '飞机结构分析与设计', department: '交通科学与工程学院'}, {id: 'B3I13462B', name: '飞机复合材料结构适航', department: '交通科学与工程学院'}, {id: 'B1A13201B', name: '计算方法', department: '交通科学与工程学院'}, {id: 'B3I13350A', name: '智能测绘', department: '交通科学与工程学院'}, {id: 'B2F130210', name: '土木工程概论', department: '交通科学与工程学院'}, {id: 'B2F130230', name: '大飞机适航概论', department: '交通科学与工程学院'}, {id: 'B2F131000', name: 'Python编程与智能车技术', department: '交通科学与工程学院'}, {id: 'B3I13269A', name: '空气动力学基础', department: '交通科学与工程学院'}, {id: 'B3I13178A', name: '汽车底盘构造', department: '交通科学与工程学院'}, {id: 'B3I13179A', name: '汽车动力系统构造', department: '交通科学与工程学院'}, {id: 'B3I13376A', name: '基础工程', department: '交通科学与工程学院'}, {id: 'B3J13444A', name: '汽车产品开发技术与方法', department: '交通科学与工程学院'}, {id: 'B2G130240', name: '大学生建筑结构设计竞赛', department: '交通科学与工程学院'}, {id: 'B2G130150', name: '大学生方程式赛车设计与竞赛', department: '交通科学与工程学院'}, {id: 'B3J13347A', name: '自动变速器技术', department: '交通科学与工程学院'}, {id: 'B3I13379A', name: '混凝土结构与砖木结构设计', department: '交通科学与工程学院'}, {id: 'B3I13374A', name: '钢结构设计原理', department: '交通科学与工程学院'}, {id: 'B3I13378A', name: '设计综合训练', department: '交通科学与工程学院'}, {id: 'B3I13315A', name: '汽车制造工艺学', department: '交通科学与工程学院'}, {id: 'B3I13316A', name: '汽车电子控制技术', department: '交通科学与工程学院'}, {id: 'B3J13323A', name: '汽车排放与控制', department: '交通科学与工程学院'}, {id: 'B3J13325A', name: '车身结构与设计', department: '交通科学与工程学院'}, {id: 'B1B13202B', name: '工程热力学基础', department: '交通科学与工程学院'}, {id: 'B3J13330B', name: '智能汽车传感器技术与应用', department: '交通科学与工程学院'}, {id: 'B2F130220', name: '汽车概论', department: '交通科学与工程学院'}, {id: 'B2K131010', name: '土木工程与中国文化', department: '交通科学与工程学院'}, {id: 'B3J13375A', name: '防护工程设计', department: '交通科学与工程学院'}, {id: 'B3I13380A', name: '土木工程施工', department: '交通科学与工程学院'}, {id: 'B3J13475A', name: '土木工程设计软件介绍', department: '交通科学与工程学院'}, {id: 'B3I13273A', name: '结构力学', department: '交通科学与工程学院'}, {id: 'B3I13275A', name: '土木工程材料', department: '交通科学与工程学院'}, {id: 'B3J13288A', name: '房屋建筑学', department: '交通科学与工程学院'}, {id: 'B3J13481A', name: '建筑工程制图与AutoCAD', department: '交通科学与工程学院'}]}, {name: '可靠性与系统工程学院', num: '14', name_s: '可靠性', courses: [{id: 'B2F140150', name: '可靠性物理', department: '可靠性与系统工程学院'}, {id: 'B3I145910', name: '科研课堂', department: '可靠性与系统工程学院'}, {id: 'B2G140240', name: '信息时代的智能预测', department: '可靠性与系统工程学院'}, {id: 'B2G140190', name: '数学建模语言与实践', department: '可靠性与系统工程学院'}, {id: 'B2G140120', name: '面向工业4.0的创新创业学习与实践', department: '可靠性与系统工程学院'}, {id: 'B3J14342B', name: '机械可靠性', department: '可靠性与系统工程学院'}, {id: 'B3I14311A', name: '可靠性统计', department: '可靠性与系统工程学院'}, {id: 'B3I14369B', name: '航空安全管理', department: '可靠性与系统工程学院'}, {id: 'B3I14321A', name: '系统工程基础', department: '可靠性与系统工程学院'}, {id: 'B1B14212A', name: '工程计算方法', department: '可靠性与系统工程学院'}, {id: 'B3I14362A', name: '安全性设计分析与验证', department: '可靠性与系统工程学院'}, {id: 'B3J14357B', name: '维修性设计与分析 ', department: '可靠性与系统工程学院'}, {id: 'B3I14351B', name: '元器件可靠性与质量保证', department: '可靠性与系统工程学院'}, {id: 'B3I14364B', name: '软件安全性 ', department: '可靠性与系统工程学院'}, {id: 'B3J144131', name: '工程中的结构安全(英)', department: '可靠性与系统工程学院'}, {id: 'B3J14341A', name: '传感器与测试技术 ', department: '可靠性与系统工程学院'}, {id: 'B3J14326B', name: '工程系统的规划与设计', department: '可靠性与系统工程学院'}, {id: 'B3J14323A', name: '可靠性试验技术', department: '可靠性与系统工程学院'}, {id: 'B2F140170', name: '可靠性工程概论', department: '可靠性与系统工程学院'}, {id: 'B2F140220', name: '质量文化和技术素养', department: '可靠性与系统工程学院'}, {id: 'B2F140271', name: '动作分析、实践与应用', department: '可靠性与系统工程学院'}, {id: 'B3I14324B', name: '质量工程技术基础', department: '可靠性与系统工程学院'}]}, {name: '宇航学院', num: '15', name_s: '宇航', courses: [{id: 'B3J155000', name: '科研课堂', department: '宇航学院'}, {id: 'B3I153120', name: '飞行动力学基础', department: '宇航学院'}, {id: 'B2F150140', name: '天文基础与航天', department: '宇航学院'}, {id: 'B2F150410', name: '坐电梯上太空', department: '宇航学院'}, {id: 'B3I153340', name: '传热学', department: '宇航学院'}, {id: 'B3I153350', name: '火箭发动机原理', department: '宇航学院'}, {id: 'B3J154720', name: '遥感技术基础', department: '宇航学院'}, {id: 'B3J154740', name: '机器学习基础', department: '宇航学院'}, {id: 'B3J154660', name: '飞行动力学', department: '宇航学院'}, {id: 'B2F150540', name: '航天工程概论（1）', department: '宇航学院'}, {id: 'B3J154990', name: '航天制导、导航与控制实验', department: '宇航学院'}, {id: 'B3J153610', name: '卡尔曼滤波基础', department: '宇航学院'}, {id: 'B3J153750', name: '计算机视觉', department: '宇航学院'}, {id: 'B3J154810', name: '现代测试技术', department: '宇航学院'}, {id: 'B3J153420', name: '弹道学与动态分析', department: '宇航学院'}, {id: 'B2G150430', name: '数字影像赏析', department: '宇航学院'}, {id: 'B3J154470', name: '飞行器总体设计优化', department: '宇航学院'}, {id: 'B3J154440', name: '导弹与运载火箭气动计算', department: '宇航学院'}, {id: 'B3J153410', name: '飞行器结构动力学', department: '宇航学院'}, {id: 'B3J154830', name: '火箭发动机推进剂', department: '宇航学院'}, {id: 'B3J153810', name: '液体火箭发动机输送系统', department: '宇航学院'}, {id: 'B3J153990', name: '非线性动力学', department: '宇航学院'}, {id: 'B1B151050', name: '自动控制原理B', department: '宇航学院'}, {id: 'B3J154750', name: '计算摄像学', department: '宇航学院'}, {id: 'B2F150420', name: '创意飞行器设计导论', department: '宇航学院'}, {id: 'B2F150370', name: '人工智能与现代战争', department: '宇航学院'}, {id: 'B2F150220', name: '航天器结构优化导论', department: '宇航学院'}, {id: 'B3I154210', name: '目标探测与识别', department: '宇航学院'}, {id: 'B3I153290', name: '惯性导航基础', department: '宇航学院'}, {id: 'B3I153210', name: '现代控制理论', department: '宇航学院'}, {id: 'B2G150360', name: 'LaTeX科技论文写作', department: '宇航学院'}, {id: 'B2G150370', name: '深空探测车设计与实践', department: '宇航学院'}, {id: 'B2F150190', name: '时速3万公里的持久飞行', department: '宇航学院'}, {id: 'B3I153130', name: '航天飞行器结构设计原理', department: '宇航学院'}, {id: 'B3I153140', name: '航天飞行器动力学原理', department: '宇航学院'}, {id: 'B3J153950', name: 'MATLAB程序设计', department: '宇航学院'}, {id: 'B3J153930', name: 'MATLAB建模与仿真', department: '宇航学院'}, {id: 'B3I154360', name: '机器学习的数学基础', department: '宇航学院'}, {id: 'B3I154420', name: '空气动力学与流体力学', department: '宇航学院'}, {id: 'B3I153260', name: '模式识别', department: '宇航学院'}, {id: 'B3I153230', name: '制导与控制原理', department: '宇航学院'}, {id: 'B2G150130', name: '天文基础与航天', department: '宇航学院'}, {id: 'B3I153250', name: '数字信号处理', department: '宇航学院'}, {id: 'B3I153310', name: '工程热力学', department: '宇航学院'}, {id: 'B3J155100', name: '航天器测控通信技术', department: '宇航学院'}, {id: 'B3I154450', name: '空气动力学', department: '宇航学院'}, {id: 'B3J154970', name: '科研创新训练（2）', department: '宇航学院'}, {id: 'B2G150140', name: '空间碎片与航天器', department: '宇航学院'}, {id: 'B2G150330', name: '星际航行概论', department: '宇航学院'}, {id: '50G40340', name: 'GPS与北斗卫星导航系统概论', department: '宇航学院'}, {id: 'B2G150190', name: '动力技术', department: '宇航学院'}, {id: 'B3I154340', name: '飞行动力学建模基础', department: '宇航学院'}, {id: 'B3J153920', name: '现代设计方法', department: '宇航学院'}, {id: '50G01030', name: '图像处理', department: '宇航学院'}, {id: 'B3J153530', name: '小天体探测技术', department: '宇航学院'}, {id: 'OH15002', name: 'Office Hours', department: '宇航学院'}]}, {name: '飞行学院', num: '16', name_s: '飞院', courses: [{id: 'B3J163420', name: '航空工程大型通用软件应用', department: '飞行学院'}, {id: 'B3I163410', name: '数字信号处理', department: '飞行学院'}, {id: 'B3J164250', name: '现代仿真技术', department: '飞行学院'}, {id: 'B3J162230', name: '加工工艺学', department: '飞行学院'}, {id: 'B3I16573A', name: '工业控制接口原理及实验', department: '飞行学院'}, {id: 'B3I161680', name: '航空气象', department: '飞行学院'}, {id: 'B3J162590', name: '飞行性能与计划', department: '飞行学院'}, {id: 'B1B162110', name: '空气动力学基础', department: '飞行学院'}, {id: 'B3I163120', name: '基于模型的系统工程', department: '飞行学院'}, {id: 'B3J16258A', name: '飞行中人的因素', department: '飞行学院'}, {id: 'B3J16258B', name: '驾驶舱资源管理', department: '飞行学院'}, {id: 'B3I16167A', name: '空中领航', department: '飞行学院'}, {id: 'B3J162550', name: '陆空通话', department: '飞行学院'}, {id: 'B3J161701', name: '地面理论与航空系统工程2', department: '飞行学院'}, {id: 'B3J162220', name: '机械制造基础', department: '飞行学院'}, {id: 'B2F160130', name: '航空航天中的系统思维与系统工程', department: '飞行学院'}, {id: 'B1C1610D1', name: '英语口语 IV', department: '飞行学院'}, {id: 'B1C1610B1', name: '英语口语 II', department: '飞行学院'}, {id: 'B3I161630', name: '民航飞机通信系统', department: '飞行学院'}, {id: 'B3I162340', name: '无人驾驶航空器气动与控制一体化设计', department: '飞行学院'}, {id: 'B1B161420', name: '工程力学', department: '飞行学院'}, {id: 'B3J162540', name: '航空法规', department: '飞行学院'}, {id: 'B3J162570', name: '空中交通管理基础', department: '飞行学院'}, {id: 'B2G16343A', name: '无人机系统前沿技术与应用', department: '飞行学院'}]}, {name: '仪器科学与光电工程学院', num: '17', name_s: '仪光', courses: [{id: 'B3I172540', name: '模拟电子技术基础', department: '仪器科学与光电工程学院'}, {id: 'B3I172410', name: '电磁场与电磁波', department: '仪器科学与光电工程学院'}, {id: 'B3I172550', name: '数字电子技术基础', department: '仪器科学与光电工程学院'}, {id: 'B3I172580', name: '遥感原理与应用', department: '仪器科学与光电工程学院'}, {id: 'B3I172590', name: '原子物理学', department: '仪器科学与光电工程学院'}, {id: 'B3I172560', name: '工程光学（上）', department: '仪器科学与光电工程学院'}, {id: 'B3I173360', name: '误差理论与数据处理', department: '仪器科学与光电工程学院'}, {id: 'B3I173390', name: '光纤传感原理', department: '仪器科学与光电工程学院'}, {id: 'B3J174950', name: '大气辐射传输理论基础', department: '仪器科学与光电工程学院'}, {id: 'B3I173470', name: '光通信原理与技术', department: '仪器科学与光电工程学院'}, {id: 'B3J174400', name: '组合导航技术与应用', department: '仪器科学与光电工程学院'}, {id: 'B3I173590', name: '自动测试原理与系统', department: '仪器科学与光电工程学院'}, {id: 'B2F171220', name: '视觉感知与导航', department: '仪器科学与光电工程学院'}, {id: 'B3I173380', name: '惯性器件原理', department: '仪器科学与光电工程学院'}, {id: 'B3I174440', name: '光电成像原理', department: '仪器科学与光电工程学院'}, {id: 'B3I173350', name: '摄影测量基础', department: '仪器科学与光电工程学院'}, {id: 'B3J175110', name: '科研课堂', department: '仪器科学与光电工程学院'}, {id: 'B3I173580', name: '自动控制元件', department: '仪器科学与光电工程学院'}, {id: 'B3I173250', name: '自动控制原理(2)', department: '仪器科学与光电工程学院'}, {id: 'B3I173370', name: '光电测试技术与系统', department: '仪器科学与光电工程学院'}, {id: 'B3I173310', name: '光电子技术', department: '仪器科学与光电工程学院'}, {id: 'B3I170360', name: '仪光科技基础综合训练(3)', department: '仪器科学与光电工程学院'}, {id: 'B2F171210', name: '北斗照我前行', department: '仪器科学与光电工程学院'}, {id: 'B2F170530', name: '创新思维、方法与实践', department: '仪器科学与光电工程学院'}, {id: 'B2F171140', name: '感知与重构三维世界', department: '仪器科学与光电工程学院'}, {id: 'B2F171240', name: '空天探测导论', department: '仪器科学与光电工程学院'}, {id: 'B2F171250', name: '神奇的量子仪器', department: '仪器科学与光电工程学院'}, {id: 'B2F171420', name: '另眼看世界--光谱成像漫谈', department: '仪器科学与光电工程学院'}, {id: 'B2F171230', name: '光电传感器', department: '仪器科学与光电工程学院'}, {id: 'B3I173330', name: '数字图像处理', department: '仪器科学与光电工程学院'}, {id: 'B2F171130', name: '激光雷达--从探测到成像', department: '仪器科学与光电工程学院'}, {id: 'B2F171120', name: '仪器科学与科技文明', department: '仪器科学与光电工程学院'}, {id: 'B2G170161', name: 'A Brief History of Machine Intelligence', department: '仪器科学与光电工程学院'}, {id: 'B2G170660', name: '生活韩国语', department: '仪器科学与光电工程学院'}, {id: '50G40480', name: '走近传感器B', department: '仪器科学与光电工程学院'}, {id: '50G40320', name: '激光雷达前沿导论', department: '仪器科学与光电工程学院'}, {id: '50G40330', name: '空天探测导论', department: '仪器科学与光电工程学院'}, {id: 'B2G170340', name: '3D打印和3D建模', department: '仪器科学与光电工程学院'}, {id: 'B2G170950', name: '飞秒激光与医学应用', department: '仪器科学与光电工程学院'}, {id: 'B2G170450', name: '医学超声成像', department: '仪器科学与光电工程学院'}]}, {name: '北京学院', num: '18', name_s: '北院', courses: []}, {name: '物理学院', num: '19', name_s: '物院', courses: [{id: 'B1A19104A', name: '基础物理学（信息类）', department: '物理学院'}, {id: 'B1A19206A', name: '基础物理实验（2）', department: '物理学院'}, {id: 'B1A19101B', name: '工科大学物理（1）', department: '物理学院'}, {id: 'B1A191020', name: '物理学（1）', department: '物理学院'}, {id: 'B3I192140', name: '理论力学', department: '物理学院'}, {id: 'B3I193440', name: '原子核物理', department: '物理学院'}, {id: 'B1A191040', name: '物理学实验（1）', department: '物理学院'}, {id: 'B3I19172A', name: '物理学实验A（1）', department: '物理学院'}, {id: 'B2G190150', name: '物理原理的演示与探究实践', department: '物理学院'}, {id: 'B3I191120', name: '电磁学', department: '物理学院'}, {id: 'B3I193680', name: '专业物理实验(核物理)II', department: '物理学院'}, {id: 'B3I193640', name: '近代物理实验（2）', department: '物理学院'}, {id: 'B1A19101BL', name: '工科大学物理（1）', department: '物理学院'}, {id: 'B3I19343A', name: '固体物理IA', department: '物理学院'}, {id: 'B3I19352A', name: '计算物理基础', department: '物理学院'}, {id: 'B3I193520', name: '计算物理基础', department: '物理学院'}, {id: 'B3J193720', name: '物理学前沿专题', department: '物理学院'}, {id: 'B3J193840', name: '数字信号处理', department: '物理学院'}, {id: 'B3J193750', name: '固体微结构及衍射物理学', department: '物理学院'}, {id: 'B3J193850', name: '现代光学导论', department: '物理学院'}, {id: 'B3J193930', name: '粒子物理与核物理前沿专题（中、英）', department: '物理学院'}, {id: 'B3J193860', name: '光电子学', department: '物理学院'}, {id: 'B3J193770', name: '广义相对论导论', department: '物理学院'}, {id: 'B3I192220', name: '热力学与统计物理', department: '物理学院'}, {id: 'B3I19222A', name: '热力学与统计物理A', department: '物理学院'}, {id: 'B3I19214A', name: '理论力学A', department: '物理学院'}, {id: 'B3I192410', name: '原子物理学', department: '物理学院'}, {id: 'B3I195630', name: '科研课堂', department: '物理学院'}, {id: 'B3I193430', name: '固体物理（1）', department: '物理学院'}, {id: 'B2F190140', name: '物理学研讨课', department: '物理学院'}, {id: 'B1A191011L', name: '工科大学物理（1）', department: '物理学院'}]}, {name: '法学院', num: '20', name_s: '法学院', courses: [{id: 'B3I202520', name: '行政法', department: '法学院'}, {id: 'B3J202730', name: '刑事诉讼法学研讨', department: '法学院'}, {id: 'B3I20212A', name: '物权法', department: '法学院'}, {id: 'B3J202160', name: '数据安全法', department: '法学院'}, {id: 'B3J202170', name: '个人信息保护法', department: '法学院'}, {id: 'B3J202710', name: '刑法案例研习', department: '法学院'}, {id: 'B3J202640', name: '法学方法论', department: '法学院'}, {id: 'B3J203360', name: '海商法', department: '法学院'}, {id: 'B3I203510', name: '中国法律史', department: '法学院'}, {id: 'B3J203730', name: '商法案例研习', department: '法学院'}, {id: 'B3J203900', name: '智慧司法与审判实务', department: '法学院'}, {id: 'B3J203960', name: '航空法', department: '法学院'}, {id: 'B3J203310', name: '国际私法', department: '法学院'}, {id: 'B3J203230', name: '信托法', department: '法学院'}, {id: 'B3J203270', name: '财税法', department: '法学院'}, {id: 'B3J203260', name: '票据法', department: '法学院'}, {id: 'B3J20335A', name: '法律英语', department: '法学院'}, {id: 'B3J20334A', name: '国际经济法(双语)', department: '法学院'}, {id: 'B2F200250', name: '刑法原理', department: '法学院'}, {id: 'B3J203970', name: '网络信息法', department: '法学院'}, {id: 'B3J205000', name: '科研课堂', department: '法学院'}, {id: 'B3J202410', name: '证据法学', department: '法学院'}, {id: 'B3I202410', name: '刑事诉讼法', department: '法学院'}, {id: 'B3J203850', name: '公法案例研习', department: '法学院'}, {id: 'B3J205910', name: '民商模拟法庭', department: '法学院'}, {id: 'B3J205310', name: '环境资源模拟法庭', department: '法学院'}, {id: 'B3J205330', name: '环境法案例研习', department: '法学院'}, {id: 'B3I202420', name: '民事诉讼法', department: '法学院'}, {id: 'B2F200270', name: '名师研讨课 法律与社会', department: '法学院'}, {id: 'B2F200280', name: '公民权利', department: '法学院'}, {id: 'B3I203820', name: '法律职业伦理', department: '法学院'}, {id: 'B3J202620', name: '法律社会学', department: '法学院'}, {id: 'B3J203990', name: '证券法', department: '法学院'}, {id: 'B3J202120', name: '侵权法', department: '法学院'}, {id: '50G40200', name: '法学原理', department: '法学院'}, {id: '50G01270', name: '国际商法', department: '法学院'}, {id: '50G40210', name: '民法典入门', department: '法学院'}, {id: 'B3J202420', name: '没收法', department: '法学院'}]}, {name: '软件学院', num: '21', name_s: '软院', courses: [{id: 'B3J213510', name: 'J2EE构架', department: '软件学院'}, {id: 'B3J212731', name: '跨文化交流', department: '软件学院'}, {id: 'B3J213751', name: '科技写作（英文）', department: '软件学院'}, {id: 'B2G210011', name: '计算机导论（英文）', department: '软件学院'}, {id: 'B3J213250', name: '分布式系统', department: '软件学院'}, {id: 'B2F213110', name: '互联网软件创新创意创业', department: '软件学院'}, {id: 'B3I213250', name: '软件过程与质量', department: '软件学院'}, {id: 'B3J213240', name: '大数据和云计算', department: '软件学院'}, {id: 'B2G212120', name: '工业软件导论', department: '软件学院'}, {id: 'B3J212620', name: '沟通技巧与工程伦理', department: '软件学院'}, {id: 'B3I213210', name: '软件工程基础', department: '软件学院'}, {id: 'B3J213520', name: '密码学与信息安全基础', department: '软件学院'}, {id: 'B3I212220', name: '数据管理技术', department: '软件学院'}, {id: 'B3I212150', name: '人工智能', department: '软件学院'}, {id: 'B3J213350', name: '人工智能', department: '软件学院'}, {id: 'B3J213340', name: '软件测试与交付', department: '软件学院'}, {id: 'B3J213140', name: '物联网技术基础', department: '软件学院'}, {id: 'B2G215110', name: '数学建模 ', department: '软件学院'}, {id: 'B3J213380', name: '图像处理和计算机视觉', department: '软件学院'}, {id: 'B3J213550', name: '互联网营销', department: '软件学院'}, {id: 'B3J212530', name: '信号处理基础', department: '软件学院'}, {id: 'B3J213630', name: '职业规范和企业文化', department: '软件学院'}, {id: 'B3J213370', name: '并行程序设计', department: '软件学院'}]}, {name: '未来空天技术学院/高等理工学院', num: '23', name_s: '沈元', courses: []}, {name: '中法工程师学院', num: '24', name_s: '中法', courses: [{id: 'B2F241020', name: '工业系统中的科学技术与实践一：智能机器人', department: '中法工程师学院'}, {id: 'B3J243010', name: '科研课堂', department: '中法工程师学院'}, {id: 'B1A24223B', name: '理论力学(2)', department: '中法工程师学院'}, {id: 'B2G24117B', name: '大学法语（1）', department: '中法工程师学院'}, {id: 'B2G24118B', name: '大学法语（2）', department: '中法工程师学院'}]}, {name: '国际学院', num: '25', name_s: '国际', courses: [{id: 'B2G252340L', name: '古诗词欣赏', department: '国际学院'}, {id: 'B1C252121L', name: '汉语（4）', department: '国际学院'}, {id: 'B1C251161L', name: '汉语（2）', department: '国际学院'}, {id: 'B1C251320L', name: '中国文化体验', department: '国际学院'}, {id: 'B1C251120L', name: '基础科技汉语（2）', department: '国际学院'}, {id: 'B2G251320L', name: '中国民俗文化', department: '国际学院'}]}, {name: '新媒体艺术与设计学院', num: '26', name_s: '新媒体', courses: [{id: 'B3J262790', name: '中国画线描艺术', department: '新媒体艺术与设计学院'}, {id: 'B3I262230', name: '综合材料', department: '新媒体艺术与设计学院'}, {id: 'B3I262190', name: '摄影理论与技法', department: '新媒体艺术与设计学院'}, {id: 'B3I262330', name: '版式设计', department: '新媒体艺术与设计学院'}, {id: 'B3I262320', name: '标志设计', department: '新媒体艺术与设计学院'}, {id: 'B3I262520', name: '动画短片创作', department: '新媒体艺术与设计学院'}, {id: 'B3I262890', name: '互动装置设计基础', department: '新媒体艺术与设计学院'}, {id: 'B3I262260', name: '绘画形式与表现', department: '新媒体艺术与设计学院'}, {id: 'B3I262760', name: '油画基础', department: '新媒体艺术与设计学院'}, {id: 'B3I262250', name: '丝网版画基础', department: '新媒体艺术与设计学院'}, {id: 'B3I262340', name: '字体设计', department: '新媒体艺术与设计学院'}, {id: 'B3I262130', name: '视觉艺术符号学导论 ', department: '新媒体艺术与设计学院'}, {id: 'B2G262280', name: '艺术概论', department: '新媒体艺术与设计学院'}, {id: 'B3J263650', name: '影视广告创意', department: '新媒体艺术与设计学院'}, {id: 'B3I262840', name: '数字创意设计', department: '新媒体艺术与设计学院'}, {id: 'B3J261390', name: '版式设计基础', department: '新媒体艺术与设计学院'}, {id: 'B3I261160', name: '构成基础（2）', department: '新媒体艺术与设计学院'}, {id: 'B3I261230', name: '人体速写', department: '新媒体艺术与设计学院'}, {id: 'B3J263920', name: '交互动画设计', department: '新媒体艺术与设计学院'}, {id: 'B3I262240', name: '民间绘画与创意', department: '新媒体艺术与设计学院'}, {id: 'B3J262440', name: '数码摄影创作', department: '新媒体艺术与设计学院'}, {id: 'B3J261790', name: '数字媒体基础', department: '新媒体艺术与设计学院'}, {id: 'B3J263840', name: '图画书基础', department: '新媒体艺术与设计学院'}, {id: 'B2F261270', name: '外国美术史', department: '新媒体艺术与设计学院'}, {id: 'B2F260110', name: '创意设计与生活', department: '新媒体艺术与设计学院'}, {id: 'B3I263740', name: '图画书创作（绘画）', department: '新媒体艺术与设计学院'}, {id: 'B3I263170', name: 'VR交互设计', department: '新媒体艺术与设计学院'}, {id: 'B3J262130', name: '互动艺术编程基础', department: '新媒体艺术与设计学院'}, {id: 'B3I263370', name: '网页设计（2）（视觉传达设计）', department: '新媒体艺术与设计学院'}, {id: 'B3I263750', name: '装饰绘画（绘画）', department: '新媒体艺术与设计学院'}, {id: 'B3I263160', name: '数字影像合成', department: '新媒体艺术与设计学院'}, {id: 'B3J265110', name: '科研课堂', department: '新媒体艺术与设计学院'}, {id: 'B3I262850', name: '三维建模基础', department: '新媒体艺术与设计学院'}, {id: 'B2G260161', name: '服务设计思维', department: '新媒体艺术与设计学院'}, {id: 'B3J261580', name: '电影艺术', department: '新媒体艺术与设计学院'}, {id: 'B3J262920', name: '三维引擎基础', department: '新媒体艺术与设计学院'}, {id: 'B3I263110', name: '二维动画技法', department: '新媒体艺术与设计学院'}, {id: 'B3J263670', name: '定格动画', department: '新媒体艺术与设计学院'}, {id: 'B3J263680', name: '多媒体交互设计', department: '新媒体艺术与设计学院'}, {id: 'B3I263150', name: '剧作与故事板', department: '新媒体艺术与设计学院'}, {id: 'B3J263120', name: '移动交互应用设计', department: '新媒体艺术与设计学院'}, {id: 'B3J263830', name: '绘画风格研究', department: '新媒体艺术与设计学院'}, {id: 'B3J263660', name: '纪录片创作', department: '新媒体艺术与设计学院'}, {id: 'B2G263320', name: '论文写作基础', department: '新媒体艺术与设计学院'}, {id: 'B3J263480', name: '品牌形象设计', department: '新媒体艺术与设计学院'}, {id: 'B3I263360', name: '广告设计（视觉传达设计）', department: '新媒体艺术与设计学院'}, {id: 'B2F261620', name: '艺术史与现代艺术（2）', department: '新媒体艺术与设计学院'}]}, {name: '美育中心', num: '26', name_s: '美育', courses: [{id: 'B2K260600', name: '钢琴音乐欣赏与实践', department: '美育中心'}, {id: 'B2K260290', name: '歌剧欣赏', department: '美育中心'}, {id: 'B2K260350', name: '动作语言分析与训练', department: '美育中心'}, {id: 'B2K260330', name: '舞蹈艺术表演实践', department: '美育中心'}, {id: 'B2K260360', name: '舞蹈之美', department: '美育中心'}, {id: 'B2K260280', name: '音乐作品分析与欣赏', department: '美育中心'}, {id: 'B2K260470', name: '摄影艺术鉴赏与基础', department: '美育中心'}, {id: 'B2K260390', name: '中国舞蹈欣赏与实践', department: '美育中心'}, {id: 'B2K260140', name: '20世纪西方音乐大师及经典作品赏析', department: '美育中心'}, {id: 'B2K260410', name: '电影与新媒体艺术', department: '美育中心'}, {id: 'B2K260160', name: '版式创意与应用', department: '美育中心'}, {id: 'B2K260180', name: '电影音乐赏析', department: '美育中心'}, {id: 'B2K260150', name: '海报创意与制作', department: '美育中心'}, {id: 'B2K260190', name: '钢琴音乐艺术', department: '美育中心'}, {id: 'B2K260230', name: '声乐课（美声唱法）', department: '美育中心'}, {id: 'B2K260220', name: '电影大师镜头语言', department: '美育中心'}, {id: 'B2K260340', name: '电影鉴赏与分析', department: '美育中心'}, {id: 'B2K260120', name: '舞蹈艺术', department: '美育中心'}, {id: 'B2K260210', name: '中国民间舞蹈审美实践', department: '美育中心'}, {id: 'B2K260170', name: '生活中的设计审美', department: '美育中心'}, {id: 'B2K260380', name: '音乐素养养成', department: '美育中心'}, {id: 'B2K260320', name: '音乐基础与歌唱技巧', department: '美育中心'}, {id: 'B2K260370', name: '弦乐鉴赏与入门', department: '美育中心'}, {id: 'B2K260590', name: '北航美育讲堂系列', department: '美育中心'}, {id: 'B2K260530', name: '创新设计思维与现代设计', department: '美育中心'}, {id: 'B2K260200', name: '中国民间舞蹈文化鉴赏', department: '美育中心'}, {id: 'B2K260480', name: '动画赏析与设计基础', department: '美育中心'}]}, {name: '化学学院', num: '27', name_s: '化院', courses: [{id: 'B1A27210D', name: '有机化学', department: '化学学院'}, {id: 'B1A271130', name: '无机化学实验（2）', department: '化学学院'}, {id: 'B2F270160', name: '化学前沿导论', department: '化学学院'}, {id: 'B1A271220', name: '无机元素化学', department: '化学学院'}, {id: 'B1A271240', name: '无机元素化学实验', department: '化学学院'}, {id: 'B3I27234A', name: '有机化学实验Ⅱ', department: '化学学院'}, {id: 'B3I27226A', name: '物理化学实验1', department: '化学学院'}, {id: 'B3I27239A', name: '物理化学实验Ⅰ', department: '化学学院'}, {id: 'B3I27213A', name: '有机化学A2', department: '化学学院'}, {id: 'B3I27218A', name: '仪器分析', department: '化学学院'}, {id: 'B3I27232A', name: '有机化学 Ⅱ', department: '化学学院'}, {id: 'B3J27218B', name: '仪器分析B', department: '化学学院'}, {id: 'B3I27216A', name: '物理化学A1', department: '化学学院'}, {id: 'B3I27237A', name: '物理化学Ⅰ', department: '化学学院'}, {id: 'B3I27243A', name: '现代分析测试技术', department: '化学学院'}, {id: 'B3I27329A', name: '化学综合实验1', department: '化学学院'}, {id: 'B3J27361B', name: '计算机与化学', department: '化学学院'}, {id: 'B3I27320A', name: '分子生物学', department: '化学学院'}, {id: 'B3J27310B', name: '微生物学', department: '化学学院'}, {id: 'B3J27311B', name: '细胞生物学', department: '化学学院'}, {id: 'B3J27365B', name: '现代显微分析技术', department: '化学学院'}, {id: 'B3J27369B', name: '科技论文阅读与写作', department: '化学学院'}, {id: 'B3I27322A', name: '表面化学与化学物理', department: '化学学院'}, {id: 'B3J27352B', name: '分子模拟', department: '化学学院'}, {id: 'B3J27336B', name: '化工原理', department: '化学学院'}, {id: 'B3J27342B', name: '电化学原理', department: '化学学院'}, {id: 'B2F270140', name: '纳米技术与人类生活', department: '化学学院'}, {id: 'B3J275110', name: '科研课堂', department: '化学学院'}, {id: 'B2G270160', name: '基础化学虚拟仿真实验', department: '化学学院'}, {id: 'B2G270110', name: '易学入门', department: '化学学院'}, {id: 'B2G270120', name: '化学大师与化学发展', department: '化学学院'}, {id: 'B3I27225A', name: '有机化学实验（2）', department: '化学学院'}, {id: 'B3J27354B', name: '创新化学实验', department: '化学学院'}, {id: 'B3I27321A', name: '分子生物学实验', department: '化学学院'}, {id: 'B3J27347B', name: '纳米材料与表征技术', department: '化学学院'}, {id: 'B3J27338B', name: '胶体与界面化学', department: '化学学院'}, {id: 'B3J27362B', name: '波谱分析', department: '化学学院'}, {id: 'B1A271160', name: '无机化学（2）', department: '化学学院'}, {id: 'B3J27364A', name: '化学专业英语', department: '化学学院'}, {id: 'B2F270170', name: '魅力化学', department: '化学学院'}, {id: 'OH27002', name: 'Office Hours', department: '化学学院'}]}, {name: '马克思主义学院', num: '28', name_s: '马院', courses: [{id: 'B2D281060', name: '中国近现代史纲要', department: '马克思主义学院'}, {id: 'B2D282070', name: '马克思主义基本原理', department: '马克思主义学院'}, {id: 'B2D280110', name: '中国共产党历史', department: '马克思主义学院'}, {id: 'B2D280140', name: '社会主义发展史', department: '马克思主义学院'}, {id: 'B2D280130', name: '改革开放史', department: '马克思主义学院'}, {id: 'B2D280120', name: '新中国史', department: '马克思主义学院'}, {id: 'B3J285100', name: '科研课堂', department: '马克思主义学院'}, {id: 'B2F280111', name: 'Contemporary Chinese Foreign Policy and Global Governance', department: '马克思主义学院'}, {id: 'B2F280150', name: '中国传统文化概论', department: '马克思主义学院'}, {id: 'B2G280310', name: '政治哲学经典问题', department: '马克思主义学院'}, {id: 'B2G280400', name: '社会学的想象力', department: '马克思主义学院'}, {id: 'B2G280590', name: '劳动文化导论', department: '马克思主义学院'}, {id: 'B2G280471', name: 'Political Theories: An Introduction', department: '马克思主义学院'}, {id: 'B2G280420', name: '领导与领导力', department: '马克思主义学院'}, {id: 'B2G280480', name: '国家安全概论', department: '马克思主义学院'}, {id: '50G01020', name: '台湾政治经济与两岸关系', department: '马克思主义学院'}, {id: 'B2G280351', name: 'Understand Politics in China: A State-Society Perspective Introduction', department: '马克思主义学院'}, {id: 'B2G280330', name: '社会研究与当代中国', department: '马克思主义学院'}, {id: 'B2G280250', name: '与柏拉图对话', department: '马克思主义学院'}]}, {name: '人文与社会科学高等研究院', num: '29', name_s: '高研院', courses: [{id: 'B2F291310', name: '中国经典研读', department: '人文与社会科学高等研究院'}, {id: 'B2F290130', name: '《孟子》研读', department: '人文与社会科学高等研究院'}, {id: 'B2F290120', name: '《诗经》选读', department: '人文与社会科学高等研究院'}, {id: 'B2F292330', name: '中国经典研读（3）', department: '人文与社会科学高等研究院'}, {id: 'B2F290330', name: '传播学概论', department: '人文与社会科学高等研究院'}, {id: 'B2F290010', name: '世界文明中的科学与技术', department: '人文与社会科学高等研究院'}, {id: 'B2F293350', name: '中国经典研读（5）', department: '人文与社会科学高等研究院'}, {id: 'B2F290270', name: '现代社会的诞生', department: '人文与社会科学高等研究院'}, {id: 'B2G291120', name: '伦理学概论', department: '人文与社会科学高等研究院'}, {id: 'B2G290170', name: '流行文化与娱乐经济', department: '人文与社会科学高等研究院'}, {id: 'B2G29501B', name: '网络舆情分析技术', department: '人文与社会科学高等研究院'}, {id: 'B2G295010', name: '新媒体运营', department: '人文与社会科学高等研究院'}, {id: 'B2G29501A', name: '自媒体创作与运营', department: '人文与社会科学高等研究院'}, {id: '50G40250', name: '谈“美”', department: '人文与社会科学高等研究院'}, {id: 'B3J295110', name: '科研课堂', department: '人文与社会科学高等研究院'}, {id: 'B2F291210', name: '西方文明文化史', department: '人文与社会科学高等研究院'}, {id: 'B2F293450', name: '西方经典研读（5）', department: '人文与社会科学高等研究院'}, {id: 'B2F292430', name: '西方经典研读（3）', department: '人文与社会科学高等研究院'}]}, {name: '空间与环境学院', num: '30', name_s: '环境', courses: [{id: 'B3I30333B', name: '环境影响评价', department: '空间与环境学院'}, {id: 'B2F300110', name: '当代环境问题新生研讨课', department: '空间与环境学院'}, {id: 'B2F300190', name: '环境污染与健康风险评估实践', department: '空间与环境学院'}, {id: 'B3I30232B', name: '环境工程微生物（含实验）', department: '空间与环境学院'}, {id: 'B3I30233A', name: '环境工程原理（含实验）', department: '空间与环境学院'}, {id: 'B3J305010', name: '科研课堂', department: '空间与环境学院'}, {id: 'B3I30337A', name: '大气污染控制工程（含实验）', department: '空间与环境学院'}, {id: 'B3I304150', name: '电动力学', department: '空间与环境学院'}, {id: 'B3J303110', name: '天体物理导论', department: '空间与环境学院'}, {id: 'B3I30335A', name: '水处理工程', department: '空间与环境学院'}, {id: 'B3I30339B', name: '物理性污染控制（含实验）', department: '空间与环境学院'}, {id: 'B2F301110', name: '空间科学新生研讨课', department: '空间与环境学院'}, {id: 'B3I30332B', name: '固体废物处理与处置（含实验）', department: '空间与环境学院'}, {id: 'B3I30541B', name: '水处理工程实验', department: '空间与环境学院'}, {id: 'B3J303150', name: '高等量子力学', department: '空间与环境学院'}, {id: 'B3J303160', name: '广义相对论', department: '空间与环境学院'}, {id: 'B3I303140', name: '空间物理基础', department: '空间与环境学院'}, {id: 'B3I303110', name: '空间等离子体数值模拟', department: '空间与环境学院'}, {id: 'B3I303180', name: '空间探测技术试验', department: '空间与环境学院'}, {id: 'B2F300160', name: '空间科学前沿', department: '空间与环境学院'}, {id: 'B2F300230', name: '飞行舱环境污染探索', department: '空间与环境学院'}, {id: 'B3I303120', name: '空间数据分析基础', department: '空间与环境学院'}]}, {name: '工程训练中心', num: '32', name_s: '工训', courses: [{id: 'B1B322080L', name: '电子工程技术训练', department: '工程训练中心'}, {id: 'B1B325020', name: '加工工艺学', department: '工程训练中心'}, {id: 'B1B322080', name: '电子工程技术训练', department: '工程训练中心'}, {id: 'B1B322040', name: '电子工程技术训练', department: '工程训练中心'}, {id: 'B1B322041L', name: '电子工程技术训练', department: '工程训练中心'}, {id: 'B1B322070', name: '机械工程技术训练B', department: '工程训练中心'}, {id: 'B1B322021L', name: '机械工程技术训练B', department: '工程训练中心'}, {id: 'B1B322070L', name: '机械工程技术训练B', department: '工程训练中心'}, {id: 'B2G320180', name: '北斗卫星导航系统的应用与实践', department: '工程训练中心'}, {id: 'B2G321970', name: '机器人及人工智能实践与竞技', department: '工程训练中心'}, {id: 'B2G321930', name: '激光加工创意产品设计与实践', department: '工程训练中心'}, {id: 'B2G320100', name: '科技创新设计与实践', department: '工程训练中心'}, {id: 'B2G321910', name: '无人系统设计与制作', department: '工程训练中心'}, {id: 'B2G321920', name: '体验式科研训练', department: '工程训练中心'}, {id: 'B2G320190', name: '手术机器人的理论与实践', department: '工程训练中心'}]}, {name: '体育部', num: '33', name_s: '体育部', courses: [{id: 'B2E331040', name: '体育（2）', department: '体育部'}, {id: 'B2E333060', name: '体育（6）', department: '体育部'}, {id: 'B2E332060', name: '体育（4）', department: '体育部'}, {id: 'B2E330930', name: '体育II', department: '体育部'}, {id: 'B2E330760', name: '航空体育（6）', department: '体育部'}, {id: 'B2E330740', name: '航空体育（4）', department: '体育部'}, {id: 'B2E330720', name: '航空体育（2）', department: '体育部'}]}, {name: '国际通用工程学院', num: '35', name_s: '国通', courses: [{id: 'B1B353561', name: '传热学', department: '国际通用工程学院'}, {id: 'B3J353611', name: '低碳科技', department: '国际通用工程学院'}, {id: 'B3I353651', name: '机电一体化系统设计与实践', department: '国际通用工程学院'}, {id: 'B1B352521', name: '理论力学（Ⅱ）', department: '国际通用工程学院'}, {id: 'B1B353571', name: '系统动力学与振动', department: '国际通用工程学院'}, {id: 'B3I353551', name: '航空电子技术', department: '国际通用工程学院'}, {id: 'B3I353541', name: '航空航天推进', department: '国际通用工程学院'}, {id: 'B1B352451', name: '机械原理与设计', department: '国际通用工程学院'}, {id: 'B1B352531', name: '材料力学A', department: '国际通用工程学院'}, {id: 'B1A352041', name: '微分方程', department: '国际通用工程学院'}, {id: 'B1B353541', name: '流体力学', department: '国际通用工程学院'}, {id: 'B3I353511', name: '飞行力学', department: '国际通用工程学院'}]}, {name: '网络空间安全学院', num: '39', name_s: '网安', courses: [{id: 'B3J393900', name: '对称密码学及其应用', department: '网络空间安全学院'}, {id: 'B3J392110', name: '密码学及应用实验', department: '网络空间安全学院'}, {id: 'B3J393250', name: '软件工程', department: '网络空间安全学院'}, {id: 'B3J393910', name: 'Python语言安全编程', department: '网络空间安全学院'}, {id: 'B3I393230', name: '科研课堂', department: '网络空间安全学院'}, {id: 'B3I392180', name: '操作系统原理与安全', department: '网络空间安全学院'}, {id: 'B3I393140', name: '网络攻防实验', department: '网络空间安全学院'}, {id: 'B3J393220', name: '并行计算程序设计', department: '网络空间安全学院'}, {id: 'B3I393150', name: '信息网络安全', department: '网络空间安全学院'}, {id: 'B3I392190', name: '计算机网络', department: '网络空间安全学院'}, {id: 'B3I392110', name: '密码学', department: '网络空间安全学院'}, {id: 'B3I393130', name: '网络攻防技术', department: '网络空间安全学院'}, {id: 'B3J393310', name: '移动通信概论', department: '网络空间安全学院'}, {id: 'B3J392210', name: '信息论与编码', department: '网络空间安全学院'}, {id: 'B3J393240', name: '机器学习', department: '网络空间安全学院'}, {id: 'B3J393400', name: '数字信号处理', department: '网络空间安全学院'}, {id: 'B3I393160', name: '通信原理', department: '网络空间安全学院'}, {id: 'B3G393901', name: '国际工程基础（全英文）', department: '网络空间安全学院'}, {id: 'B3I393220', name: '网络安全创新实验', department: '网络空间安全学院'}]}, {name: '人工智能研究院', num: '42', name_s: 'AI', courses: [{id: 'B1B422120', name: '数字电子技术基础', department: '人工智能研究院'}, {id: 'B2F420120', name: '人工智能概论', department: '人工智能研究院'}, {id: 'B3I423230', name: '智能控制与机器人', department: '人工智能研究院'}, {id: 'B3I420170', name: '博弈', department: '人工智能研究院'}, {id: 'B3I424120', name: '计算机科学方法论', department: '人工智能研究院'}, {id: 'B3J423610', name: '学科技术前沿讲座', department: '人工智能研究院'}, {id: 'B3I423180', name: '模式识别', department: '人工智能研究院'}, {id: 'B3J423110', name: '对抗机器学习', department: '人工智能研究院'}, {id: 'B3J420160', name: '深度学习', department: '人工智能研究院'}, {id: 'B1A42051A', name: '基础物理学（1）', department: '人工智能研究院'}, {id: 'B3I422250', name: '计算机系统基础', department: '人工智能研究院'}, {id: 'B3I42313A', name: '微分方程', department: '人工智能研究院'}, {id: 'B1A42321A', name: '数理统计', department: '人工智能研究院'}, {id: 'B3J420170', name: '数字图像处理', department: '人工智能研究院'}, {id: 'B3I422280', name: '信号与系统', department: '人工智能研究院'}, {id: 'B3J420130', name: '科研课堂', department: '人工智能研究院'}, {id: 'B1A42012A', name: '数学分析(2)', department: '人工智能研究院'}, {id: 'B3I422270', name: '智能控制与机器人', department: '人工智能研究院'}, {id: 'B3J420120', name: '数据挖掘', department: '人工智能研究院'}, {id: 'B3I421180', name: '数理逻辑', department: '人工智能研究院'}, {id: 'B2G425100', name: '数学模型', department: '人工智能研究院'}, {id: 'B1A42022A', name: '高等代数(2)', department: '人工智能研究院'}, {id: 'B3I420110', name: '人工智能导论', department: '人工智能研究院'}]}, {name: '集成电路科学与工程学院', num: '49', name_s: '集电', courses: [{id: 'B3I493320', name: '认知智能芯片设计与实现', department: '集成电路科学与工程学院'}, {id: 'B3I493250', name: '微纳器件制备实训', department: '集成电路科学与工程学院'}, {id: 'B3J494410', name: '工程量子力学', department: '集成电路科学与工程学院'}, {id: 'B2F490540', name: '走进存储器世界', department: '集成电路科学与工程学院'}, {id: 'B2F491510', name: '芯片加工技术入门', department: '集成电路科学与工程学院'}, {id: 'B2F490320', name: '自旋电子科技前沿', department: '集成电路科学与工程学院'}, {id: 'B3I492140', name: '模拟集成电路基础', department: '集成电路科学与工程学院'}, {id: 'B3I492320', name: '数字集成电路设计', department: '集成电路科学与工程学院'}, {id: 'B3I493210', name: '微电子器件物理', department: '集成电路科学与工程学院'}, {id: 'B3J493420', name: '射频集成电路', department: '集成电路科学与工程学院'}, {id: 'B3I493430', name: '模拟集成电路设计实训', department: '集成电路科学与工程学院'}, {id: 'B1A492130', name: '应用概率与统计', department: '集成电路科学与工程学院'}, {id: 'B3J492210', name: '平衡态统计物理', department: '集成电路科学与工程学院'}, {id: 'B3I492900', name: '科研课堂', department: '集成电路科学与工程学院'}, {id: 'B2F495510', name: '微纳技术前沿专业研讨课', department: '集成电路科学与工程学院'}, {id: 'B3I492150', name: '信号与系统', department: '集成电路科学与工程学院'}]}, {name: '学生处武装部', num: '51', name_s: '武装部', courses: []}, {name: '图书馆', num: '52', name_s: '图书馆', courses: [{id: 'B2G520110', name: '信息检索与网络应用', department: '图书馆'}]}, {name: '校团委', num: '53', name_s: '校团委', courses: [{id: 'B2K530090', name: '中国传统曲艺鉴赏与实践（二）', department: '校团委'}, {id: 'B2K530120', name: '表达性艺术体验及心理成长', department: '校团委'}, {id: 'B2K530110', name: '播音主持鉴赏实践（二）', department: '校团委'}, {id: 'B2K530170', name: '邂逅交响乐（2）', department: '校团委'}, {id: 'B2K530030', name: '唱游和声世界——合唱音响学实践（三）', department: '校团委'}, {id: 'B2K530230', name: '舞蹈艺术鉴赏与实践（4）', department: '校团委'}, {id: 'B2K530070', name: '中国民族乐器鉴赏与实践（二）', department: '校团委'}, {id: 'B2K530040', name: '声乐艺术鉴赏与实践', department: '校团委'}, {id: 'B2K530210', name: '舞蹈艺术鉴赏与实践（2）', department: '校团委'}, {id: 'B2K530240', name: '交响管乐实践与鉴赏', department: '校团委'}, {id: 'B2K530190', name: '踢踏舞艺术鉴赏与实践（2）', department: '校团委'}, {id: 'B2K530050', name: '音乐奥秘解码——音符与律动', department: '校团委'}, {id: 'B2K530140', name: '戏剧导表演理论与实践（二）', department: '校团委'}]}, {name: '校医院', num: '56', name_s: '校医院', courses: [{id: 'B2G560330', name: '健康常识教育', department: '校医院'}]}, {name: '招生就业处', num: '56', name_s: '招就处', courses: []}, {name: '校机关', num: '56', name_s: '校机关', courses: []}, {name: '校内其它单位', num: '56', name_s: '其他', courses: [{id: 'B2G560440', name: '大学生应急救援知识与技能', department: '校内其它单位'}, {id: 'B2G560420', name: '创新创业基础', department: '校内其它单位'}, {id: 'B2F560110', name: '创业基础', department: '校内其它单位'}]}, {name: '北航学院', num: '70', name_s: '书院', courses: [{id: 'B2G700180', name: '本科生学业规划', department: '北航学院'}, {id: 'B1B701120', name: 'C语言程序设计', department: '北航学院'}, {id: 'B2G700170', name: '大学生自我管理与修养提升', department: '北航学院'}, {id: 'B2G700360', name: '北京城市发展与文化溯源', department: '北航学院'}, {id: 'B2G700290', name: '大学生社会实践：面向乡村中小学生的科创教育', department: '北航学院'}, {id: 'B2G700280', name: '大学生通用学习能力', department: '北航学院'}, {id: 'B2G700190', name: '领导力开发', department: '北航学院'}, {id: 'B2K700130', name: '交响乐入门与小提琴艺术实践', department: '北航学院'}, {id: 'B2G700340', name: '“四史”导学', department: '北航学院'}, {id: 'B2K700140', name: '戏剧导论与名剧鉴赏', department: '北航学院'}, {id: 'B2G700370', name: '中国共产党经典文献研读', department: '北航学院'}, {id: 'B2G700120', name: '航空航天科技与工程通识', department: '北航学院'}]}, {name: '医学科学与工程学院', num: '83', name_s: '医工', courses: [{id: 'B2G830100', name: '实验动物学', department: '医学科学与工程学院'}]}, {name: '航空发动机研究院', num: '86', name_s: '航发', courses: [{id: 'B3J863110', name: '科研课堂', department: '航空发动机研究院'}]}, {name: '校外单位', num: 'A1', name_s: '校外', courses: [{id: 'B2GA00030R', name: '悖论：思维的魔方', department: '校外单位'}, {id: 'B2GA00200R', name: '兵器美学', department: '校外单位'}, {id: 'B2GA11310M', name: '摄影基础', department: '校外单位'}, {id: 'B2GA11320M', name: '社会心理学', department: '校外单位'}, {id: 'B2GA11330M', name: '商务英语案例分析', department: '校外单位'}, {id: 'B2GA11340M', name: '国际关系与国际法', department: '校外单位'}, {id: 'B2GA11350M', name: '工程制图（双语）', department: '校外单位'}, {id: 'B2GA11360M', name: '财务报表分析（全英文）', department: '校外单位'}, {id: 'B2GA11370M', name: '版面文化与设计鉴赏——教你学会版面设计', department: '校外单位'}, {id: 'B2GA11380M', name: 'Python语言程序设计（全英）', department: '校外单位'}, {id: 'B2GA10130M', name: '艺术与审美', department: '校外单位'}, {id: 'B2GA10020M', name: '艾滋病、性与健康', department: '校外单位'}, {id: 'B2GA10030M', name: '伟大的《红楼梦》', department: '校外单位'}, {id: 'B2GA10040M', name: '中国古典诗词中的品格与修养', department: '校外单位'}, {id: 'B2GA10070M', name: '古希腊文明', department: '校外单位'}, {id: 'B2GA10140M', name: '公共关系与人际交往能力', department: '校外单位'}, {id: 'B2GA10160M', name: '探索心理学的奥秘', department: '校外单位'}, {id: 'B2GA10170M', name: '孙子兵法中的思维智慧', department: '校外单位'}, {id: 'B2GA10240M', name: '中国历史地理', department: '校外单位'}, {id: 'B2GA10380M', name: '大学生性健康修养', department: '校外单位'}, {id: 'B2GA10430M', name: '不负卿春-大学生职业生涯规划', department: '校外单位'}, {id: 'B2GA10860M', name: '莎士比亚戏剧赏析', department: '校外单位'}, {id: 'B2GA10870M', name: '完美着装', department: '校外单位'}, {id: 'B2GA10880M', name: '葡萄酒的那些事儿', department: '校外单位'}, {id: 'B2GA10890M', name: '欧美电影文化', department: '校外单位'}, {id: 'B2GA11000M', name: '英语阅读', department: '校外单位'}, {id: 'B2GA11010M', name: '微观经济学（四川大学）', department: '校外单位'}, {id: 'B2GA11020M', name: '能源英语面面观', department: '校外单位'}, {id: 'B2GA11030M', name: '私法英语表达', department: '校外单位'}, {id: 'B2GA11040M', name: '商务英语（西安交通大学）', department: '校外单位'}, {id: 'B2GA11050M', name: '学术交流英语', department: '校外单位'}, {id: 'B2GA11060M', name: '跨文化交际学', department: '校外单位'}, {id: 'B2GA11070M', name: 'Basic Chemistry 基础化学', department: '校外单位'}, {id: 'B2GA11080M', name: '全球健康', department: '校外单位'}, {id: 'B2GA11090M', name: '中国文化概要', department: '校外单位'}, {id: 'B2GA11120M', name: '电影叙事与美学', department: '校外单位'}, {id: 'B2GA11130M', name: '珠宝鉴赏', department: '校外单位'}, {id: 'B2GA11240M', name: '国际学术交流英语', department: '校外单位'}, {id: 'B2GA11250M', name: '商务英语听说', department: '校外单位'}, {id: 'B2GA11260M', name: '跨文化交际（西北大学）', department: '校外单位'}, {id: 'B2GA11280M', name: '语言、文化与交际', department: '校外单位'}, {id: 'B2GA11290M', name: '数字时代的商务英语写作', department: '校外单位'}, {id: 'B2GA11300M', name: '生物化学（英文版）', department: '校外单位'}, {id: 'B2GA00220R', name: '社会调查与研究方法(上)', department: '校外单位'}, {id: 'B2GA00190R', name: '舌尖上的历史与文化', department: '校外单位'}, {id: 'B2GA00120R', name: '20世纪西方音乐', department: '校外单位'}, {id: 'B2GA00070R', name: '莎士比亚戏剧赏析', department: '校外单位'}, {id: 'B2GA00090R', name: '少数民族神话赏析', department: '校外单位'}, {id: 'B2GA00050R', name: '思维训练与学习力提升', department: '校外单位'}, {id: 'B2GA00100R', name: '武器装备概论', department: '校外单位'}, {id: 'B2GA00210R', name: '微生物与人体健康', department: '校外单位'}, {id: 'B2GA00060R', name: '西方文学经典鉴赏', department: '校外单位'}, {id: 'B2GA00170R', name: '新闻摄影', department: '校外单位'}, {id: 'B2GA00160R', name: '音乐与数学', department: '校外单位'}, {id: 'B2GA00110R', name: '艺术史', department: '校外单位'}, {id: 'B2GA00010R', name: '中国古代史', department: '校外单位'}, {id: 'B2GA11390M', name: '创新设计前沿', department: '校外单位'}, {id: 'B2GA11440M', name: '笔墨时空——解读中国书法文化基因', department: '校外单位'}, {id: 'B2GA11140M', name: '大学生心理健康', department: '校外单位'}, {id: 'B2GA11450M', name: '3D打印技术与应用', department: '校外单位'}, {id: 'B2GA10210M', name: '科研方法论', department: '校外单位'}, {id: 'B2GA11400M', name: '碳汇经济与美丽中国', department: '校外单位'}, {id: 'B2GA11410M', name: '英语口语直通车', department: '校外单位'}, {id: 'B2GA11420M', name: '职场口语', department: '校外单位'}, {id: 'B2GA00180R', name: '中国现代女性文学研究', department: '校外单位'}, {id: 'B2GA00020R', name: '民俗学', department: '校外单位'}, {id: 'B2GA00140R', name: '普通心理学', department: '校外单位'}]}, {name: '沙河高教园区高校联盟', num: 'FF', name_s: '高教园', courses: [{id: '50G40420', name: 'C语言程序设计', department: '沙河高教园区高校联盟'}, {id: '50G40520', name: '走进材料——从原子到器件', department: '沙河高教园区高校联盟'}, {id: '50G40440', name: '航空航天概论', department: '沙河高教园区高校联盟'}, {id: '50G40470', name: '图形创意设计与制作', department: '沙河高教园区高校联盟'}, {id: '50G40500', name: '宪法原理', department: '沙河高教园区高校联盟'}, {id: '50G40450', name: '大学计算机基础', department: '沙河高教园区高校联盟'}, {id: '50G40510', name: '环境与可持续发展', department: '沙河高教园区高校联盟'}, {id: '50G40430', name: '职业生涯规划', department: '沙河高教园区高校联盟'}]}];
         
-        this.globalData.college_course_list = [
-            {
-             name:"材料科学与工程学院",
-             num:"01",
-             name_s:"材料",
-             courses:courses,
-            },
-            {
-             name:"电子信息工程学院",
-             num:"02",
-             name_s:"电子",
-            },
-            {
-             name:"自动化科学与电气工程学院",
-             num:"03",
-             name_s:"自动化",
-            },
-            {
-             name:"能源与动力工程学院",
-             num:"04",
-             name_s:"能源",
-            },
-            {
-             name:"航空科学与工程学院",
-             num:"05",
-             name_s:"航空",
-            },
-            {
-             name:"计算机学院",
-             num:"06",
-             name_s:"计算机",
-            },
-            {
-             name:"机械工程及自动化学院",
-             num:"07",
-             name_s:"机械",
-            },
-            {
-             name:"经济管理学院",
-             num:"08",
-             name_s:"经管",
-            },
-            {
-             name:"数学科学学院",
-             num:"09",
-             name_s:"数院",
-            },
-            {
-             name:"生物与医学工程学院",
-             num:"10",
-             name_s:"生医",
-            },
-            {
-             name:"人文社会科学学院",
-             num:"11",
-             name_s:"人文",
-            },
-            {
-             name:"外国语学院",
-             num:"12",
-             name_s:"外国语",
-            },
-            {
-             name:"交通科学与工程学院",
-             num:"13",
-             name_s:"交通",
-            },
-            {
-             name:"可靠性与系统工程学院",
-             num:"14",
-             name_s:"可靠性",
-            },
-            {
-             name:"宇航学院",
-             num:"15",
-             name_s:"宇航",
-            },
-            {
-             name:"飞行学院",
-             num:"16",
-             name_s:"飞院",
-            },
-            {
-             name:"仪器科学与光电工程学院",
-             num:"17",
-             name_s:"仪光",
-            },
-            {
-             name:"北京学院",
-             num:"18",
-             name_s:"北院",
-            },
-            {
-             name:"物理学院",
-             num:"19",
-             name_s:"物院",
-            },
-            {
-             name:"法学院",
-             num:"20",
-             name_s:"法学院",
-            },
-            {
-             name:"软件学院",
-             num:"21",
-             name_s:"软院",
-            },
-            {
-             name:"未来空天技术学院/高等理工学院",
-             num:"23",
-             name_s:"沈元",
-            },
-            {
-             name:"中法工程师学院",
-             num:"24",
-             name_s:"中法",
-            },
-            {
-             name:"国际学院",
-             num:"25",
-             name_s:"国际",
-            },
-            {
-             name:"新媒体艺术与设计学院",
-             num:"26",
-             name_s:"新媒体",
-            },
-            {
-             name:"美育中心",
-             num:"26",
-             name_s:"美育",
-            },
-            {
-             name:"化学学院",
-             num:"27",
-             name_s:"化院",
-            },
-            {
-             name:"马克思主义学院",
-             num:"28",
-             name_s:"马院",
-            },
-            {
-             name:"人文与社会科学高等研究院",
-             num:"29",
-             name_s:"高研院",
-            },
-            {
-             name:"空间与环境学院",
-             num:"30",
-             name_s:"环境",
-            },
-            {
-             name:"工程训练中心",
-             num:"32",
-             name_s:"工训",
-            },
-            {
-             name:"体育部",
-             num:"33",
-             name_s:"体育部",
-            },
-            {
-             name:"国际通用工程学院",
-             num:"35",
-             name_s:"国通",
-            },
-            {
-             name:"网络空间安全学院",
-             num:"39",
-             name_s:"网安",
-            },
-            {
-             name:"人工智能研究院",
-             num:"42",
-             name_s:"AI",
-            },
-            {
-             name:"集成电路科学与工程学院",
-             num:"49",
-             name_s:"集电",
-            },
-            {
-             name:"学生处武装部",
-             num:"51",
-             name_s:"武装部",
-            },
-            {
-             name:"图书馆",
-             num:"52",
-             name_s:"图书馆",
-            },
-            {
-             name:"校团委",
-             num:"53",
-             name_s:"校团委",
-            },
-            {
-             name:"校医院",
-             num:"56",
-             name_s:"校医院",
-            },
-            {
-             name:"招生就业处",
-             num:"56",
-             name_s:"招就处",
-            },
-            {
-             name:"校机关",
-             num:"56",
-             name_s:"校机关",
-            },
-            {
-             name:"校内其它单位",
-             num:"56",
-             name_s:"其他",
-            },
-            {
-             name:"北航学院",
-             num:"70",
-             name_s:"书院",
-            },
-            {
-             name:"医学科学与工程学院",
-             num:"83",
-             name_s:"医工",
-            },
-            {
-             name:"航空发动机研究院",
-             num:"86",
-             name_s:"航发",
-            },
-            {
-             name:"校外单位",
-             num:"A1",
-             name_s:"校外",
-            },
-            {
-             name:"沙河高教园区高校联盟",
-             num:"FF",
-             name_s:"高教园",
-            },
-           ];
-           for(let i=1; i<this.globalData.college_course_list.length;i++) {
-            this.globalData.college_course_list[i].courses = [];
-        }  
+        
+            // this.globalData.college_course_list = [
+            //     {
+            //     name:"材料科学与工程学院",
+            //     num:"01",
+            //     name_s:"材料",
+            //     courses:courses,
+            //     },
+            //     {
+            //     name:"电子信息工程学院",
+            //     num:"02",
+            //     name_s:"电子",
+            //     },
+            //     {
+            //     name:"自动化科学与电气工程学院",
+            //     num:"03",
+            //     name_s:"自动化",
+            //     },
+            //     {
+            //     name:"能源与动力工程学院",
+            //     num:"04",
+            //     name_s:"能源",
+            //     },
+            //     {
+            //     name:"航空科学与工程学院",
+            //     num:"05",
+            //     name_s:"航空",
+            //     },
+            //     {
+            //     name:"计算机学院",
+            //     num:"06",
+            //     name_s:"计算机",
+            //     },
+            //     {
+            //     name:"机械工程及自动化学院",
+            //     num:"07",
+            //     name_s:"机械",
+            //     },
+            //     {
+            //     name:"经济管理学院",
+            //     num:"08",
+            //     name_s:"经管",
+            //     },
+            //     {
+            //     name:"数学科学学院",
+            //     num:"09",
+            //     name_s:"数院",
+            //     },
+            //     {
+            //     name:"生物与医学工程学院",
+            //     num:"10",
+            //     name_s:"生医",
+            //     },
+            //     {
+            //     name:"人文社会科学学院",
+            //     num:"11",
+            //     name_s:"人文",
+            //     },
+            //     {
+            //     name:"外国语学院",
+            //     num:"12",
+            //     name_s:"外国语",
+            //     },
+            //     {
+            //     name:"交通科学与工程学院",
+            //     num:"13",
+            //     name_s:"交通",
+            //     },
+            //     {
+            //     name:"可靠性与系统工程学院",
+            //     num:"14",
+            //     name_s:"可靠性",
+            //     },
+            //     {
+            //     name:"宇航学院",
+            //     num:"15",
+            //     name_s:"宇航",
+            //     },
+            //     {
+            //     name:"飞行学院",
+            //     num:"16",
+            //     name_s:"飞院",
+            //     },
+            //     {
+            //     name:"仪器科学与光电工程学院",
+            //     num:"17",
+            //     name_s:"仪光",
+            //     },
+            //     {
+            //     name:"北京学院",
+            //     num:"18",
+            //     name_s:"北院",
+            //     },
+            //     {
+            //     name:"物理学院",
+            //     num:"19",
+            //     name_s:"物院",
+            //     },
+            //     {
+            //     name:"法学院",
+            //     num:"20",
+            //     name_s:"法学院",
+            //     },
+            //     {
+            //     name:"软件学院",
+            //     num:"21",
+            //     name_s:"软院",
+            //     },
+            //     {
+            //     name:"未来空天技术学院/高等理工学院",
+            //     num:"23",
+            //     name_s:"沈元",
+            //     },
+            //     {
+            //     name:"中法工程师学院",
+            //     num:"24",
+            //     name_s:"中法",
+            //     },
+            //     {
+            //     name:"国际学院",
+            //     num:"25",
+            //     name_s:"国际",
+            //     },
+            //     {
+            //     name:"新媒体艺术与设计学院",
+            //     num:"26",
+            //     name_s:"新媒体",
+            //     },
+            //     {
+            //     name:"美育中心",
+            //     num:"26",
+            //     name_s:"美育",
+            //     },
+            //     {
+            //     name:"化学学院",
+            //     num:"27",
+            //     name_s:"化院",
+            //     },
+            //     {
+            //     name:"马克思主义学院",
+            //     num:"28",
+            //     name_s:"马院",
+            //     },
+            //     {
+            //     name:"人文与社会科学高等研究院",
+            //     num:"29",
+            //     name_s:"高研院",
+            //     },
+            //     {
+            //     name:"空间与环境学院",
+            //     num:"30",
+            //     name_s:"环境",
+            //     },
+            //     {
+            //     name:"工程训练中心",
+            //     num:"32",
+            //     name_s:"工训",
+            //     },
+            //     {
+            //     name:"体育部",
+            //     num:"33",
+            //     name_s:"体育部",
+            //     },
+            //     {
+            //     name:"国际通用工程学院",
+            //     num:"35",
+            //     name_s:"国通",
+            //     },
+            //     {
+            //     name:"网络空间安全学院",
+            //     num:"39",
+            //     name_s:"网安",
+            //     },
+            //     {
+            //     name:"人工智能研究院",
+            //     num:"42",
+            //     name_s:"AI",
+            //     },
+            //     {
+            //     name:"集成电路科学与工程学院",
+            //     num:"49",
+            //     name_s:"集电",
+            //     },
+            //     {
+            //     name:"学生处武装部",
+            //     num:"51",
+            //     name_s:"武装部",
+            //     },
+            //     {
+            //     name:"图书馆",
+            //     num:"52",
+            //     name_s:"图书馆",
+            //     },
+            //     {
+            //     name:"校团委",
+            //     num:"53",
+            //     name_s:"校团委",
+            //     },
+            //     {
+            //     name:"校医院",
+            //     num:"56",
+            //     name_s:"校医院",
+            //     },
+            //     {
+            //     name:"招生就业处",
+            //     num:"56",
+            //     name_s:"招就处",
+            //     },
+            //     {
+            //     name:"校机关",
+            //     num:"56",
+            //     name_s:"校机关",
+            //     },
+            //     {
+            //     name:"校内其它单位",
+            //     num:"56",
+            //     name_s:"其他",
+            //     },
+            //     {
+            //     name:"北航学院",
+            //     num:"70",
+            //     name_s:"书院",
+            //     },
+            //     {
+            //     name:"医学科学与工程学院",
+            //     num:"83",
+            //     name_s:"医工",
+            //     },
+            //     {
+            //     name:"航空发动机研究院",
+            //     num:"86",
+            //     name_s:"航发",
+            //     },
+            //     {
+            //     name:"校外单位",
+            //     num:"A1",
+            //     name_s:"校外",
+            //     },
+            //     {
+            //     name:"沙河高教园区高校联盟",
+            //     num:"FF",
+            //     name_s:"高教园",
+            //     },
+            // ];
+        //    for(let i=1; i<this.globalData.college_course_list.length;i++) {
+        //     this.globalData.college_course_list[i].courses = [];
+        // }  
         // this.globalData.college_course_list = [ 
         //     {
         //       label: '42计算机',

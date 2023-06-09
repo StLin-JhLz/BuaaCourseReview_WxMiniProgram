@@ -90,9 +90,9 @@ Page({
         
         reviews_show[index].agree_cnt = this.data.reviews_show[index].agree_cnt +op;
         //test
-        // self.setData({
-        //    reviews_show:reviews_show
-        // })
+        self.setData({
+           reviews_show:reviews_show
+        })
         wx.request({
             url: apis.main.url + apis.interaction.url, // 请求的 URL
             method: apis.interaction.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
@@ -130,9 +130,9 @@ Page({
         
         reviews_show[index].disagree_cnt = this.data.reviews_show[index].disagree_cnt +op;
         //test
-        // self.setData({
-        //    reviews_show:reviews_show
-        // })
+        self.setData({
+           reviews_show:reviews_show
+        })
         wx.request({
             url: apis.main.url + apis.interaction.url, // 请求的 URL
             method: apis.interaction.method, // 请求方法，可选值：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE、CONNECT，默认为 GET
@@ -420,61 +420,184 @@ Page({
     makeTestData() {
         var course = {
             id : "B3I063210",
-            name : "软件工程",
+            name : "计算机网络",
             department : "计算机学院",
-            teachers: ['欧阳元新','孙青','测试一','测试二','测试三', '测试四'],
+            teachers: ['罗洪斌','张辉','刘轶'],
             teachers_filter:[],
             teachers_name2index:{}
         };
         this.setData({
             course: course,
         })
-        var a = [{
+        var a =   [{
             id : "1",
             user_id : "user",
-            time : "2020/09/02",
-            agree_cnt : 0,
+            time : "2022/06/30",
+            agree_cnt : 8,
             disagree_cnt : 0,
             course_id : "B3I063210",
             course_name:"计算机网络",
-            teacher_name : "欧阳元新",
+            teacher_name : "刘轶",
+            semester : "20-21-2",
+            rating_total : 5,
+            rating_quality : 4,
+            rating_workload : 4,
+            rating_assesment : 5,
+            title : "正经",
+            text : "一共八次课，正好对应书上第一章到第八章的内容。ppt利于考试复习。",
+        },
+        {
+            id : "2",
+            user_id : "user",
+            time : "2022/06/12",
+            agree_cnt : 22,
+            disagree_cnt : 2,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "罗洪斌",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 5,
+            rating_workload : 2,
+            rating_assesment : 5,
+            title : "推荐！!罗老师的课超有趣！",
+            text : "罗老师的课程会以计算机网络经典论文的结构为主，带我们较为深入的体会计网的逻辑。同时，对于考试重点，老师也会有所提示。课堂气氛活跃，内容有趣，超级推荐！",
+        },
+        {
+            id : "3",
+            user_id : "user",
+            time : "2022/07/28",
+            agree_cnt : 8,
+            disagree_cnt : 2,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "罗洪斌",
+            semester : "22-23-3",
+            rating_total : 5,
+            rating_quality : 1,
+            rating_workload : 5,
+            rating_assesment : 5,
+            title : "从不点名的好课",
+            text : "老师上课不会点名!课程内容以论文为主，与考试关系不大，但重点知识点会提到。推荐！",
+        },
+        {
+            id : "4",
+            user_id : "user",
+            time : "2022/07/15",
+            agree_cnt : 12,
+            disagree_cnt : 0,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "张辉",
             semester : "21-22-3",
             rating_total : 5,
             rating_quality : 1,
             rating_workload : 5,
             rating_assesment : 5,
-            title : "好课",
-            text : "这是一条正经的评价这是一条正经的评价这\n是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
-        }, {
-            id : "1afbc",
-            user_id : "1afbc",
-            time : "2022/09/01",
-            agree_cnt : 5000,
-            disagree_cnt : 3000,
-            course_id : "1afbcd",
-            teacher_name : "孙青",
+            title : "传统好课",
+            text : "课程内容与考试相关度不大。作业不是很多。考试在第15周。没有点名。",
+        },
+        {
+            id : "5",
+            user_id : "user",
+            time : "2022/07/10",
+            agree_cnt : 15,
+            disagree_cnt : 0,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "张辉",
             semester : "20-21-3",
             rating_total : 5,
+            rating_quality : 1,
+            rating_workload : 3,
+            rating_assesment : 5,
+            title : "计网课程安排分享",
+            text : "1-8周理论课，作业不是很多.期末考试不进考期，在15周左右。",
+        },
+        {
+            id : "6",
+            user_id : "user",
+            time : "2022/07/20",
+            agree_cnt : 2,
+            disagree_cnt : 0,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "刘轶",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 1,
+            rating_workload : 5,
+            rating_assesment : 5,
+            title : "无标题",
+            text : "作业挺少。上课不点名。期末闭卷考试，与往年题较像，比较好复习。",
+        },
+        {
+            id : "7",
+            user_id : "user",
+            time : "2022/07/25",
+            agree_cnt : 7,
+            disagree_cnt : 1,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "罗洪斌",
+            semester : "21-22-3",
+            rating_total : 5,
             rating_quality : 5,
+            rating_workload : 2,
+            rating_assesment : 5,
+            title : "计算机网络课分享",
+            text : "平时作业是课后习题，只有三次作业还不错。考试在第15周，闭卷。平时不会点名。",
+        },
+        {
+            id : "8",
+            user_id : "user",
+            time : "2022/07/18",
+            agree_cnt : 6,
+            disagree_cnt : 2,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "张辉",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 1,
             rating_workload : 5,
             rating_assesment : 5,
-            title : "好课",
-            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评\n价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
-        },{
-            id : "1afbc",
-            user_id : "1afbc",
-            time : "2022/09/01",
-            agree_cnt : 5,
-            disagree_cnt : 3,
-            course_id : "1afbcd",
-            teacher_name : "孙青",
-            semester : "20-21-3",
-            rating_total : 1.0,
-            rating_quality : 4,
+            title : "不错",
+            text : "张老师讲的很好。作业不多。不过课程是1-8周，考试在十五周。。。",
+        },
+        {
+            id : "9",
+            user_id : "user",
+            time : "2022/07/10",
+            agree_cnt : 3,
+            disagree_cnt : 0,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "刘轶",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 1,
             rating_workload : 5,
             rating_assesment : 5,
-            title : "好课",
-            text : "这是一条正经的评价这是一条正经的评价这是一条正经的评\n价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价这是一条正经的评价",
+            title : "力推",
+            text : "老师上课讲的比较细腻，但是可能会有点平淡的感觉。作业不多。考试闭卷，但不难，和往年挺像。",
+        },
+        {
+            id : "10",
+            user_id : "user",
+            time : "2022/06/29",
+            agree_cnt : 4,
+            disagree_cnt : 1,
+            course_id : "B3I063210",
+            course_name:"计算机网络",
+            teacher_name : "刘轶",
+            semester : "21-22-3",
+            rating_total : 5,
+            rating_quality : 1,
+            rating_workload : 5,
+            rating_assesment : 5,
+            title : "推荐！！",
+            text : "老师的ppt是中文的，是对课本内容的梳理。对于复习来说比较方便。平时作业不多，考试不仅烤漆，接近期末。",
         }];
         
         //console.log(this.data.length);
