@@ -145,15 +145,15 @@
     },
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#000000",
+        "navigationBarBackgroundColor": "#6495ED",
         "backgroundColor": "#f6f6f6",
         "navigationBarTitleText": "北航课程评价",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
-        "backgroundColor": "#000000",
+        "backgroundColor": "#6495ED",
         "borderStyle": "white",
-        "color": "#000000",
+        "color": "#ffffff",
         "position": "bottom",
         "selectedColor": "#000000",
         "list": [
