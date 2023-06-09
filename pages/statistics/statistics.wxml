@@ -2,8 +2,10 @@
   <!-- 这里放置页面内容 -->
     <view class="container">
         <image src="../../images/word/b972bbe520eb0dd5f824d1495653927.png"></image>
-        <image src="../../images/back_img/backIMG.png"></image>
-        <text>This is some text.</text>
+        <view class="bottom-space2"></view>
+        <image src="../../images/word/87c81bb3b0e2e823c23069a88ca9266.png"></image>
+        <view class="bottom-space2"></view>
+        <text style="color: cornflowerblue;">平台访问次数统计：45</text>
     </view>
 </view>
 

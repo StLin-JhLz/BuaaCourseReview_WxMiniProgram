@@ -20,7 +20,11 @@
   }
 
   .page-background {
-    background: linear-gradient(to bottom, #128fc8, #efefef);
+    background: linear-gradient(to bottom, #6495ed, #efefef);
+  }
+
+  .bottom-space2 {
+    padding-bottom: 30rpx;
   }
   
   
